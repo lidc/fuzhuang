@@ -1,0 +1,102 @@
+/* CSS Document */
+html{
+	background:#FFF; 
+}
+body{ margin:0; padding:0; font-family:"新宋体","宋体", "仿宋","微软雅黑", "黑体"; font-size:14px; color:#474749}
+ul,li,img,p,strong,span,h2,h3{ margin:0; padding:0;}
+ul,li{ list-style:none; list-style-type:none; margin:0; padding:0;}
+a{text-decoration:none;}
+a:hover{ text-decoration:none}
+img{ border:0;}
+
+.page-content{ width:1024px; height:auto; background:#FFF; margin:0 auto;}
+.header{ width:1024px; height:auto; margin:auto;}
+.logo{ width:1024px; background:url(../images/topbg.jpg) no-repeat; height:89px; }
+.logo img{ margin:12px 33px;}
+
+.nav{ width:100%; height:36px; clear:both; background:#4a4a4a; font-family:"微软雅黑", "黑体", "宋体", "仿宋";}
+.nav a{ color:#FFF;}
+.nav ul{ margin:0; padding:0 22px; width:100%; height:36px; }
+.nav ul li{ float:left; line-height:36px; padding:0 22px; font-size:17px;}
+
+/****************** banner 样式及动态效果样式  slider-wrapper *******************/
+.banner{ width:1024px; height:303px; clear:both; margin:2px auto;}
+
+/*============================*/
+/*=== Custom Slider Styles ===*/
+/*============================*/
+#slider-wrapper {
+    width:1024px;
+    height:303px;
+    margin:0 auto;
+}
+
+#slider {
+	position:relative;
+    width:965px;
+    height:303px;
+	background:url(../images/loading.gif) no-repeat 50% 50%;
+}
+#slider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+#slider a {
+	border:0;
+	display:block;
+}
+
+.nivo-controlNav {
+	position:absolute;
+	right:1px;
+	bottom:-32px;
+	margin-right:20px;
+}
+.nivo-controlNav a {
+	display:none;
+	width:22px;
+	height:22px;
+	background:url(../images/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-right:3px;
+	float:left;
+	cursor:pointer;
+}
+.nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+
+
+.content{ width:100%; height:auto; background:#e7e7e7; }
+.con1{ max-width:100%; height:520px; }
+.con1-mod{ width:301px; height:491px; float:left; background:url(../images/home-lan-bg.jpg) no-repeat; margin:12px 22px 20px 18px;}
+.mod-title{ float:left; width:100%; height:30px;}
+.mod-hot{ width:268px; height:202px; margin:auto; padding:10px; text-align:center; clear:both;}
+.mod-hot p{ clear:both; margin-top:10px; }
+.mod-hot p a{ background-image:url(../images/48.png); background-repeat:no-repeat; font-size:14px; color:#000; padding-left:20px;}
+.mod-list{ clear:both; width:100%; height:auto; margin-top:26px;}
+.mod-list hr{ border:2px #000 solid;}
+.mod-list ul{ padding:3px;}
+.mod-list ul li{ width:100%; float:left; height:22px; line-height:22px; padding-left:26px;}
+.mod-list ul li a{ background-image:url(../images/48.png); background-repeat:no-repeat; font-size:14px; color:#000; padding-left:20px;}
+.mod-list p a{ display:block; width:69px; height:21px; float:right;}
+
+.con2{ width:100%; height:auto; clear:both;  padding:10px 0; }
+.con2-head{ width:100%; height:40px; line-height:40px; font-size:18px; font-family:"微软雅黑"; text-align:center;}
+.con2-product-list{ clear:both; height:212px; background:#FFF; margin-top:30px; border:1px #e7e7e7 solid;}
+.con2-product-list ul{ padding:0 16px;}
+.con2-product-list ul li{ float:left; width:186px; height:186px; margin:12px 6px;}
+
+.bottom{ clear:both; background:#d3d3d3; width:100%; height:145px; text-align:center; font-family:"微软雅黑"; line-height:25px;}
+.bottom span{ font-size:22px;}
+
+
+
+
+
+
+
+

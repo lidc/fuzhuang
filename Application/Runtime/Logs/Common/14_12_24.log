@@ -1,0 +1,64 @@
+[ 2014-12-24T18:07:06+08:00 ] ::1 /fuzhuang/index.php/Public/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Public
+NOTIC: [2] include(E:\WWW\fuzhuang\system\core/Tpl/think_exception.tpl) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory E:\WWW\fuzhuang\system\core\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening 'E:\WWW\fuzhuang\system\core/Tpl/think_exception.tpl' for inclusion (include_path='.;C:\php\pear') E:\WWW\fuzhuang\system\core\Library\Think\Think.class.php 第 314 行.
+
+[ 2014-12-24T18:07:19+08:00 ] ::1 /fuzhuang/index.php/Public/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+NOTIC: [2] include(E:\WWW\fuzhuang\system\core/Tpl/think_exception.tpl) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory E:\WWW\fuzhuang\system\core\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening 'E:\WWW\fuzhuang\system\core/Tpl/think_exception.tpl' for inclusion (include_path='.;C:\php\pear') E:\WWW\fuzhuang\system\core\Library\Think\Think.class.php 第 314 行.
+
+[ 2014-12-24T18:07:34+08:00 ] ::1 /fuzhuang/index.php/localhost/fuzhuang/index.php/Public/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+ERR: 无法加载模块:Localhost
+NOTIC: [2] include(E:\WWW\fuzhuang\system\core/Tpl/think_exception.tpl) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory E:\WWW\fuzhuang\system\core\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening 'E:\WWW\fuzhuang\system\core/Tpl/think_exception.tpl' for inclusion (include_path='.;C:\php\pear') E:\WWW\fuzhuang\system\core\Library\Think\Think.class.php 第 314 行.
+
+[ 2014-12-24T18:07:41+08:00 ] ::1 /fuzhuang/index.php/Public/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载模块:Public
+NOTIC: [2] include(E:\WWW\fuzhuang\system\core/Tpl/think_exception.tpl) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory E:\WWW\fuzhuang\system\core\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening 'E:\WWW\fuzhuang\system\core/Tpl/think_exception.tpl' for inclusion (include_path='.;C:\php\pear') E:\WWW\fuzhuang\system\core\Library\Think\Think.class.php 第 314 行.
+
+[ 2014-12-24T18:09:55+08:00 ] ::1 /fuzhuang/index.php/!-APP-!/Public/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:!-APP-!
+NOTIC: [2] include(E:\WWW\fuzhuang\system\core/Tpl/think_exception.tpl) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory E:\WWW\fuzhuang\system\core\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening 'E:\WWW\fuzhuang\system\core/Tpl/think_exception.tpl' for inclusion (include_path='.;C:\php\pear') E:\WWW\fuzhuang\system\core\Library\Think\Think.class.php 第 314 行.
+
+[ 2014-12-24T18:10:09+08:00 ] ::1 /fuzhuang/index.php/Public/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Public
+NOTIC: [2] include(E:\WWW\fuzhuang\system\core/Tpl/think_exception.tpl) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory E:\WWW\fuzhuang\system\core\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening 'E:\WWW\fuzhuang\system\core/Tpl/think_exception.tpl' for inclusion (include_path='.;C:\php\pear') E:\WWW\fuzhuang\system\core\Library\Think\Think.class.php 第 314 行.
+
+[ 2014-12-24T18:10:09+08:00 ] ::1 /fuzhuang/index.php/Public/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Public
+NOTIC: [2] include(E:\WWW\fuzhuang\system\core/Tpl/think_exception.tpl) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory E:\WWW\fuzhuang\system\core\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening 'E:\WWW\fuzhuang\system\core/Tpl/think_exception.tpl' for inclusion (include_path='.;C:\php\pear') E:\WWW\fuzhuang\system\core\Library\Think\Think.class.php 第 314 行.
+
+[ 2014-12-24T18:10:09+08:00 ] ::1 /fuzhuang/index.php/Public/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Public
+NOTIC: [2] include(E:\WWW\fuzhuang\system\core/Tpl/think_exception.tpl) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory E:\WWW\fuzhuang\system\core\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening 'E:\WWW\fuzhuang\system\core/Tpl/think_exception.tpl' for inclusion (include_path='.;C:\php\pear') E:\WWW\fuzhuang\system\core\Library\Think\Think.class.php 第 314 行.
+

@@ -13,7 +13,7 @@
   <div class="dl-title"> 
     <!--<img src="/chinapost/Public/assets/img/top.png">--> 
   </div>
-  <div class="dl-log">欢迎您，<span class="dl-log-user">root</span><a href="/chinapost/index.php?m=Public&a=logout" title="退出系统" class="dl-log-quit">[退出]</a> </div>
+  <div class="dl-log">欢迎您，<span class="dl-log-user">{{$_SESSION['fuzhuang']['username']}}</span><a href="/chinapost/index.php?m=Public&a=logout" title="退出系统" class="dl-log-quit">[退出]</a> </div>
 </div>
 <div class="content">
   <div class="dl-main-nav">
@@ -27,6 +27,12 @@
       <li class="nav-item dl-selected">
         <div class="nav-item-inner nav-order">业务管理</div>
       </li>
+      <li class="nav-item dl-selected">
+        <div class="nav-item-inner nav-order">产品管理</div>
+      </li>
+      <li class="nav-item dl-selected">
+        <div class="nav-item-inner nav-order">新闻管理</div>
+      </li>
     </ul>
   </div>
   <ul id="J_NavContent" class="dl-tab-conten"> 
@@ -38,7 +44,7 @@
 <script type="text/javascript" src="__PUBLICA__/assets/js/config-min.js"></script> 
 <script>
     BUI.use('common/main',function(){
-        var config = [{id:'1',menu:[{text:'系统管理',items:[{id:'12',text:'机构管理',href:'{{$__FILE__}}Admin/Node/index'},{id:'3',text:'角色管理',href:'Role/index.html'},{id:'4',text:'用户管理',href:'User/index.html'},{id:'6',text:'菜单管理',href:'Menu/index.html'}]}]},{id:'7',homePage : '9',menu:[{text:'业务管理',items:[{id:'9',text:'查询业务',href:'Node/index.html'}]}]}];
+        var config = [{id:'1',homePage : '9',menu:[{text:'系统管理',items:[{id:'12',text:'机构管理',href:'{{$__FILE__}}Admin/Node/index'},{id:'3',text:'角色管理',href:'Role/index.html'},{id:'4',text:'用户管理',href:'User/index.html'},{id:'6',text:'菜单管理',href:'Menu/index.html'}]}]},{id:'7',menu:[{text:'业务管理',items:[{id:'9',text:'查询业务',href:'Node/index.html'}]}]},{id:'10',homePage : '10',menu:[{text:'产品管理',items:[{id:'10',text:'产品列表',href:'Node/index.html'}]}]}];
         new PageUtil.MainPage({
             modulesConfig : config
         });

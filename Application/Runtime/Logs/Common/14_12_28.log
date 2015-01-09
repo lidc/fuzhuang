@@ -1,0 +1,8 @@
+[ 2014-12-28T13:41:28+08:00 ] ::1 /fuzhuang/index.php/Node/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Node
+NOTIC: [2] include(E:\www\fuzhuang\system\core/Tpl/think_exception.tpl) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory E:\www\fuzhuang\system\core\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening 'E:\www\fuzhuang\system\core/Tpl/think_exception.tpl' for inclusion (include_path='.;C:\php\pear') E:\www\fuzhuang\system\core\Library\Think\Think.class.php 第 314 行.
+

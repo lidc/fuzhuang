@@ -28,18 +28,9 @@
 <div class="bottom">
 	<div class="item_list">
     	<ul>
-<<<<<<< HEAD
     	<li>一、1月28日手机版、微信网站上线
            
-                编号：<?php echo ($vo["id"]); ?>
-                用户名：<?php echo ($vo["username"]); ?>
-                性别：<?php echo ($vo["password"]); ?>
-               
-           
         </li>
-=======
-    	<li>一、1月28日手机版、微信网站上线  &nbsp;  -- <?php echo ($vo["nav_title"]); ?></li>
->>>>>>> 7dc65646a47764619a58be39e1a5d8cca446c08b
     	<li>二、12月20日高级功能新增网站小图标</li>
     	<li>三、12月19日拖拽建站新增6个色系，增加选色功能</li>
     	<li>四、12月12日拖拽建站新增10个色系</li>

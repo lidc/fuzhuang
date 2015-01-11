@@ -15,15 +15,17 @@ class IndexController extends Controller {
         	$username = isset($_POST['username']) ? in($_POST['username']) : "";
             $password = isset($_POST['userpwd']) ? md5($_POST['userpwd']) : "";
         	$validatecode = isset($_POST['validatecode']) ? $_POST['validatecode'] : 0;  
-        	$public  = new PublicController();  
-        	if(!$public->check($validatecode)){
-                $this->show("<script>alert('验证码错误，请重新输入！');javascript:history.go(-1);</script>");    
-                exit;      
-            }
+        	if($validatecode!=0){
+	        	$public  = new PublicController();  
+	        	if(!$public->check($validatecode)){
+	                $this->show("<script>alert('验证码错误，请重新输入！');javascript:history.go(-1);</script>");    
+	                exit;      
+	            }
+	        }
             $this->assign("__FILE__",C('__FILE__'));
             $data = M('user_admin');
             $list = $data->field('password')->where("username='".$username."'")->find();
-
+// 			echo $list['password']."=".$password;exit;
             if($list['password']!=$password){
                 $this->show("<script>alert('用户名或密码有误，请重新输入！');javascript:history.go(-1);</script>");    
                 exit;  
@@ -32,5 +34,11 @@ class IndexController extends Controller {
                 $this->display('index');
             }
         }   	
+    }
+    
+    public function logout(){
+		session_destroy();
+		session_unset();
+		$this->display('login');
     }
 }

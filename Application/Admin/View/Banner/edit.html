@@ -28,59 +28,32 @@
                 padding-right: 5px;
             }
         }
+
+
     </style>
 </head>
 <body>
-<form action="{{:U('edit')}}" method="post" class="definewidth m20">
+<form action="index.html" method="post" class="definewidth m20">
 <input type="hidden" name="id" value="" />
 <table class="table table-bordered table-hover ">
     <tr>
-        <td width="10%" class="tableleft">登陆用户名称</td>
-        <td><input type="text" name="username" value="{{$ls['username']}}"/></td>
+        <td width="10%" class="tableleft">机构号</td>
+        <td><input type="text" name="grouptitle" value=""/></td>
     </tr>
     <tr>
-        <td width="10%" class="tableleft">登陆密码</td>
-        <td><input type="text" name="password" value=""/></td>
-    </tr>
-    <tr>
-        <td width="10%" class="tableleft">确认登陆密码</td>
-        <td><input type="text" name="confirm_password" value=""/></td>
-    </tr>
-    <tr>
-        <td width="10%" class="tableleft">真实姓名</td>
-        <td><input type="text" name="real_name" value="{{$ls['real_name']}}"/></td>
-    </tr>
-    <tr>
-        <td width="10%" class="tableleft">联系电话</td>
-        <td><input type="text" name="tel" value="{{$ls['tel']}}"/></td>
-    </tr>
-    <tr>
-        <td width="10%" class="tableleft">联系手机号</td>
-        <td><input type="text" name="mobile_phone" value="{{$ls['mobile_phone']}}"/></td>
-    </tr>
-    <tr>
-        <td width="10%" class="tableleft">E-Mail</td>
-        <td><input type="text" name="email" value="{{$ls['email']}}"/></td>
-    </tr>
-    <tr>
-        <td width="10%" class="tableleft">QQ</td>
-        <td><input type="text" name="qq" value="{{$ls['qq']}}"/></td>
-    </tr>
-    <tr>
-        <td width="10%" class="tableleft">详细地址</td>
-        <td><input type="text" name="address" value="{{$ls['address']}}"/></td>
-    </tr>   
+        <td class="tableleft">机构名称</td>
+        <td ><input type="text" name="moduletitle" value=""/></td>
+    </tr>  
     <tr>
         <td class="tableleft">状态</td>
         <td >
-            <input type="radio" name="user_status" value="1" <if condition="$ls['user_status'] eq 1">  checked </if> /> 启用
-           <input type="radio" name="user_status" value="0" <if condition="$ls['user_status'] eq 0"> checked </if> /> 禁用
+            <input type="radio" name="status" value="1" checked/> 启用
+           <input type="radio" name="status" value="0" /> 禁用
         </td>
     </tr>
     <tr>
         <td class="tableleft"></td>
         <td>
-        	<input type="hidden" name="uId" value="{{$ls['id']}}"/>
             <button type="submit" class="btn btn-primary" type="button">保存</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
         </td>
     </tr>

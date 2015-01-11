@@ -33,39 +33,31 @@
     </style>
 </head>
 <body>
-<form class="form-inline definewidth m20" action="index" method="get">  
-    用户名称：
-    <input type="text" name="userName" id="userName"class="abc input-default" placeholder="" value="<?php echo ($userName); ?>">&nbsp;&nbsp;  
-    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增用户</button>
+<form class="form-inline definewidth m20" action="index.html" method="get">  
+    Banner名称：
+    <input type="text" name="rolename" id="rolename"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
+    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增机构</button>
 </form>
 <table class="table table-bordered table-hover definewidth m10" >
     <thead>
     <tr>
-        <th>编号</th>
-        <th>登录用户</th>
-        <th>真实名称</th>
-        <th>联系电话</th>
+        <th>机构编号</th>
+        <th>机构名称</th>
         <th>状态</th>
-        <th>添加时间</th>
         <th>管理操作</th>
     </tr>
     </thead>
-        <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>            
-            <td><?php echo ($vo['id']); ?></td>
-            <td><?php echo ($vo['username']); ?></td>
-            <td><?php echo ($vo['real_name']); ?></td>
-            <td><?php echo ($vo['phone']); ?></td>
-            <td><?php echo ($vo['status']); ?></td>
-            <td><?php echo ($vo['add_time']); ?></td>
+	     <tr>
+            <td>5</td>
+            <td>管理员</td>
+            <td>1</td>
             <td>
-                  <a href="edit?uId=<?php echo ($vo['id']); ?>">编辑</a>                  
-            </td>            
-        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-    </table>
-    <div class="inline pull-right page">
-        <?php echo ($page_show); ?>
-         <!-- 10122 条记录 1/507 页  <a href='#'>下一页</a>     <span class='current'>1</span><a href='#'>2</a><a href='/chinapost/index.php?m=Label&a=index&p=3'>3</a><a href='#'>4</a><a href='#'>5</a>  <a href='#' >下5页</a> <a href='#' >最后一页</a> -->    
-    </div>
+                  <a href="edit.html">编辑</a>
+                  
+            </td>
+        </tr></table>
+<div class="inline pull-right page">
+         10122 条记录 1/507 页  <a href='#'>下一页</a>     <span class='current'>1</span><a href='#'>2</a><a href='/chinapost/index.php?m=Label&a=index&p=3'>3</a><a href='#'>4</a><a href='#'>5</a>  <a href='#' >下5页</a> <a href='#' >最后一页</a>    </div>
 </body>
 </html>
 <script>

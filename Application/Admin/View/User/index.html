@@ -55,12 +55,11 @@
             <td>{{$vo['id']}}</td>
             <td>{{$vo['username']}}</td>
             <td>{{$vo['real_name']}}</td>
-            <td>{{$vo['tel']}}</td>
-            <td>{{$vo['user_status']}}</td>
+            <td>{{$vo['phone']}}</td>
+            <td>{{$vo['status']}}</td>
             <td>{{$vo['add_time']}}</td>
             <td>
-                  <a href="edit.html">编辑</a>
-                  
+                  <a href="edit?uId={{$vo['id']}}">编辑</a>                  
             </td>            
         </tr>
         </volist>

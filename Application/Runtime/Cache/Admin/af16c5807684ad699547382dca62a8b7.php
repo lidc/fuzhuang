@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="__PUBLICA__/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="__PUBLICA__/css/bootstrap-responsive.css" />
-    <link rel="stylesheet" type="text/css" href="__PUBLICA__/css/style.css" />
-    <script type="text/javascript" src="__PUBLICA__/js/jquery.js"></script>
-    <script type="text/javascript" src="__PUBLICA__/js/jquery.sorted.js"></script>
-    <script type="text/javascript" src="__PUBLICA__/js/bootstrap.js"></script>
-    <script type="text/javascript" src="__PUBLICA__/js/ckform.js"></script>
-    <script type="text/javascript" src="__PUBLICA__/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="/fuzhuang/Application/Admin/Public/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/fuzhuang/Application/Admin/Public/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="/fuzhuang/Application/Admin/Public/css/style.css" />
+    <script type="text/javascript" src="/fuzhuang/Application/Admin/Public/js/jquery.js"></script>
+    <script type="text/javascript" src="/fuzhuang/Application/Admin/Public/js/jquery.sorted.js"></script>
+    <script type="text/javascript" src="/fuzhuang/Application/Admin/Public/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/fuzhuang/Application/Admin/Public/js/ckform.js"></script>
+    <script type="text/javascript" src="/fuzhuang/Application/Admin/Public/js/common.js"></script>
     <style type="text/css">
         body {
             padding-bottom: 40px;
@@ -72,4 +72,4 @@
 
     });
 </script>
-{{$editor}}
+<?php echo ($editor); ?>

@@ -2,7 +2,7 @@
 namespace Admin\Controller;
 use Think\Controller;
 class SystemController extends Controller {
-    public function index(){    	
+    public function index(){
     	$current_time = date('Y-m-d H:i:s');
     	$sys_php_uname = php_uname();	//获取系统类型及版本号
     	$sys_php_sapi_name = php_sapi_name();	//获取PHP运行方式

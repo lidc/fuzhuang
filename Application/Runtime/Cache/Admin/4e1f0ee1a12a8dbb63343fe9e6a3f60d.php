@@ -76,6 +76,12 @@
         </td>
     </tr>
     <tr>
+        <td class="tableleft">内容</td>
+        <td >
+            <textarea cols="40" rows="5" name="textName" id="textName"></textarea>
+        </td>
+    </tr>
+    <tr>
         <td class="tableleft"></td>
         <td>
             <button type="submit" class="btn btn-primary" type="button">保存</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
@@ -92,3 +98,4 @@
 		 });
     });
 </script>
+<?php echo ($editor); ?>

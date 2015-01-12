@@ -2,6 +2,7 @@
 namespace Admin\Controller;
 use Think\Controller;
 use Think\Page;
+use Think\KindEditor;
 class UserController extends Controller {
 		
     public function index(){  
@@ -53,7 +54,8 @@ class UserController extends Controller {
     		$email = isset($_POST['email']) ? in($_POST['email']) : "";
     		$qq = isset($_POST['qq']) ? in($_POST['qq']) : "";
     		$address = isset($_POST['address']) ? in($_POST['address']) : "";
-    		$user_status = isset($_POST['user_status']) ? intval($_POST['user_status']) : 0;
+    		$user_status = isset($_POST['user_status']) ? intval($_POST['user_status']) : 0;    		
+    		
     		$data = array(
     			'username' => $username,
     			'password' => $password,
@@ -126,6 +128,9 @@ class UserController extends Controller {
     	
     		exit;
     	}
+    	$KindEditor_obj = new KindEditor();
+    	$editor_code = $KindEditor_obj->create_editor('textName',700,400);
+    	$this->assign("editor",$editor_code);
     	$this->display();
     }
     

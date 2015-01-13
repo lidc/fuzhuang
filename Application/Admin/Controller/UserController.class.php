@@ -14,7 +14,7 @@ class UserController extends Controller {
         $userAdmin = M('user_admin');
         $nowPage = isset($_GET['p'])?intval($_GET['p']):1;
         $numPerPage = 10;
-        $count = $userAdmin->where('1')->count();
+        $count = $userAdmin->where($where)->count();
         $Page = new Page($count,$numPerPage);
         $list = $userAdmin->field('id,username,real_name,tel,mobile_phone,userIp,user_status,add_time')->where($where)->order('id asc')->page($nowPage.','.$Page->listRows)->select();
         $phone = '';
@@ -35,8 +35,8 @@ class UserController extends Controller {
         	$list[$key]['add_time'] = date('Y-m-d H:i:s',$value['add_time']);
         }
         $page_show = $Page->show();
-        $this->assign("list",$list);
         $this->assign("page_show",$page_show);
+        $this->assign("list",$list);        
         $this->assign("userName",$userName);
         $this->display();
     }
@@ -134,5 +134,8 @@ class UserController extends Controller {
     	$this->display();
     }
     
+    public function delete(){
+        
+    }
     
 }

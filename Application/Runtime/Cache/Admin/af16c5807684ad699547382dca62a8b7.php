@@ -10,7 +10,8 @@
     <script type="text/javascript" src="/fuzhuang/Application/Admin/Public/js/jquery.sorted.js"></script>
     <script type="text/javascript" src="/fuzhuang/Application/Admin/Public/js/bootstrap.js"></script>
     <script type="text/javascript" src="/fuzhuang/Application/Admin/Public/js/ckform.js"></script>
-    <script type="text/javascript" src="/fuzhuang/Application/Admin/Public/js/common.js"></script>
+    <script type="text/javascript" src="/fuzhuang/Application/Admin/Public/js/common.js"></script> 
+
     <style type="text/css">
         body {
             padding-bottom: 40px;
@@ -31,33 +32,55 @@
 
     </style>
 </head>
-<form action="index.html" method="post">
-<table class="table table-bordered table-hover definewidth m10">
+<body>
+<form action="index.html" method="post" class="definewidth m20">
+<input type="hidden" name="id" value="{$menu.id}" />
+<table class="table table-bordered table-hover m10">
     <tr>
-        <td width="10%" class="tableleft">机构号</td>
-        <td><input type="text" name="grouptitle"/></td>
+        <td width="10%" class="tableleft">上级</td>
+        <td>
+            <select name="parentid">
+            	<option value="0">一级菜单</option>
+            	
+            	<option value='1'   />&nbsp;系统管理</option>
+            	<option value='7'   />&nbsp;明信片管理</option>
+            	            
+            </select>
+        </td>
     </tr>
     <tr>
-        <td class="tableleft">机构名称</td>
-        <td><input type="text" name="moduletitle"/></td>
-    </tr>   
+        <td class="tableleft">菜单名称</td>
+        <td><input type="text" name="nav_title" /></td>
+    </tr>
+    <tr>
+        <td class="tableleft">菜单简介</td>
+        <td><textarea cols="40" rows="5" name="nav_desc" id="nav_desc"></textarea></td>
+    </tr>
+    <tr>
+        <td class="tableleft">Model</td>
+        <td><input type="text" name="module"/></td>
+    </tr>
+    <tr>
+        <td class="tableleft">Action</td>
+        <td><input type="text" name="action"/></td>
+    </tr>
     <tr>
         <td class="tableleft">状态</td>
         <td>
-            <input type="radio" name="status" value="1" checked/> 启用
-            <input type="radio" name="status" value="0"/> 禁用
+            <input type="radio" name="status" value="0" checked/> 启用
+            <input type="radio" name="status" value="1"/> 禁用
         </td>
     </tr>
     <tr>
-        <td class="tableleft">内容</td>
-        <td >
-            <textarea cols="40" rows="5" name="textName" id="textName"></textarea>
+        <td class="tableleft">页面内容</td>
+        <td>
+        	<textarea cols="40" rows="5" name="page_content" id="page_content"></textarea>
         </td>
-    </tr>
+    </tr>    
     <tr>
         <td class="tableleft"></td>
         <td>
-            <button type="submit" class="btn btn-primary" type="button">保存</button>&nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
+            <button type="submit" class="btn btn-primary" type="button">保存</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
         </td>
     </tr>
 </table>

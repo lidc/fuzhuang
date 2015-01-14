@@ -1,0 +1,8 @@
+[ 2015-01-14T18:26:10+08:00 ] ::1 /fuzhuang/index.php/Application/Admin/Public/Uploads/admin_img/2015-01-14/54b6443484235.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Application
+NOTIC: [2] include(E:\WWW\fuzhuang\system\core/Tpl/think_exception.tpl) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory E:\WWW\fuzhuang\system\core\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening 'E:\WWW\fuzhuang\system\core/Tpl/think_exception.tpl' for inclusion (include_path='.;C:\php\pear') E:\WWW\fuzhuang\system\core\Library\Think\Think.class.php 第 314 行.
+

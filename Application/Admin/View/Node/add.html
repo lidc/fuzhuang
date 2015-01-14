@@ -33,18 +33,16 @@
     </style>
 </head>
 <body>
-<form action="index.html" method="post" class="definewidth m20">
-<input type="hidden" name="id" value="{$menu.id}" />
+<form action="add" method="post" class="definewidth m20" enctype="multipart/form-data">
 <table class="table table-bordered table-hover m10">
     <tr>
         <td width="10%" class="tableleft">上级</td>
         <td>
             <select name="parentid">
-            	<option value="0">一级菜单</option>
-            	
-            	<option value='1'   />&nbsp;系统管理</option>
-            	<option value='7'   />&nbsp;明信片管理</option>
-            	            
+            	<option value="0">&nbsp;一级菜单</option>
+            	<volist name="list" id="v">
+            	<option value='{{$v['id']}}'/>&nbsp;{{$v['nav_title']}}</option>
+                </volist>            	            
             </select>
         </td>
     </tr>
@@ -54,27 +52,52 @@
     </tr>
     <tr>
         <td class="tableleft">菜单简介</td>
-        <td><textarea cols="40" rows="5" name="nav_desc" id="nav_desc"></textarea></td>
+        <td><textarea cols="40" rows="5" name="nav_desc" id="nav_desc" style="width:380px;"></textarea></td>
     </tr>
     <tr>
-        <td class="tableleft">Model</td>
-        <td><input type="text" name="module"/></td>
+        <td class="tableleft">图片</td>
+        <td>
+            <input type="file" name="nav_photo" id="nav_photo"/>
+        </td>
     </tr>
     <tr>
-        <td class="tableleft">Action</td>
-        <td><input type="text" name="action"/></td>
-    </tr>
+        <td class="tableleft">排序</td>
+        <td>
+            <input class="text" type="text" name="nav_order" value="0" style="width:90px;" onblur="if(/[^0123456789]/g.test(value))value=value.replace(/[^0123456789]/g,'');" onkeyup="if(/[^0123456789]/g.test(value))value=value.replace(/[^0123456789]/g,'');"/>
+        </td>
+    </tr>   
     <tr>
         <td class="tableleft">状态</td>
         <td>
-            <input type="radio" name="status" value="0" checked/> 启用
-            <input type="radio" name="status" value="1"/> 禁用
+            <input type="radio" name="nav_status" value="1" checked/> 启用
+            <input type="radio" name="nav_status" value="0"/> 禁用
         </td>
     </tr>
     <tr>
         <td class="tableleft">页面内容</td>
         <td>
         	<textarea cols="40" rows="5" name="page_content" id="page_content"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td class="tableleft" colspan="2">SEO优化</td>       
+    </tr>
+    <tr>
+        <td class="tableleft">Meta 标题</td>
+        <td>
+            <input type="text" name="meta_title" style="width:380px;"/>
+        </td>
+    </tr>
+    <tr>
+        <td class="tableleft">Meta 关键字</td>
+        <td>
+            <input type="text" name="meta_keywords" style="width:380px;"/>
+        </td>
+    </tr>
+    <tr>
+        <td class="tableleft">Meta 描述</td>
+        <td>
+            <input type="text" name="meta_description" style="width:380px;" />
         </td>
     </tr>    
     <tr>

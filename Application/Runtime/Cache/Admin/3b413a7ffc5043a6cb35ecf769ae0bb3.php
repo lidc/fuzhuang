@@ -51,7 +51,7 @@
     <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr>
            <td><input type="text" name="nav_order" id="nav_order" value="<?php echo ($v['nav_order']); ?>" style="width:36px; text-align:center;"/> </td>
            <td><?php echo ($v['nav_title']); ?></td>
-           <td><?php echo ($v['nav_photo']); ?></td>
+           <td><img src="<?php echo ($v['thumb_photo']); ?>" height="36" /></td>
            <td><?php echo ($v['status']); ?></td>
            <td>
                  <a href="edit?uId=<?php echo ($vo['id']); ?>">编辑</a>    

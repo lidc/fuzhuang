@@ -10,7 +10,8 @@
     <script type="text/javascript" src="__PUBLICA__/js/jquery.sorted.js"></script>
     <script type="text/javascript" src="__PUBLICA__/js/bootstrap.js"></script>
     <script type="text/javascript" src="__PUBLICA__/js/ckform.js"></script>
-    <script type="text/javascript" src="__PUBLICA__/js/common.js"></script>
+    <script type="text/javascript" src="__PUBLICA__/js/common.js"></script> 
+
     <style type="text/css">
         body {
             padding-bottom: 40px;
@@ -31,33 +32,78 @@
 
     </style>
 </head>
-<form action="index.html" method="post">
-<table class="table table-bordered table-hover definewidth m10">
+<body>
+<form action="add" method="post" class="definewidth m20" enctype="multipart/form-data">
+<table class="table table-bordered table-hover m10">
     <tr>
-        <td width="10%" class="tableleft">机构号</td>
-        <td><input type="text" name="grouptitle"/></td>
+        <td width="10%" class="tableleft">上级</td>
+        <td>
+            <select name="parentid">
+            	<option value="0">&nbsp;一级菜单</option>
+            	<volist name="list" id="v">
+            	<option value='{{$v['id']}}'/>&nbsp;{{$v['nav_title']}}</option>
+                </volist>            	            
+            </select>
+        </td>
     </tr>
     <tr>
-        <td class="tableleft">机构名称</td>
-        <td><input type="text" name="moduletitle"/></td>
+        <td class="tableleft">菜单名称</td>
+        <td><input type="text" name="nav_title" /></td>
+    </tr>
+    <tr>
+        <td class="tableleft">菜单简介</td>
+        <td><textarea cols="40" rows="5" name="nav_desc" id="nav_desc" style="width:380px;"></textarea></td>
+    </tr>
+    <tr>
+        <td class="tableleft">图片</td>
+        <td>
+            <input type="file" name="nav_photo" id="nav_photo"/>
+        </td>
+    </tr>
+    <tr>
+        <td class="tableleft">排序</td>
+        <td>
+            <input class="text" type="text" name="nav_order" value="0" style="width:90px;" onblur="if(/[^0123456789]/g.test(value))value=value.replace(/[^0123456789]/g,'');" onkeyup="if(/[^0123456789]/g.test(value))value=value.replace(/[^0123456789]/g,'');"/>
+        </td>
     </tr>   
     <tr>
         <td class="tableleft">状态</td>
         <td>
-            <input type="radio" name="status" value="1" checked/> 启用
-            <input type="radio" name="status" value="0"/> 禁用
+            <input type="radio" name="nav_status" value="1" checked/> 启用
+            <input type="radio" name="nav_status" value="0"/> 禁用
         </td>
     </tr>
     <tr>
-        <td class="tableleft">内容</td>
-        <td >
-            <textarea cols="40" rows="5" name="textName" id="textName"></textarea>
+        <td class="tableleft">页面内容</td>
+        <td>
+        	<textarea cols="40" rows="5" name="page_content" id="page_content"></textarea>
         </td>
     </tr>
+    <tr>
+        <td class="tableleft" colspan="2">SEO优化</td>       
+    </tr>
+    <tr>
+        <td class="tableleft">Meta 标题</td>
+        <td>
+            <input type="text" name="meta_title" style="width:380px;"/>
+        </td>
+    </tr>
+    <tr>
+        <td class="tableleft">Meta 关键字</td>
+        <td>
+            <input type="text" name="meta_keywords" style="width:380px;"/>
+        </td>
+    </tr>
+    <tr>
+        <td class="tableleft">Meta 描述</td>
+        <td>
+            <input type="text" name="meta_description" style="width:380px;" />
+        </td>
+    </tr>    
     <tr>
         <td class="tableleft"></td>
         <td>
-            <button type="submit" class="btn btn-primary" type="button">保存</button>&nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
+            <button type="submit" class="btn btn-primary" type="button">保存</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
         </td>
     </tr>
 </table>

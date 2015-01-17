@@ -2,8 +2,12 @@
 return array(
 	//'配置项'=>'配置值'
 	'TMPL_PARSE_STRING' => array(
-        '__PUBLICA__' => __ROOT__.'/Application/Admin/Public'
-    ),    
+        '__PUBLICA__'       => __ROOT__.'/Application/Admin/Public',                                      //后台公共资源Public路径
+	    '__PUBLIC_FONT__'   => ROOT_PATH.'Application/Admin/Public/font/',                          //字体根目录
+	    '__UPLOAD_URL__'    => __ROOT__.'/Application/Admin/Public/Uploads/', //后台图片访问路径   $_SERVER['HTTP_HOST'].
+        '__UPLOAD_PATH__'   => ROOT_PATH.'Application/Admin/Public/Uploads/',                        //后台图片保存路径
+    ),
+    
     'TMPL_L_DELIM' => '{{',
     'TMPL_R_DELIM' => '}}',
     '__FILE__' => __ROOT__.'/index.php/',
@@ -17,3 +21,5 @@ return array(
     'DB_PORT'               =>  '3306',        // 端口
     'DB_PREFIX'             =>  '',    // 数据库表前缀
 );
+
+

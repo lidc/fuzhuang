@@ -58,7 +58,8 @@
             <td><?php echo ($vo['status']); ?></td>
             <td><?php echo ($vo['add_time']); ?></td>
             <td>
-                  <a href="edit?uId=<?php echo ($vo['id']); ?>">编辑</a>                  
+                  <a href="edit?uId=<?php echo ($vo['id']); ?>">编辑</a>
+                  <a href="delete?uId=<?php echo ($vo['id']); ?>">删除</a>
             </td>            
         </tr><?php endforeach; endif; else: echo "" ;endif; ?>
     </table>

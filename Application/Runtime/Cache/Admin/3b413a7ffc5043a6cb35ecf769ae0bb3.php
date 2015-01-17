@@ -33,31 +33,35 @@
     </style>
 </head>
 <body>
-<form class="form-inline definewidth m20" action="index.html" method="get">  
+<form class="form-inline definewidth m20" action="index" method="get">  
     菜单名称：
-    <input type="text" name="rolename" id="rolename"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
-    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增机构</button>
+    <input type="text" name="nav_title" id="nav_title"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
+    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增菜单</button>
 </form>
 <table class="table table-bordered table-hover definewidth m10" >
     <thead>
     <tr>
-        <th>机构编号</th>
-        <th>机构名称</th>
-        <th>状态</th>
+    	<th>排序</th>
+        <th>菜单标题</th>
+        <th>菜单图片</th>
+        <th>状态</th>        
         <th>管理操作</th>
     </tr>
     </thead>
-	     <tr>
-            <td>5</td>
-            <td>管理员</td>
-            <td>1</td>
-            <td>
-                  <a href="edit.html">编辑</a>
-                  
-            </td>
-        </tr></table>
+    <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr>
+           <td><input type="text" name="nav_order" id="nav_order" value="<?php echo ($v['nav_order']); ?>" style="width:36px; text-align:center;"/> </td>
+           <td><?php echo ($v['nav_title']); ?></td>
+           <td><img src="<?php echo ($v['thumb_photo']); ?>" height="36" /></td>
+           <td><?php echo ($v['status']); ?></td>
+           <td>
+                 <a href="edit?uId=<?php echo ($vo['id']); ?>">编辑</a>    
+                 <a href="delete?uId=<?php echo ($vo['id']); ?>">删除</a>              
+           </td>
+       </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+</table>
 <div class="inline pull-right page">
-         10122 条记录 1/507 页  <a href='#'>下一页</a>     <span class='current'>1</span><a href='#'>2</a><a href='/chinapost/index.php?m=Label&a=index&p=3'>3</a><a href='#'>4</a><a href='#'>5</a>  <a href='#' >下5页</a> <a href='#' >最后一页</a>    </div>
+	<?php echo ($page_show); ?>        
+</div>
 </body>
 </html>
 <script>

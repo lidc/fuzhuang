@@ -34,21 +34,40 @@
 </head>
 <body>
 <form action="index.html" method="post" class="definewidth m20">
-<input type="hidden" name="id" value="" />
-<table class="table table-bordered table-hover ">
+<input type="hidden" name="id" value="{$menu.id}" />
+<table class="table table-bordered table-hover m10">
     <tr>
-        <td width="10%" class="tableleft">机构号</td>
-        <td><input type="text" name="grouptitle" value=""/></td>
+        <td width="10%" class="tableleft">上级</td>
+        <td>
+            <select name="parentid">
+            <option value="0">一级菜单</option><option value='1'   />&nbsp;系统管理</option><option value='7'   />&nbsp;明信片管理</option>            </select>
+        </td>
     </tr>
     <tr>
-        <td class="tableleft">机构名称</td>
-        <td ><input type="text" name="moduletitle" value=""/></td>
-    </tr>  
+        <td class="tableleft">名称</td>
+        <td><input type="text" name="name"/></td>
+    </tr>
+    <tr>
+        <td class="tableleft">Group</td>
+        <td><input type="text" name="group"/></td>
+    </tr>
+    <tr>
+        <td class="tableleft">Model</td>
+        <td><input type="text" name="module"/></td>
+    </tr>
+    <tr>
+        <td class="tableleft">Action</td>
+        <td><input type="text" name="action"/></td>
+    </tr>
+    <tr>
+        <td class="tableleft">备注</td>
+        <td><input type="text" name="remark"/></td>
+    </tr>
     <tr>
         <td class="tableleft">状态</td>
-        <td >
-            <input type="radio" name="status" value="1" checked/> 启用
-           <input type="radio" name="status" value="0" /> 禁用
+        <td>
+            <input type="radio" name="status" value="0" checked/> 启用
+            <input type="radio" name="status" value="1"/> 禁用
         </td>
     </tr>
     <tr>

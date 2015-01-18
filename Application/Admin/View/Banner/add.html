@@ -10,7 +10,8 @@
     <script type="text/javascript" src="__PUBLICA__/js/jquery.sorted.js"></script>
     <script type="text/javascript" src="__PUBLICA__/js/bootstrap.js"></script>
     <script type="text/javascript" src="__PUBLICA__/js/ckform.js"></script>
-    <script type="text/javascript" src="__PUBLICA__/js/common.js"></script>
+    <script type="text/javascript" src="__PUBLICA__/js/common.js"></script> 
+
     <style type="text/css">
         body {
             padding-bottom: 40px;
@@ -27,31 +28,49 @@
                 padding-right: 5px;
             }
         }
-
-
     </style>
+    <script type="text/javascript">
+    function check(){
+     var big_photo=document.form1.big_photo.value;
+     if(big_photo==''){
+       $("#big_photo").attr("name","");
+      }
+    }
+</script>
 </head>
-<form action="index.html" method="post">
-<table class="table table-bordered table-hover definewidth m10">
+<body>
+<form action="add" method="post" class="definewidth m20" name="form1" id="form1" enctype="multipart/form-data">
+<table class="table table-bordered table-hover m10">
     <tr>
-        <td width="10%" class="tableleft">机构号</td>
-        <td><input type="text" name="grouptitle"/></td>
+        <td class="tableleft">Banner 标题</td>
+        <td ><input type="text" name="banner_title" /></td>
     </tr>
     <tr>
-        <td class="tableleft">机构名称</td>
-        <td><input type="text" name="moduletitle"/></td>
-    </tr>   
+        <td class="tableleft">链接网址</td>
+        <td><input type="text" name="website" /></td>
+    </tr>
     <tr>
-        <td class="tableleft">状态</td>
+        <td class="tableleft">图片</td>
         <td>
-            <input type="radio" name="status" value="1" checked/> 启用
-            <input type="radio" name="status" value="0"/> 禁用
+            <input type="file" name="big_photo" id="big_photo"/>
         </td>
     </tr>
     <tr>
+        <td class="tableleft">排序</td>
+        <td>
+            <input class="text" type="text" name="myorder" value="0" style="width:90px;" onblur="if(/[^0123456789]/g.test(value))value=value.replace(/[^0123456789]/g,'');" onkeyup="if(/[^0123456789]/g.test(value))value=value.replace(/[^0123456789]/g,'');"/>
+        </td>
+    </tr>   
+    <tr>
+        <td class="tableleft">Banner 描述</td>
+        <td>
+            <textarea cols="60" rows="6" name="banner_desc" id="banner_desc"></textarea>
+        </td>
+    </tr>       
+    <tr>
         <td class="tableleft"></td>
         <td>
-            <button type="submit" class="btn btn-primary" type="button">保存</button>&nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
+            <button type="submit" class="btn btn-primary" onclick="return check();">保存</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
         </td>
     </tr>
 </table>
@@ -60,9 +79,9 @@
 </html>
 <script>
     $(function () {       
-		$('#backid').click(function(){
-				window.location.href="index.html";
-		 });
+        $('#backid').click(function(){
+                window.location.href="index.html";
+         });
 
     });
 </script>

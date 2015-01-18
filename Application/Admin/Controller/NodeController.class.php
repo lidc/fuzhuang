@@ -228,7 +228,7 @@ class NodeController extends Controller {
                 echo "<script>alert('修改成功！');location.href='index';</script>";      
                 exit;         
             }else{
-                echo "<script>alert('添加失败！');location.href='index';</script>";
+                echo "<script>alert('修改失败！');location.href='index';</script>";
                 exit;
             }
         }

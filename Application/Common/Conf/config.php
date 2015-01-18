@@ -6,6 +6,7 @@ return array(
 	    '__PUBLIC_FONT__'   => ROOT_PATH.'Application/Admin/Public/font/',                          //字体根目录
 	    '__UPLOAD_URL__'    => __ROOT__.'/Application/Admin/Public/Uploads/', //后台图片访问路径   $_SERVER['HTTP_HOST'].
         '__UPLOAD_PATH__'   => ROOT_PATH.'Application/Admin/Public/Uploads/',                        //后台图片保存路径
+        '__PUBLICS__' => __PUBLIC__,
     ),
     
     'TMPL_L_DELIM' => '{{',

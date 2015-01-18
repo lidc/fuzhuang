@@ -28,9 +28,16 @@
                 padding-right: 5px;
             }
         }
-
-
     </style>
+    <script type="text/javascript">
+    function check(){
+     var nav_photo=document.form1.nav_photo.value;
+     if(nav_photo==''){
+       $("#nav_photo").attr("name","");
+       // return false;
+      }
+    }
+</script>
 </head>
 <body>
 <form action="add" method="post" class="definewidth m20" enctype="multipart/form-data">
@@ -103,7 +110,7 @@
     <tr>
         <td class="tableleft"></td>
         <td>
-            <button type="submit" class="btn btn-primary" type="button">保存</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
+            <button type="submit" class="btn btn-primary" onclick="return check();" >保存</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
         </td>
     </tr>
 </table>

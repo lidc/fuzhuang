@@ -1,0 +1,1986 @@
+[ 2015-01-17T11:55:17+08:00 ] ::1 /fuzhuang/index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.234013s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.024002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant logout - assumed 'logout' E:\www\fuzhuang\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 16 行.
+NOTIC: [8] Undefined variable: __FILE__ E:\www\fuzhuang\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 53 行.
+NOTIC: [8] Undefined variable: __FILE__ E:\www\fuzhuang\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 59 行.
+NOTIC: [8] Undefined variable: __FILE__ E:\www\fuzhuang\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 59 行.
+NOTIC: [8] Undefined variable: __FILE__ E:\www\fuzhuang\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 59 行.
+NOTIC: [8] Undefined variable: __FILE__ E:\www\fuzhuang\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 59 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.020001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.020001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009001s ]
+
+[ 2015-01-17T11:55:19+08:00 ] ::1 /fuzhuang/index.php/Admin/System/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T11:56:01+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.4830s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0410s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'thumb_photo' in 'field list'
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Filename cannot be empty E:\www\fuzhuang\system\core\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening '' for inclusion (include_path='.;C:\php\pear') E:\www\fuzhuang\system\core\Library\Think\Think.class.php 第 314 行.
+
+[ 2015-01-17T11:57:29+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.174010s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.174010s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T11:57:33+08:00 ] ::1 /fuzhuang/index.php/Admin/User/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_admin` [ RunTime:0.0070s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\fuzhuang\system\core\Library\Think\Db\Driver.class.php 第 488 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `user_admin` LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\fuzhuang\system\core\Library\Think\Db\Driver.class.php 第 488 行.
+SQL: SELECT `id`,`username`,`real_name`,`tel`,`mobile_phone`,`userIp`,`user_status`,`add_time` FROM `user_admin` ORDER BY id asc LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-01-17T11:57:34+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T11:57:35+08:00 ] ::1 /fuzhuang/index.php/Admin/User/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_admin` [ RunTime:0.0100s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\fuzhuang\system\core\Library\Think\Db\Driver.class.php 第 488 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `user_admin` LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\fuzhuang\system\core\Library\Think\Db\Driver.class.php 第 488 行.
+SQL: SELECT `id`,`username`,`real_name`,`tel`,`mobile_phone`,`userIp`,`user_status`,`add_time` FROM `user_admin` ORDER BY id asc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-01-17T11:57:36+08:00 ] ::1 /fuzhuang/index.php/Admin/System/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T11:57:38+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T11:57:44+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit?nav_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `nav_page` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `page_content` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`nav_title`,`pid` FROM `nav_page` WHERE ( nav_status=1 AND pid=0 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T12:50:55+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-01-17T12:50:58+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit?nav_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `nav_page` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `page_content` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`nav_title`,`pid` FROM `nav_page` WHERE ( nav_status=1 AND pid=0 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-01-17T12:51:01+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0040s ]
+SQL: UPDATE `nav_page` SET `pid`='2',`nav_title`='企业文化',`nav_desc`='企业文化',`nav_order`='2',`nav_status`='1',`add_time`='1421470261',`meta_title`='企业文化',`meta_keywords`='企业文化',`meta_description`='企业文化' WHERE ( id=4 ) [ RunTime:0.0640s ]
+SQL: UPDATE `page_content` SET `content`='企业文化' WHERE ( nav_id=4 ) [ RunTime:0.0010s ]
+
+[ 2015-01-17T12:51:04+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T12:52:45+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-01-17T12:52:46+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T12:52:48+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-01-17T12:52:49+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit?nav_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `nav_page` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `page_content` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`nav_title`,`pid` FROM `nav_page` WHERE ( nav_status=1 AND pid=0 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T12:52:53+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0080s ]
+SQL: UPDATE `nav_page` SET `pid`='2',`nav_title`='企业文化',`nav_desc`='企业文化',`nav_order`='2',`nav_status`='1',`add_time`='1421470373',`meta_title`='企业文化',`meta_keywords`='企业文化',`meta_description`='企业文化' WHERE ( id=4 ) [ RunTime:0.0010s ]
+SQL: UPDATE `page_content` SET `content`='企业文化' WHERE ( nav_id=4 ) [ RunTime:0.0010s ]
+
+[ 2015-01-17T12:52:55+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T12:53:35+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T12:53:38+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit?nav_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `nav_page` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `page_content` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`nav_title`,`pid` FROM `nav_page` WHERE ( nav_status=1 AND pid=0 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T12:57:05+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T12:57:10+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit?nav_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `nav_page` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `page_content` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`nav_title`,`pid` FROM `nav_page` WHERE ( nav_status=1 AND pid=0 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T12:57:14+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0090s ]
+SQL: UPDATE `nav_page` SET `pid`='2',`nav_title`='企业文化',`nav_desc`='企业文化',`nav_order`='2',`nav_status`='1',`add_time`='1421470634',`meta_title`='企业文化',`meta_keywords`='企业文化',`meta_description`='企业文化' WHERE ( id=4 ) [ RunTime:0.0010s ]
+SQL: UPDATE `page_content` SET `content`='企业文化' WHERE ( nav_id=4 ) [ RunTime:0.0000s ]
+
+[ 2015-01-17T12:57:16+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0170s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T12:57:45+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit?nav_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `nav_page` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `page_content` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`nav_title`,`pid` FROM `nav_page` WHERE ( nav_status=1 AND pid=0 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T12:57:52+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0030s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T12:57:55+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit?nav_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `nav_page` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `page_content` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`nav_title`,`pid` FROM `nav_page` WHERE ( nav_status=1 AND pid=0 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T12:58:01+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0150s ]
+SQL: UPDATE `nav_page` SET `pid`='2',`nav_title`='企业文化',`nav_desc`='企业文化',`nav_order`='2',`nav_status`='1',`add_time`='1421470681',`meta_title`='企业文化',`meta_keywords`='企业文化',`meta_description`='企业文化' WHERE ( id=4 ) [ RunTime:0.0010s ]
+SQL: UPDATE `page_content` SET `content`='企业文化' WHERE ( nav_id=4 ) [ RunTime:0.0000s ]
+
+[ 2015-01-17T12:58:04+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T12:58:14+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-01-17T12:59:29+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit?nav_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `nav_page` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `page_content` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`nav_title`,`pid` FROM `nav_page` WHERE ( nav_status=1 AND pid=0 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T12:59:43+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0110s ]
+SQL: UPDATE `nav_page` SET `pid`='2',`nav_title`='企业文化',`nav_desc`='企业文化',`nav_order`='2',`nav_status`='1',`add_time`='1421470783',`meta_title`='企业文化',`meta_keywords`='企业文化',`meta_description`='企业文化' WHERE ( id=4 ) [ RunTime:0.0000s ]
+SQL: UPDATE `page_content` SET `content`='企业文化' WHERE ( nav_id=4 ) [ RunTime:0.0000s ]
+
+[ 2015-01-17T12:59:45+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T12:59:55+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit?nav_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `nav_page` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `page_content` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`nav_title`,`pid` FROM `nav_page` WHERE ( nav_status=1 AND pid=0 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T12:59:59+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T13:01:11+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit?nav_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `nav_page` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `page_content` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`nav_title`,`pid` FROM `nav_page` WHERE ( nav_status=1 AND pid=0 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T13:01:17+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0100s ]
+SQL: UPDATE `nav_page` SET `pid`='2',`nav_title`='企业文化',`nav_desc`='企业文化',`nav_order`='2',`nav_status`='1',`add_time`='1421470877',`meta_title`='企业文化',`meta_keywords`='企业文化',`meta_description`='企业文化' WHERE ( id=4 ) [ RunTime:0.0010s ]
+SQL: UPDATE `page_content` SET `content`='企业文化' WHERE ( nav_id=4 ) [ RunTime:0.0010s ]
+
+[ 2015-01-17T13:01:20+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T13:01:23+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit?nav_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `nav_page` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `page_content` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`nav_title`,`pid` FROM `nav_page` WHERE ( nav_status=1 AND pid=0 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-01-17T13:02:14+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T13:02:17+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit?nav_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `nav_page` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `page_content` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`nav_title`,`pid` FROM `nav_page` WHERE ( nav_status=1 AND pid=0 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T13:02:25+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0110s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\www\fuzhuang\system\core\Library\Think\Upload.class.php 第 170 行.
+SQL: UPDATE `nav_page` SET `pid`='2',`nav_title`='企业文化',`nav_desc`='企业文化',`nav_order`='2',`nav_status`='1',`add_time`='1421470944',`meta_title`='企业文化',`meta_keywords`='企业文化',`meta_description`='企业文化',`nav_photo`='/fuzhuang/Application/Admin/Public/Uploads/Original_Img/2015-01-17/54b9ece0c5259.png',`thumb_photo`='/fuzhuang/Application/Admin/Public/Uploads/Thumb_Img/2015-01-17/54b9ece0c5259.png' WHERE ( id=4 ) [ RunTime:0.0010s ]
+SQL: UPDATE `page_content` SET `content`='企业文化' WHERE ( nav_id=4 ) [ RunTime:0.0000s ]
+
+[ 2015-01-17T13:02:27+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T13:02:59+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T13:03:00+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit?nav_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `nav_page` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `page_content` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`nav_title`,`pid` FROM `nav_page` WHERE ( nav_status=1 AND pid=0 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T13:03:01+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit?nav_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `nav_page` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `page_content` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`nav_title`,`pid` FROM `nav_page` WHERE ( nav_status=1 AND pid=0 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T13:03:06+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0080s ]
+SQL: UPDATE `nav_page` SET `pid`='2',`nav_title`='企业文化',`nav_desc`='企业文化',`nav_order`='2',`nav_status`='1',`add_time`='1421470986',`meta_title`='企业文化',`meta_keywords`='企业文化',`meta_description`='企业文化' WHERE ( id=4 ) [ RunTime:0.0000s ]
+SQL: UPDATE `page_content` SET `content`='企业文化' WHERE ( nav_id=4 ) [ RunTime:0.0000s ]
+
+[ 2015-01-17T13:03:08+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T13:03:11+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit?nav_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `nav_page` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `page_content` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`nav_title`,`pid` FROM `nav_page` WHERE ( nav_status=1 AND pid=0 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T13:03:20+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0070s ]
+SQL: UPDATE `nav_page` SET `pid`='2',`nav_title`='企业文化',`nav_desc`='企业文化',`nav_order`='2',`nav_status`='1',`add_time`='1421471000',`meta_title`='企业文化',`meta_keywords`='企业文化',`meta_description`='企业文化' WHERE ( id=4 ) [ RunTime:0.0010s ]
+SQL: UPDATE `page_content` SET `content`='企业文化' WHERE ( nav_id=4 ) [ RunTime:0.0000s ]
+
+[ 2015-01-17T13:03:24+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T13:04:09+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T13:04:11+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit?nav_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `nav_page` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `page_content` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`nav_title`,`pid` FROM `nav_page` WHERE ( nav_status=1 AND pid=0 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T13:04:17+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0050s ]
+SQL: UPDATE `nav_page` SET `pid`='2',`nav_title`='企业文化',`nav_desc`='企业文化',`nav_order`='2',`nav_status`='1',`add_time`='1421471057',`meta_title`='企业文化',`meta_keywords`='企业文化',`meta_description`='企业文化' WHERE ( id=4 ) [ RunTime:0.0000s ]
+SQL: UPDATE `page_content` SET `content`='企业文化' WHERE ( nav_id=4 ) [ RunTime:0.0000s ]
+
+[ 2015-01-17T13:04:19+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-01-17T13:04:22+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit?nav_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `nav_page` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `page_content` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`nav_title`,`pid` FROM `nav_page` WHERE ( nav_status=1 AND pid=0 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T13:04:35+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0080s ]
+SQL: UPDATE `nav_page` SET `pid`='2',`nav_title`='企业文化',`nav_desc`='企业文化',`nav_order`='2',`nav_status`='1',`add_time`='1421471075',`meta_title`='企业文化',`meta_keywords`='企业文化',`meta_description`='企业文化' WHERE ( id=4 ) [ RunTime:0.0000s ]
+SQL: UPDATE `page_content` SET `content`='企业文化' WHERE ( nav_id=4 ) [ RunTime:0.0000s ]
+
+[ 2015-01-17T13:04:38+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T13:04:58+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T13:05:00+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit?nav_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `nav_page` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `page_content` WHERE ( nav_id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`nav_title`,`pid` FROM `nav_page` WHERE ( nav_status=1 AND pid=0 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T13:05:06+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0050s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\www\fuzhuang\system\core\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [2] mkdir() [<a href='function.mkdir'>function.mkdir</a>]: File exists E:\www\fuzhuang\Application\Admin\Controller\NodeController.class.php 第 202 行.
+SQL: UPDATE `nav_page` SET `pid`='2',`nav_title`='企业文化',`nav_desc`='企业文化',`nav_order`='2',`nav_status`='1',`add_time`='1421471106',`meta_title`='企业文化',`meta_keywords`='企业文化',`meta_description`='企业文化',`nav_photo`='/fuzhuang/Application/Admin/Public/Uploads/Original_Img/2015-01-17/54b9ed8226732.png',`thumb_photo`='/fuzhuang/Application/Admin/Public/Uploads/Thumb_Img/2015-01-17/54b9ed8226732.png' WHERE ( id=4 ) [ RunTime:0.0010s ]
+SQL: UPDATE `page_content` SET `content`='企业文化' WHERE ( nav_id=4 ) [ RunTime:0.0000s ]
+
+[ 2015-01-17T13:05:08+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0160s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0020s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T13:05:34+08:00 ] ::1 /fuzhuang/index.php/Admin/User/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_admin` [ RunTime:0.0180s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\fuzhuang\system\core\Library\Think\Db\Driver.class.php 第 488 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `user_admin` LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\fuzhuang\system\core\Library\Think\Db\Driver.class.php 第 488 行.
+SQL: SELECT `id`,`username`,`real_name`,`tel`,`mobile_phone`,`userIp`,`user_status`,`add_time` FROM `user_admin` ORDER BY id asc LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-01-17T13:05:34+08:00 ] ::1 /fuzhuang/index.php/Admin/System/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T13:05:37+08:00 ] ::1 /fuzhuang/index.php/Admin/User/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_admin` [ RunTime:0.0130s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\fuzhuang\system\core\Library\Think\Db\Driver.class.php 第 488 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `user_admin` LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\fuzhuang\system\core\Library\Think\Db\Driver.class.php 第 488 行.
+SQL: SELECT `id`,`username`,`real_name`,`tel`,`mobile_phone`,`userIp`,`user_status`,`add_time` FROM `user_admin` ORDER BY id asc LIMIT 0,10   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T13:05:38+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.084005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.084005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-01-17T13:05:38+08:00 ] ::1 /fuzhuang/index.php/Admin/Banner/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T18:34:39+08:00 ] ::1 /fuzhuang/index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.074004s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.178011s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.178011s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.023001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.023001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.016001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.017001s ]
+
+[ 2015-01-17T18:34:40+08:00 ] ::1 /fuzhuang/index.php/Admin/Public/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T18:34:52+08:00 ] ::1 /fuzhuang/index.php/Admin/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_admin` [ RunTime:0.3510s ]
+SQL: SELECT `password` FROM `user_admin` WHERE ( username='admin' ) LIMIT 1   [ RunTime:0.0220s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant logout - assumed 'logout' E:\www\fuzhuang\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 16 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-01-17T18:34:53+08:00 ] ::1 /fuzhuang/index.php/Admin/System/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T18:34:56+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.2020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0690s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.145008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.145008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2015-01-17T18:36:57+08:00 ] ::1 /fuzhuang/index.php/Admin/Banner/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.093005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.094005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T18:48:35+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T18:48:48+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/edit?nav_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `page_content` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `nav_page` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `page_content` WHERE ( nav_id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`nav_title`,`pid` FROM `nav_page` WHERE ( nav_status=1 AND pid=0 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-01-17T18:48:48+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/33.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T18:50:28+08:00 ] ::1 /fuzhuang/index.php/Admin/Banner/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T18:50:33+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=2 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-01-17T18:51:26+08:00 ] ::1 /fuzhuang/index.php/Admin/Node/index?nav_title=%E9%A6%96%E9%A1%B5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `nav_page` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `nav_page` WHERE ( pid=0 AND nav_title like '%首页%'  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=0 AND nav_title like '%首页%'  ) ORDER BY nav_order LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`nav_title`,`nav_photo`,`thumb_photo`,`nav_order`,`nav_status` FROM `nav_page` WHERE ( pid=1 ) ORDER BY nav_order  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T18:51:30+08:00 ] ::1 /fuzhuang/index.php/Admin/Banner/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T18:53:44+08:00 ] ::1 /fuzhuang/index.php/Admin/Banner/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T19:25:46+08:00 ] ::1 /fuzhuang/index.php/Admin/Banner/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T19:25:47+08:00 ] ::1 /fuzhuang/index.php/Admin/Banner/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: editor E:\www\fuzhuang\Application\Runtime\Cache\Admin\fdb6517bd5618a603440d3f60f8d1032.php 第 96 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-01-17T19:26:15+08:00 ] ::1 /fuzhuang/index.php/Admin/Banner/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T19:26:18+08:00 ] ::1 /fuzhuang/index.php/Admin/Banner/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: editor E:\www\fuzhuang\Application\Runtime\Cache\Admin\fdb6517bd5618a603440d3f60f8d1032.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-01-17T19:30:21+08:00 ] ::1 /fuzhuang/index.php/Admin/Banner/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T19:30:22+08:00 ] ::1 /fuzhuang/index.php/Admin/Banner/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-17T19:30:37+08:00 ] ::1 /fuzhuang/index.php/Admin/Banner/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-01-17T19:30:38+08:00 ] ::1 /fuzhuang/index.php/Admin/Banner/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

@@ -19,7 +19,6 @@
         .sidebar-nav {
             padding: 9px 0;
         }
-
         @media (max-width: 980px) {
             /* Enable use of floated navbar text */
             .navbar-text.pull-right {
@@ -28,12 +27,19 @@
                 padding-right: 5px;
             }
         }
-
-
     </style>
+    <script type="text/javascript">
+        function check(){
+         var nav_photo=$("#nav_photo").val();
+         if(nav_photo==''){
+           $("#nav_photo").attr("name","");
+           // return false;
+          }
+        }
+    </script>
 </head>
 <body>
-<form action="edit" method="post" class="definewidth m20" enctype="multipart/form-data">
+<form action="edit" method="post" class="definewidth m20" id="form1" name="form1" enctype="multipart/form-data">
 <input type="hidden" name="id" value="{{$nl.id}}" />
 <table class="table table-bordered table-hover m10">
     <tr>
@@ -108,7 +114,7 @@
     <tr>
         <td class="tableleft"></td>
         <td>
-            <button type="submit" class="btn btn-primary" type="button">保存</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
+            <button type="submit" class="btn btn-primary" onclick="return check();"/>保存</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
         </td>
     </tr>
 </table>

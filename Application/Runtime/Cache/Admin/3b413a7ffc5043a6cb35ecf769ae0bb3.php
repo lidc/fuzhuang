@@ -32,7 +32,7 @@
 <body>
 <form class="form-inline definewidth m20" action="index" method="get">  
     菜单名称：
-    <input type="text" name="nav_title" id="nav_title"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
+    <input type="text" name="nav_title" id="nav_title"class="abc input-default" placeholder="" value="<?php echo ($nav_title); ?>">&nbsp;&nbsp;  
     <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增菜单</button>
 </form>
 <table class="table table-bordered table-hover definewidth m10" >
@@ -52,7 +52,7 @@
 	           <td><?php echo ($v['status']); ?></td>
 	           <td>
 	                 <a href="edit?nav_id=<?php echo ($v['id']); ?>">编辑</a>    
-	                 <a href="delete?nav_id=<?php echo ($v['id']); ?>">删除</a>              
+	                 <a href="delete?id=<?php echo ($v['id']); ?>">删除</a>              
 	           </td>
 	       </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 </table>
@@ -64,7 +64,7 @@
 <script>
     $(function () {        
 		$('#addnew').click(function(){
-				window.location.href="add.html";
+				window.location.href="add";
 		 });
     });
 
@@ -72,7 +72,7 @@
 	{		
 		if(confirm("确定要删除吗？"))
 		{		
-			var url = "index.html";			
+			var url = "index";			
 			window.location.href=url;		
 		}	
 	}

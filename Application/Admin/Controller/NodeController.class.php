@@ -129,12 +129,12 @@ class NodeController extends Controller {
                 $nav_content = M('page_content');
                 $result = $nav_content->data($data_c)->add();
                 if($result){
-                    echo "<script>alert('添加成功！');</script>";
+                    echo "<script>alert('添加成功！');location.href='index';</script>";
                 }else{
-                    echo "<script>alert('添加失败！');</script>";
+                    echo "<script>alert('添加失败！');location.href='add';</script>";
                 }
             }else{
-                echo "<script>alert('添加失败！');</script>";
+                echo "<script>alert('添加失败！');location.href='add';</script>";
             }
 
         }
@@ -249,5 +249,26 @@ class NodeController extends Controller {
         $editor_code = $KindEditor_obj->create_editor('page_content',1000,380);
         $this->assign("editor",$editor_code);
         $this->display();
+    }
+    
+    public function delete(){
+    	$nav_page = M('nav_page');
+    	$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+    	if(!$id){
+    		echo "无参数！";
+    		exit();
+    	}
+    	$count = $nav_page->where('pid='.$id)->count();
+    	if($count>0){
+    		echo "<script>alert('删除失败,有子级关联关系，请先删除子级！');location.href='index';</script>";
+    		exit();
+    	}else{
+    		$result = $nav_page->where('id='.$id)->delete();
+    		if($result){
+    			echo "<script>alert('删除成功！');location.href='index';</script>";
+    		}else {
+    			echo "<script>alert('删除失败！');location.href='index';</script>";
+    		}
+    	}
     }
 }

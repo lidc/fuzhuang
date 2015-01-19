@@ -53,7 +53,7 @@
             <td><?php echo ($v['website']); ?></td>
             <td>
                   <a href="edit?bid=<?php echo ($v['id']); ?>">编辑</a>
-                  
+                  <a href="delete?id=<?php echo ($v['id']); ?>">删除</a>
             </td>
         </tr><?php endforeach; endif; else: echo "" ;endif; ?>
     </table>
@@ -67,7 +67,7 @@
         
 		$('#addnew').click(function(){
 
-				window.location.href="add.html";
+				window.location.href="add";
 		 });
 
 
@@ -80,7 +80,7 @@
 		if(confirm("确定要删除吗？"))
 		{
 		
-			var url = "index.html";
+			var url = "index";
 			
 			window.location.href=url;		
 		

@@ -51,8 +51,8 @@
 	           <td><img src="<?php echo ($v['small_img']); ?>" style="height:42px;" /></td>
 	           <td><?php echo ($v['status']); ?></td>
 	           <td>
-                 <a href="edit?nav_id=<?php echo ($v['id']); ?>">编辑</a>    
-                 <a href="delete?nav_id=<?php echo ($v['id']); ?>">删除</a>              
+                 <a href="edit?id=<?php echo ($v['id']); ?>">编辑</a>    
+                 <a href="delete?id=<?php echo ($v['id']); ?>">删除</a>              
 	           </td>
 	       </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 </table>

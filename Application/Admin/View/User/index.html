@@ -60,7 +60,7 @@
             <td>{{$vo['add_time']}}</td>
             <td>
                   <a href="edit?uId={{$vo['id']}}">编辑</a>
-                  <a href="delete?uId={{$vo['id']}}">删除</a>
+                  <a href="delete?id={{$vo['id']}}">删除</a>
             </td>            
         </tr>
         </volist>
@@ -72,31 +72,17 @@
 </body>
 </html>
 <script>
-    $(function () {
-        
+    $(function () {        
 		$('#addnew').click(function(){
-
-				window.location.href="add.html";
+				window.location.href="add";
 		 });
-
-
     });
-
 	function del(id)
-	{
-		
-		
+	{	
 		if(confirm("确定要删除吗？"))
-		{
-		
-			var url = "index.html";
-			
-			window.location.href=url;		
-		
+		{	
+			var url = "index";			
+			window.location.href=url;	
 		}
-	
-	
-	
-	
 	}
 </script>

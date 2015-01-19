@@ -45,7 +45,7 @@
     <tr>
         <td width="10%" class="tableleft">上级</td>
         <td>
-            <select name="parentid">{{$nl['pid']}}
+            <select name="parentid">
                 <option value="0">&nbsp;一级菜单</option>
                 <volist name="list" id="v">
                 <option value='{{$v['id']}}' <if condition="$v['id'] eq $nl['pid']" > selected </if> />&nbsp;{{$v['nav_title']}}</option>

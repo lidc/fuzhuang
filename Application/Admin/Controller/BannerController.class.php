@@ -174,4 +174,20 @@ class BannerController extends Controller {
     	$this->assign("ls",$list);    	
     	$this->display();
     }
+    
+    public function delete(){
+    	$banner = M('banner'); 
+    	$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+    	if(!$id){
+    		echo "无参数！";
+    		exit();
+    	}
+    	$result = $banner->where('id='.$id)->delete();
+    	if($result){
+    		echo "<script>alert('删除成功！');location.href='index';</script>";
+    	}else {
+    		echo "<script>alert('删除失败！');location.href='index';</script>";
+    	}
+    
+    }
 }

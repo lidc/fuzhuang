@@ -59,7 +59,7 @@
             <td><?php echo ($vo['add_time']); ?></td>
             <td>
                   <a href="edit?uId=<?php echo ($vo['id']); ?>">编辑</a>
-                  <a href="delete?uId=<?php echo ($vo['id']); ?>">删除</a>
+                  <a href="delete?id=<?php echo ($vo['id']); ?>">删除</a>
             </td>            
         </tr><?php endforeach; endif; else: echo "" ;endif; ?>
     </table>
@@ -70,31 +70,17 @@
 </body>
 </html>
 <script>
-    $(function () {
-        
+    $(function () {        
 		$('#addnew').click(function(){
-
-				window.location.href="add.html";
+				window.location.href="add";
 		 });
-
-
     });
-
 	function del(id)
-	{
-		
-		
+	{	
 		if(confirm("确定要删除吗？"))
-		{
-		
-			var url = "index.html";
-			
-			window.location.href=url;		
-		
+		{	
+			var url = "index";			
+			window.location.href=url;	
 		}
-	
-	
-	
-	
 	}
 </script>

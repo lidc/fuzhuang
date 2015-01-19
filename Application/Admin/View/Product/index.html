@@ -31,16 +31,18 @@
 </head>
 <body>
 <form class="form-inline definewidth m20" action="index" method="get">  
-    菜单名称：
-    <input type="text" name="nav_title" id="nav_title"class="abc input-default" placeholder="" value="{{$nav_title}}">&nbsp;&nbsp;  
-    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增菜单</button>
+    产品名称：
+    <input type="text" name="nav_title" id="nav_title"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
+    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增产品</button>
 </form>
 <table class="table table-bordered table-hover definewidth m10" >
     <thead>
     <tr>
-    	<th>排序</th>
-        <th>菜单标题</th>
-        <th>菜单图标</th>
+    	<th>序号</th>
+        <th>产品名称</th>
+        <th>所在分类</th>
+        <th>所在品牌</th>
+        <th>产品图片</th>
         <th>状态</th>        
         <th>管理操作</th>
     </tr>
@@ -50,6 +52,8 @@
 	           <td><if condition="($v['childY'] eq $v['pid']) and ($v['pid'] neq 0) "> &nbsp;&nbsp;&nbsp; &lfloor; </if> <input type="text" name="nav_order" id="nav_order" value="{{$v['nav_order']}}" style="width:36px; text-align:center;"/> </td>
 	           <td>{{$v['nav_title']}}</td>
 	           <td><img src="{{$v['thumb_photo']}}" style="height:42px;" /></td>
+	           <td>{{$v['status']}}</td>
+	           <td>{{$v['status']}}</td>
 	           <td>{{$v['status']}}</td>
 	           <td>
 	                 <a href="edit?nav_id={{$v['id']}}">编辑</a>    

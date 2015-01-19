@@ -32,13 +32,7 @@
       </li>
       <li class="nav-item dl-selected">
         <div class="nav-item-inner nav-order">新闻资讯</div>
-      </li>
-      <li class="nav-item dl-selected">
-        <div class="nav-item-inner nav-order">产品管理</div>
-      </li>
-      <li class="nav-item dl-selected">
-        <div class="nav-item-inner nav-order">新闻管理</div>
-      </li>
+      </li>     
     </ul>
   </div>
   <ul id="J_NavContent" class="dl-tab-conten"> 
@@ -56,7 +50,7 @@
     //     });
     // });    
   BUI.use('common/main',function(){
-        var config = [{id:'1',homePage : '2',menu:[{text:'系统管理',items:[{id:'2',text:'系统信息',href:'{{$__FILE__}}Admin/System/index'},{id:'3',text:'用户管理',href:'{{$__FILE__}}Admin/User/index'},{id:'4',text:'菜单管理',href:'{{$__FILE__}}Admin/Node/index'},{id:'5',text:'Banner管理',href:'{{$__FILE__}}Admin/Banner/index'}]}]},{id:'7',menu:[{text:'产品管理',items:[{id:'9',text:'产品列表',href:'Product/index.html'},{id:'10',text:'产品添加',href:'Product/add.html'}]}]},{id:'11',menu:[{text:'创意设计',items:[{id:'12',text:'设计类资讯',href:'Design/index.html'},{id:'13',text:'设计添加',href:'Design/add.html'}]}]},{id:'14',menu:[{text:'新闻资讯',items:[{id:'15',text:'新闻列表',href:'News/index.html'},{id:'16',text:'新闻添加',href:'News/add.html'}]}]}];
+        var config = [{id:'1',homePage : '2',menu:[{text:'系统管理',items:[{id:'2',text:'系统信息',href:'{{$__FILE__}}Admin/System/index'},{id:'3',text:'用户管理',href:'{{$__FILE__}}Admin/User/index'},{id:'4',text:'菜单管理',href:'{{$__FILE__}}Admin/Node/index'},{id:'5',text:'Banner管理',href:'{{$__FILE__}}Admin/Banner/index'}]}]},{id:'7', homePage : '9', menu:[{text:'产品管理',items:[{id:'9',text:'产品列表',href:'{{$__FILE__}}Admin/Product/index'},{id:'10',text:'产品类别',href:'{{$__FILE__}}Admin/ProductCategory/index'},{id:'11',text:'产品品牌',href:'{{$__FILE__}}Admin/Brand/index'}]}]},{id:'13',homePage : '14',menu:[{text:'创意设计', items:[{id:'14',text:'设计类资讯',href:'{{$__FILE__}}Admin/Design/index'},{id:'15',text:'设计分类',href:'{{$__FILE__}}Admin/DesignCategory/index'}]}]},{id:'17', homePage : '18',menu:[{text:'新闻资讯', items:[{id:'18',text:'新闻列表',href:'{{$__FILE__}}Admin/News/index'},{id:'19',text:'新闻分类',href:'{{$__FILE__}}Admin/NewsCategory/index'}]}]}];
         new PageUtil.MainPage({
             modulesConfig : config
         });

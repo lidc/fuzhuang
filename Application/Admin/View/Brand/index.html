@@ -19,6 +19,7 @@
         .sidebar-nav {
             padding: 9px 0;
         }
+
         @media (max-width: 980px) {
             /* Enable use of floated navbar text */
             .navbar-text.pull-right {
@@ -27,55 +28,68 @@
                 padding-right: 5px;
             }
         }
+
+
     </style>
 </head>
 <body>
 <form class="form-inline definewidth m20" action="index" method="get">  
-    菜单名称：
-    <input type="text" name="nav_title" id="nav_title"class="abc input-default" placeholder="" value="{{$nav_title}}">&nbsp;&nbsp;  
-    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增菜单</button>
+    品牌名称：
+    <input type="text" name="banner_title" id="banner_title"class="abc input-default" placeholder="" value="{{$banner_title}}">&nbsp;&nbsp;  
+    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增品牌</button>
 </form>
 <table class="table table-bordered table-hover definewidth m10" >
     <thead>
     <tr>
-    	<th>排序</th>
-        <th>菜单标题</th>
-        <th>菜单图标</th>
-        <th>状态</th>        
+        <th>Banner 标题</th>
+        <th>Banner 图片</th>
+        <th>链接地址</th>
         <th>管理操作</th>
     </tr>
     </thead>
-    <volist name="list" id="v">    
-	       <tr>
-	           <td><if condition="($v['childY'] eq $v['pid']) and ($v['pid'] neq 0) "> &nbsp;&nbsp;&nbsp; &lfloor; </if> <input type="text" name="nav_order" id="nav_order" value="{{$v['nav_order']}}" style="width:36px; text-align:center;"/> </td>
-	           <td>{{$v['nav_title']}}</td>
-	           <td><img src="{{$v['thumb_photo']}}" style="height:42px;" /></td>
-	           <td>{{$v['status']}}</td>
-	           <td>
-	                 <a href="edit?nav_id={{$v['id']}}">编辑</a>    
-	                 <a href="delete?nav_id={{$v['id']}}">删除</a>              
-	           </td>
-	       </tr>
-     </volist>
-</table>
+    	<volist name="list" id="v">
+	     <tr>
+            <td>{{$v['banner_title']}}</td>
+            <td><img src="{{$v['small_photo']}}" style="width:126px"/></td>
+            <td>{{$v['website']}}</td>
+            <td>
+                  <a href="edit?bid={{$v['id']}}">编辑</a>
+                  
+            </td>
+        </tr>
+    	</volist>
+    </table>
 <div class="inline pull-right page">
-	{{$page_show}}        
+	{{$page_show}}         
 </div>
 </body>
 </html>
 <script>
-    $(function () {        
+    $(function () {
+        
 		$('#addnew').click(function(){
+
 				window.location.href="add.html";
 		 });
+
+
     });
 
 	function del(id)
-	{		
+	{
+		
+		
 		if(confirm("确定要删除吗？"))
-		{		
-			var url = "index.html";			
+		{
+		
+			var url = "index.html";
+			
 			window.location.href=url;		
-		}	
+		
+		}
+	
+	
+	
+	
 	}
 </script>

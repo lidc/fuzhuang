@@ -2,11 +2,12 @@
 return array(
 	//'配置项'=>'配置值'
 	'TMPL_PARSE_STRING' => array(
-        '__PUBLICA__'       => __ROOT__.'/Application/Admin/Public',                                      //后台公共资源Public路径
-	    '__PUBLIC_FONT__'   => ROOT_PATH.'Application/Admin/Public/font/',                          //字体根目录
-	    '__UPLOAD_URL__'    => __ROOT__.'/Application/Admin/Public/Uploads/', //后台图片访问路径   $_SERVER['HTTP_HOST'].
-        '__UPLOAD_PATH__'   => ROOT_PATH.'Application/Admin/Public/Uploads/',                        //后台图片保存路径
-        '__PUBLICS__' => __PUBLIC__,
+        '__PUBLICA__'           => __ROOT__.'/Application/Admin/Public',                    //后台公共资源Public路径
+	    '__PUBLIC_FONT__'       => ROOT_PATH.'Application/Admin/Public/font/',              //字体根目录
+	    '__UPLOAD_URL__'        => __ROOT__.'/Application/Admin/Public/Uploads/',           //后台图片访问路径   $_SERVER['HTTP_HOST'].
+        '__UPLOAD_PATH__'       => ROOT_PATH.'Application/Admin/Public/Uploads/',           //后台图片保存路径
+        '__FILE__UPLOADS__'     => ROOT_PATH.'public/uploads/',                             //文件上传目录                        
+	    '__FILE_UPLOADS_URL__'  => __ROOT__.'/public/uploads/',                             //文件上传访问路径
     ),
     
     'TMPL_L_DELIM' => '{{',

@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="__PUBLICA__/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="__PUBLICA__/css/bootstrap-responsive.css" />
-    <link rel="stylesheet" type="text/css" href="__PUBLICA__/css/style.css" />
-    <script type="text/javascript" src="__PUBLICA__/js/jquery.js"></script>
-    <script type="text/javascript" src="__PUBLICA__/js/jquery.sorted.js"></script>
-    <script type="text/javascript" src="__PUBLICA__/js/bootstrap.js"></script>
-    <script type="text/javascript" src="__PUBLICA__/js/ckform.js"></script>
-    <script type="text/javascript" src="__PUBLICA__/js/common.js"></script> 
+    <link rel="stylesheet" type="text/css" href="/fuzhuang/Application/Admin/Public/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/fuzhuang/Application/Admin/Public/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="/fuzhuang/Application/Admin/Public/css/style.css" />
+    <script type="text/javascript" src="/fuzhuang/Application/Admin/Public/js/jquery.js"></script>
+    <script type="text/javascript" src="/fuzhuang/Application/Admin/Public/js/jquery.sorted.js"></script>
+    <script type="text/javascript" src="/fuzhuang/Application/Admin/Public/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/fuzhuang/Application/Admin/Public/js/ckform.js"></script>
+    <script type="text/javascript" src="/fuzhuang/Application/Admin/Public/js/common.js"></script> 
 
     <style type="text/css">
         body {
@@ -45,9 +45,7 @@
         <td width="10%" class="tableleft">产品分类</td>
         <td>
             <select name="parentid">
-            	<volist name="cl" id="v">
-            	<option value='{{$v['id']}}'/>&nbsp; <if condition="($v['childY'] eq $v['pid']) and ($v['pid'] neq 0) "> &nbsp;&nbsp;&nbsp; &lfloor; &nbsp; </if> {{$v['c_title']}}</option>
-                </volist>            	            
+            	<?php if(is_array($cl)): $i = 0; $__LIST__ = $cl;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><option value='<?php echo ($v['id']); ?>'/>&nbsp; <?php if(($v['childY'] == $v['pid']) and ($v['pid'] != 0) ): ?>&nbsp;&nbsp;&nbsp; &lfloor; &nbsp;<?php endif; ?> <?php echo ($v['c_title']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>            	            
             </select>
         </td>
     </tr>
@@ -123,4 +121,4 @@
 
     });
 </script>
-{{$editor}}
+<?php echo ($editor); ?>

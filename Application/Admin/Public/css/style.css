@@ -84,3 +84,9 @@ form{
 .onCorrect{background-position:3px -247px;border-color:#40B3FF;}
 .onLamp{background-position:3px -200px}
 .onTime{background-position:3px -1356px}
+
+/* lightbox */
+.image-row ul,li{list-style:none; list-style-type:none; margin:0; padding:0; }
+.image-row ul li{ float:left; margin:6px;}
+.image-row .imgdel{ clear:both; display:block; text-align:center;}
+

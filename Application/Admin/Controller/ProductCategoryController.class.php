@@ -230,14 +230,17 @@ class ProductCategoryController extends Controller {
     
     public function delete(){
     	$product_category = M('product_category');
+    	$product = M('product');
     	$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
     	if(!$id){
     		echo "无参数！";
     		exit();
     	}
     	$count = $product_category->where('pid='.$id)->count();
-    	if($count>0){
-    		echo "<script>alert('删除失败,有子级关联关系，请先删除子级！');location.href='index';</script>";
+    	$where = "cid=".$id." or cpid=".$id."";
+    	$count2 = $product->where($where)->count();
+    	if($count>0 || $count2>0){
+    		echo "<script>alert('删除失败！因子级关系或产品中有关联，请先删除关联关系！');location.href='index';</script>";
     		exit();
     	}else{    		
     		$result = $product_category->where('id='.$id)->delete();

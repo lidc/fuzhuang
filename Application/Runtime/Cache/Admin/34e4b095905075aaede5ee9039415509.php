@@ -46,20 +46,22 @@
     <tr>
     	<th>序号</th>
         <th>产品名称</th>
-        <th>所在品牌分类</th>
+        <th>所在分类</th>
+        <th>状态</th>
         <th>产品图片</th>
-        <th>状态</th>        
+        <th>更多图片</th>                
         <th>管理操作</th>
     </tr>
     </thead>
     <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr>
 	           <td>1</td>
 	           <td><?php echo ($v['product_title']); ?></td>
-	           <td><?php echo ($v['c_title']); ?></td>
-	           <td><img src="<?php echo ($v['small_img']); ?>" style="height:52px;" /></td>
+	           <td><?php echo ($v['b_title']); ?> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ($v['c_title']); ?></p></td>
 	           <td><?php echo ($v['status']); ?></td>
+	           <td><img src="<?php echo ($v['small_img']); ?>" style="height:52px;" /></td>
+	           <td><a href="imgList?id=<?php echo ($v['id']); ?>&title=<?php echo ($v['product_title']); ?>">查看</a></td>	           
 	           <td>
-                 <a href="edit?nav_id=<?php echo ($v['id']); ?>">编辑</a>    
+                 <a href="edit?id=<?php echo ($v['id']); ?>">编辑</a>    
                  <a href="delete?id=<?php echo ($v['id']); ?>">删除</a>              
 	           </td>
 	       </tr><?php endforeach; endif; else: echo "" ;endif; ?>

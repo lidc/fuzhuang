@@ -13,13 +13,11 @@ public function index(){
         $product_title = isset($_GET['product_title']) ? in($_GET['product_title']) : "";
         if(!empty($product_title)){
             $where .= " AND product_title like '%".$product_title."%' ";
-        }
-        
+        }        
         $parentid = isset($_GET['parentid']) ? intval($_GET['parentid']) : 0;
         if($parentid){
             $where .=" AND (cid=".$parentid." or cpid=".$parentid.")";
-        }
-        
+        }       
         $nowPage = isset($_GET['p']) ? intval($_GET['p']) : 1;
         $numPerPage = 10;
         $count = $product->where($where)->count();
@@ -36,10 +34,19 @@ public function index(){
             $list[$key]['status'] = $status;
             $cl = $product_category->field('id,pid,c_title')->where("id=".$value['cid'])->find();
             if($cl){
-                $list[$key]['c_title'] = $cl['c_title'];
+                if($cl['pid']==0){
+                    $list[$key]['b_title'] = $cl['c_title'];
+                    $list[$key]['c_title'] = "";
+                }else{
+                    $cls = $product_category->field('id,pid,c_title')->where("id=".$cl['pid'])->find();
+                    $list[$key]['b_title'] = $cls['c_title'];
+                    $list[$key]['c_title'] = $cl['c_title'];
+                }
+//                 $list[$key]['c_title'] = $cl['c_title'];
                 $cArr[] = $list[$key];
             }else{
-                $list[$key]['c_title'] = "";
+                $list[$key]['b_title'] = "";
+                $list[$key]['c_title'] = "";                
                 $cArr[]=$list[$key];
             }
         }
@@ -139,6 +146,7 @@ public function index(){
                 'meta_keywords' =>  $meta_keywords,
                 'meta_description'  =>  $meta_description
             );
+
             $id = $product->data($data)->add();
             if($id){
                 $data_c = array(
@@ -183,33 +191,36 @@ public function index(){
     
     public function edit(){
     	$product = M('product');
+        $product_category = M('product_category');
+        $product_content = M('product_content'); 
     	if($_POST){
     		$id = isset($_POST['id']) ? intval($_POST['id']) : 0;
     		if(!$id){
     			echo "无参数！";
     			exit();
     		}
-    		$parentid = isset($_POST['parentid']) ? intval($_POST['parentid']) : 0;
-    		$c_title = isset($_POST['c_title']) ? in($_POST['c_title']) : "";
-    		$c_desc = isset($_POST['c_desc']) ? in($_POST['c_desc']) : "";
-    		$myorder = isset($_POST['myorder']) ? intval($_POST['myorder']) : 0;
-    		$status = isset($_POST['status']) ? intval($_POST['status']) : 1;
-    		$add_time = time();
-    		$meta_title = isset($_POST['meta_title']) ? in($_POST['meta_title']) : "";
-    		$meta_keywords = isset($_POST['meta_keywords']) ? in($_POST['meta_keywords']) : "";
-    		$meta_description = isset($_POST['meta_description']) ? in($_POST['meta_description']) : "";
+    		$cid = isset($_POST['parentid']) ? intval($_POST['parentid']) : 0;
+            $pc = $product_category->field('pid')->where('id='.$cid)->find();
+            $cpid = $pc['pid'];
+            $product_title = isset($_POST['product_title']) ? in($_POST['product_title']) : "";
+            $product_desc = isset($_POST['product_desc']) ? in($_POST['product_desc']) : "";
+            $status = isset($_POST['status']) ? intval($_POST['status']) : 1;
+            $add_time = time();
+            $meta_title = isset($_POST['meta_title']) ? in($_POST['meta_title']) : "";
+            $meta_keywords = isset($_POST['meta_keywords']) ? in($_POST['meta_keywords']) : "";
+            $meta_description = isset($_POST['meta_description']) ? in($_POST['meta_description']) : "";            
+            $content = isset($_POST['content']) ? in($_POST['content']) : "";
     		 
     		$data = array(
-    				'pid'           =>  $parentid,
-    				'c_title'       =>  $c_title,
-    				'c_desc'        =>  $c_desc,
-    				'myorder'       =>  $myorder,
-    				'status'        =>  $status,
-    				'add_time'      =>  $add_time,
-    				'meta_title'    =>  $meta_title,
-    				'meta_keywords' =>  $meta_keywords,
-    				'meta_description'  =>  $meta_description
-    		);
+                'cid'           =>  $cid,
+                'cpid'          =>  $cpid,
+                'product_title' =>  $product_title,
+                'product_desc'  =>  $product_desc,                
+                'status'        =>  $status,
+                'meta_title'    =>  $meta_title,
+                'meta_keywords' =>  $meta_keywords,
+                'meta_description'  =>  $meta_description
+            );
     		
     		$urlArr = C('TMPL_PARSE_STRING');
     		$img_url = $urlArr['__FILE__UPLOADS__'];                      //图片保存路径
@@ -250,23 +261,50 @@ public function index(){
     				$data['small_img'] = $small_photo_url;
     			}
     		}    		
+    		$data_c = array(
+    		    'content1'  => $content
+    		);
+    		$result1 = $product_content->data($data_c)->where('product_id='.$id)->save();    		
     		$result = $product->data($data)->where('id='.$id)->save();
-    		if($result){
-    			echo "<script>alert('修改成功！');location.href='index';</script>";
+    		if($result || $result1){   		    
+    			echo "<script>alert('修改成功！');location.href='index';</script>";    		   
     		}else{
     			echo "<script>alert('修改失败！');location.href='edit';</script>";
     		}
     	}    
     	$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
     	if(!$id){
-    		echo "无参数！";
+    		echo "<script>location.href='index';</script>";
     		exit;
     	}
-    	$cList = $product->where('id='.$id)->find();
-    	$this->assign("cl",$cList);
-    	$where = 'status=1 AND pid=0';
-    	$list = $product->field('id,c_title')->where($where)->order('myorder')->select();
-    	$this->assign("list",$list);
+    	$pList = $product->where('id='.$id)->find();
+    	$this->assign("pl",$pList);
+        $pcList = $product_content->where('product_id='.$id)->find();
+    	$this->assign('pcl',$pcList);
+    	
+    	$where = 'status=1 and pid=0';
+    	$list = $product_category->field('id,pid,c_title')->where($where)->order('myorder')->select();
+    	$cArray = array();
+    	foreach ($list as $key=>$value){
+    	    $cl = $product_category->field('id,pid,c_title')->where('pid='.$value['id'])->order('myorder')->select();
+    	    if($cl){
+    	        $list[$key]['childY'] = $value['id'];
+    	        $cArray[] = $list[$key];
+    	        foreach ($cl as $k=>$v){
+    	            $cl[$k]['childY'] = $v['pid'];
+    	            $cArray[] = $cl[$k];
+    	        }
+    	    }else{
+    	        $cl[$k]['childY'] = "";
+    	        $cArray[] = $list[$key];
+    	    }
+    	}
+    	$this->assign("cl",$cArray);
+    	
+    	$KindEditor_obj = new KindEditor();
+    	$editor_code = $KindEditor_obj->create_editor('content',1000,380);
+    	$this->assign("editor",$editor_code);
+    	
     	$this->display();
     }
     
@@ -277,17 +315,25 @@ public function index(){
     		echo "无参数！";
     		exit();
     	}
-    	$count = $product->where('pid='.$id)->count();
-    	if($count>0){
-    		echo "<script>alert('删除失败,有子级关联关系，请先删除子级！');location.href='index';</script>";
-    		exit();
-    	}else{    		
-    		$result = $product->where('id='.$id)->delete();
-    		if($result){
-    			echo "<script>alert('删除成功！');location.href='index';</script>";
-    		}else {
-    			echo "<script>alert('删除失败！');location.href='index';</script>";
-    		}
-    	}   	
+    	
+		$result = $product->where('id='.$id)->delete();
+		if($result){
+			echo "<script>alert('删除成功！');location.href='index';</script>";
+		}else {
+			echo "<script>alert('删除失败！');location.href='index';</script>";
+		}  	
+    }
+    
+    public function imgList(){
+        
+        $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+        $title = isset($_GET['title']) ? in($_GET['title']) : "";
+        if(!$id){
+            echo "无参数！";
+            exit();
+        }
+        $this->assign("id",$id);
+        $this->assign("title",$title);
+        $this->display();
     }
 }

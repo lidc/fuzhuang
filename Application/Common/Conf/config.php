@@ -8,6 +8,7 @@ return array(
         '__UPLOAD_PATH__'       => ROOT_PATH.'Application/Admin/Public/Uploads/',           //后台图片保存路径
         '__FILE__UPLOADS__'     => ROOT_PATH.'public/uploads/',                             //文件上传目录                        
 	    '__FILE_UPLOADS_URL__'  => __ROOT__.'/public/uploads/',                             //文件上传访问路径
+	    '__PLUG-IN__'           => __ROOT__.'/plug-in',
     ),
     
     'TMPL_L_DELIM' => '{{',

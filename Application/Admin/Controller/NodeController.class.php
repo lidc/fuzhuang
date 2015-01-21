@@ -216,15 +216,13 @@ class NodeController extends Controller {
                     $data['thumb_photo'] = $thumb_photo_url;
                 }
             }
-
+            $data_c = array(
+                'content'   =>  $page_content
+            );
+            $result1 = $nav_content->data($data_c)->where('nav_id='.$id)->save();
+            
             $result = $nav_page->data($data)->where('id='.$id)->save();
-            if($result){
-                if(!empty($page_content)){
-                    $data_c = array(
-                        'content'   =>  $page_content
-                    );
-                    $result = $nav_content->data($data_c)->where('nav_id='.$id)->save();
-                }                
+            if($result || $result1){                                
                 echo "<script>alert('修改成功！');location.href='index';</script>";      
                 exit;         
             }else{
@@ -235,7 +233,7 @@ class NodeController extends Controller {
         
         $nav_id = isset($_GET['nav_id']) ? intval($_GET['nav_id']) : 0;
         if(!$nav_id){
-            echo "无参数！";
+            echo "<script>location.href='index';</script>";
             exit;
         }        
         $navList = $nav_page->where('id='.$nav_id)->find();

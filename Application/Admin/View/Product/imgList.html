@@ -41,7 +41,7 @@
 </script>
 </head>
 <body>
-<form action="add" method="post" class="definewidth m20" name="form1" id="form1" enctype="multipart/form-data">
+<form action="addImg" method="post" class="definewidth m20" name="form1" id="form1" enctype="multipart/form-data">
 <input type="hidden" value="{{$id}}" name="id" id="id"/>
 <table class="table table-bordered table-hover m10">
     <tr>
@@ -64,7 +64,15 @@
         	<div class="image-row">
 				<div class="image-set">
 					<ul>
+						<volist name="list" id="v"> 
 						<li>
+							<a class="example-image-link" href="{{$v['big_img']}}" data-lightbox="example-set" data-title="">
+								<img class="example-image" src="{{$v['small_img']}}" alt=""/>
+							</a>
+							<a href="deleteImg?id={{$v['id']}}&productId={{$v['product_id']}}" class="imgdel">删除</a>
+						</li>
+						</volist>
+						<!-- <li>
 							<a class="example-image-link" href="__PLUG-IN__/lightbox/img/demopage/image-3.jpg" data-lightbox="example-set" data-title="">
 								<img class="example-image" src="__PLUG-IN__/lightbox/img/demopage/thumb-3.jpg" alt=""/>
 							</a>
@@ -87,7 +95,7 @@
 								<img class="example-image" src="__PLUG-IN__/lightbox/img/demopage/thumb-6.jpg" alt="" />
 							</a>
 							<a href="" class="imgdel">删除</a>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 			</div>

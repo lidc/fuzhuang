@@ -325,15 +325,117 @@ public function index(){
     }
     
     public function imgList(){
-        
+        $product_img = M('product_images');
         $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
         $title = isset($_GET['title']) ? in($_GET['title']) : "";
         if(!$id){
             echo "无参数！";
             exit();
         }
+        $list = $product_img->where('product_id='.$id)->select();
+        $this->assign("list",$list);
         $this->assign("id",$id);
         $this->assign("title",$title);
         $this->display();
     }
+    
+    public function addImg(){
+    	$product_img = M('product_images');
+    	if($_POST){
+    		$product_id = isset($_POST['id']) ? intval($_POST['id']) : 0;
+    		$add_time = time();
+    		if(!$product_id){
+    			echo "无参数！";
+    			exit();
+    		}
+    		$urlArr = C('TMPL_PARSE_STRING');
+    		$img_url = $urlArr['__FILE__UPLOADS__'];                      //图片保存路径
+    		$font_url = $urlArr['__PUBLIC_FONT__'].'FZSTK.TTF';         //字体
+    		$big_img_url = "";
+    		$small_photo_url = "";
+            if(isset($_FILES['big_img'])){
+                $img_date = date('Y-m-d');
+                $upload = new Upload();
+                $upload->maxSize = 3000000;     //文件大小限制
+                $upload->mimes = array('image/jpg','image/jpeg','image/pjpeg','image/png','image/gif');    // 设置附件上传类型
+                $upload->exts = array('jpg', 'gif', 'png', 'jpeg');// 允许上传的文件后缀
+                if(!is_file($img_url.'product_img')){
+                    mkdir($img_url.'product_img');
+                }                
+                $upload->savePath = 'product_img/';
+                $upload->rootPath = $img_url;
+                $info = $upload->upload();
+                if(!$info){
+                    echo $upload->getError();                    
+                }else{
+                    $big_img_url = $urlArr['__FILE_UPLOADS_URL__'].$info['big_img']['savepath'].$info['big_img']['savename'];
+                    $image = new Image();    
+                    if(!is_file($img_url.'product_img/thumb_img')){
+                        mkdir($img_url.'product_img/thumb_img');
+                        if(!is_file($img_url.'product_img/thumb_img/'.$img_date)){
+                            mkdir($img_url.'product_img/thumb_img/'.$img_date);
+                        }
+                    }    
+                    $thumb_save_file = $img_url.$info['big_img']['savepath'].$info['big_img']['savename'];      //上传的图片路径
+                    $thumb_url = $img_url.'product_img/thumb_img/'.$img_date;
+                    $thumb_save_path = $thumb_url.'/'.$info['big_img']['savename'];                               //缩略图保存的路径
+    
+                    $image->open($thumb_save_file)->text('简朵', $font_url, 36,'#A7AAA4',$image::IMAGE_WATER_SOUTHEAST)->thumb(180, 180)->save($thumb_save_path);
+                    $image->open($thumb_save_file)->text('简朵', $font_url, 32,'#A7AAA4',$image::IMAGE_WATER_SOUTHEAST)->save($thumb_save_file);
+    
+                    $small_photo_url = $urlArr['__FILE_UPLOADS_URL__'].'product_img/thumb_img/'.$img_date.'/'.$info['big_img']['savename'];
+                }
+            }
+            
+            $data = array(
+            	'product_id' => $product_id,
+            	'big_img'	=>	$big_img_url,
+            	'small_img'	=>	$small_photo_url,
+            	'add_time'	=>	$add_time
+            );
+            $result = $product_img->data($data)->add();
+    		if($result){   		    
+    			echo "<script>alert('上传成功！');location.href='imgList?id=".$product_id."';</script>";    		   
+    		}else{
+    			echo "<script>alert('上传失败！');location.href='imgList?id=".$product_id."';</script>";
+    		}
+    	}    	
+    }
+    
+    public function deleteImg(){
+    	$product_img = M('product_images');
+    	$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+    	$productId = isset($_GET['productId']) ? intval($_GET['productId']) : 0;
+    	if(!$id){
+    		echo "无参数！";
+    		exit();
+    	}
+    	$list = $product_img->where('id='.$id)->find();
+    	$big_img = $list['big_img'];
+    	$small_img = $list['small_img'];
+    	
+    	$result = $product_img->where('id='.$id)->delete();
+    	if($result){
+    		$urlArr = C('TMPL_PARSE_STRING');
+    		$img_url = $urlArr['__FILE__UPLOADS__'];
+    		$file = str_replace("/fuzhuang/", "", ROOT_PATH);
+    		$big_img_file = $file.$big_img;
+    		$small_img_file = $file.$small_img;
+    		$result1 = @unlink($big_img_file);
+    		$result2 = @unlink($small_img_file);    		
+    		if ($result1 && $result2) {
+    			echo "<script>alert('删除成功！');location.href='imgList?id=".$productId."';</script>";
+    			exit();
+    		} else {
+    			echo "<script>alert('删除失败！');location.href='imgList?id=".$productId."';</script>";
+    			exit();
+    		}    		
+    	}else{
+    		echo "<script>alert('删除失败！');location.href='imgList?id=".$productId."';</script>";
+    	}
+    	
+    }
+    
+    
+    
 }

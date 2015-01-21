@@ -41,7 +41,7 @@
 </script>
 </head>
 <body>
-<form action="add" method="post" class="definewidth m20" name="form1" id="form1" enctype="multipart/form-data">
+<form action="addImg" method="post" class="definewidth m20" name="form1" id="form1" enctype="multipart/form-data">
 <input type="hidden" value="<?php echo ($id); ?>" name="id" id="id"/>
 <table class="table table-bordered table-hover m10">
     <tr>
@@ -64,11 +64,17 @@
         	<div class="image-row">
 				<div class="image-set">
 					<ul>
+						<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><li>
+							<a class="example-image-link" href="<?php echo ($v['big_img']); ?>" data-lightbox="example-set" data-title="">
+								<img class="example-image" src="<?php echo ($v['small_img']); ?>" alt=""/>
+							</a>
+							<a href="deleteImg?id=<?php echo ($v['id']); ?>&productId=<?php echo ($v['product_id']); ?>" class="imgdel">删除</a>
+						</li><?php endforeach; endif; else: echo "" ;endif; ?>
 						<li>
 							<a class="example-image-link" href="/fuzhuang/plug-in/lightbox/img/demopage/image-3.jpg" data-lightbox="example-set" data-title="">
 								<img class="example-image" src="/fuzhuang/plug-in/lightbox/img/demopage/thumb-3.jpg" alt=""/>
 							</a>
-							<a href="" class="imgdel">删除</a>
+							<a href="deleteImg?id=<?php echo ($id); ?>" class="imgdel">删除</a>
 						</li>
 						<li>
 							<a class="example-image-link" href="/fuzhuang/plug-in/lightbox/img/demopage/image-4.jpg" data-lightbox="example-set" data-title="">

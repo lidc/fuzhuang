@@ -32,27 +32,34 @@
 <body>
 <form class="form-inline definewidth m20" action="index" method="get">  
     设计名称：
-    <input type="text" name="nav_title" id="nav_title"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
+    <input type="text" name="design_title" id="design_title"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
+   类型：
+    <select name="parentid">
+    		<option value="0">--请选择--</option>
+    	<?php if(is_array($cl)): $i = 0; $__LIST__ = $cl;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><option value='<?php echo ($v['id']); ?>' <?php if($parentid == $v['id']): ?>selected<?php endif; ?> />&nbsp; <?php if(($v['childY'] == $v['pid']) and ($v['pid'] != 0) ): ?>&nbsp;&nbsp;&nbsp;&lfloor;&nbsp;<?php endif; ?> <?php echo ($v['c_title']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>            	            
+    </select>
     <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增设计</button>
 </form>
 <table class="table table-bordered table-hover definewidth m10" >
     <thead>
     <tr>
-    	<th>排序</th>
-        <th>菜单标题</th>
-        <th>菜单图标</th>
-        <th>状态</th>        
+    	<th>序号</th>
+        <th>设计标题</th>
+        <th>所在分类</th>
+        <th>设计图标</th>
+        <th>发布时间</th>        
         <th>管理操作</th>
     </tr>
-    </thead>
+    </thead>	 
     <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr>
-	           <td><?php if(($v['childY'] == $v['pid']) and ($v['pid'] != 0) ): ?>&nbsp;&nbsp;&nbsp; &lfloor;<?php endif; ?> <input type="text" name="nav_order" id="nav_order" value="<?php echo ($v['nav_order']); ?>" style="width:36px; text-align:center;"/> </td>
-	           <td><?php echo ($v['nav_title']); ?></td>
-	           <td><img src="<?php echo ($v['thumb_photo']); ?>" style="height:42px;" /></td>
-	           <td><?php echo ($v['status']); ?></td>
+	           <td><?php echo ($v["id"]); ?></td>
+	           <td><?php echo ($v["design_title"]); ?></td>
+	           <td><?php echo ($v["b_title"]); ?> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ($v["c_title"]); ?></p></td>
+	           <td><img src="<?php echo ($v["small_img"]); ?>" style="height:42px;" /></td>
+	           <td><?php echo (date('Y-m-d H:i:s',$v["release_time"])); ?></td>
 	           <td>
-	                 <a href="edit?nav_id=<?php echo ($v['id']); ?>">编辑</a>    
-	                 <a href="delete?nav_id=<?php echo ($v['id']); ?>">删除</a>              
+	                 <a href="edit?id=<?php echo ($v["id"]); ?>">编辑</a>    
+	                 <a href="delete?id=<?php echo ($v["id"]); ?>&cid=<?php echo ($v["cid"]); ?>&cpid=<?php echo ($v["cpid"]); ?>">删除</a>              
 	           </td>
 	       </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 </table>

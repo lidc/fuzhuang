@@ -1048,3 +1048,1547 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
 
+[ 2015-01-22T22:59:41+08:00 ] ::1 /fuzhuang/index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.040002s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.078005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.015001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.016001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.031001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.032001s ]
+
+[ 2015-01-22T22:59:42+08:00 ] ::1 /fuzhuang/index.php/Admin/Public/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-01-22T22:59:54+08:00 ] ::1 /fuzhuang/index.php/Admin/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_admin` [ RunTime:0.1420s ]
+SQL: SELECT `password` FROM `user_admin` WHERE ( username='admin' ) LIMIT 1   [ RunTime:0.0310s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant logout - assumed 'logout' E:\www\fuzhuang\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 16 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-01-22T22:59:55+08:00 ] ::1 /fuzhuang/index.php/Admin/System/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.075004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:00:02+08:00 ] ::1 /fuzhuang/index.php/Admin/Product/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.1240s ]
+SQL: SHOW COLUMNS FROM `product_category` [ RunTime:0.0550s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\fuzhuang\system\core\Library\Think\Db\Driver.class.php 第 488 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `product` LIMIT 1   [ RunTime:0.0360s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\fuzhuang\system\core\Library\Think\Db\Driver.class.php 第 488 行.
+SQL: SELECT `id`,`cid`,`cpid`,`product_title`,`status`,`small_img` FROM `product` ORDER BY add_time LIMIT 0,10   [ RunTime:0.0020s ]
+SQL: SELECT `id`,`pid`,`c_title` FROM `product_category` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0250s ]
+SQL: SELECT `id`,`pid`,`c_title` FROM `product_category` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title` FROM `product_category` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title` FROM `product_category` WHERE ( status=1 and pid=0 ) ORDER BY myorder  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title` FROM `product_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title` FROM `product_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: childY E:\www\fuzhuang\Application\Runtime\Cache\Admin\34e4b095905075aaede5ee9039415509.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.083005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.083005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-01-22T23:00:08+08:00 ] ::1 /fuzhuang/index.php/Admin/ProductCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `product_category` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `product_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `product_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0020s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `product_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:00:11+08:00 ] ::1 /fuzhuang/index.php/Admin/Design/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 48 行.
+NOTIC: [8] Undefined variable: page_show E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:00:13+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list E:\www\fuzhuang\Application\Runtime\Cache\Admin\6cba218eb9f0de6f2275b22ed0805ac7.php 第 48 行.
+NOTIC: [8] Undefined variable: page_show E:\www\fuzhuang\Application\Runtime\Cache\Admin\6cba218eb9f0de6f2275b22ed0805ac7.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:00:14+08:00 ] ::1 /fuzhuang/index.php/Admin/Design/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 48 行.
+NOTIC: [8] Undefined variable: page_show E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-01-22T23:00:23+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list E:\www\fuzhuang\Application\Runtime\Cache\Admin\6cba218eb9f0de6f2275b22ed0805ac7.php 第 48 行.
+NOTIC: [8] Undefined variable: page_show E:\www\fuzhuang\Application\Runtime\Cache\Admin\6cba218eb9f0de6f2275b22ed0805ac7.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-01-22T23:04:43+08:00 ] ::1 /fuzhuang/index.php/Admin/Design/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 48 行.
+NOTIC: [8] Undefined variable: page_show E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:04:45+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product_category` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-01-22T23:04:51+08:00 ] ::1 /fuzhuang/index.php/Admin/Design/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 48 行.
+NOTIC: [8] Undefined variable: page_show E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:04:53+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `product_category` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-01-22T23:19:17+08:00 ] ::1 /fuzhuang/index.php/Admin/Design/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 48 行.
+NOTIC: [8] Undefined variable: page_show E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:19:18+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product_category` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-01-22T23:19:25+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `product_category` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-01-22T23:20:40+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `product_category` [ RunTime:0.0180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `product_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `product_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `product_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:21:17+08:00 ] ::1 /fuzhuang/index.php/Admin/News/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list E:\www\fuzhuang\Application\Runtime\Cache\Admin\36087655c6ab8580337cdc45b35a926d.php 第 48 行.
+NOTIC: [8] Undefined variable: page_show E:\www\fuzhuang\Application\Runtime\Cache\Admin\36087655c6ab8580337cdc45b35a926d.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:21:19+08:00 ] ::1 /fuzhuang/index.php/Admin/NewsCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `product_category` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `product_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `product_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `product_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:28:06+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `design_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-01-22T23:28:06+08:00 ] ::1 /fuzhuang/index.php/Admin/Design/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 48 行.
+NOTIC: [8] Undefined variable: page_show E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:28:09+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `design_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:28:11+08:00 ] ::1 /fuzhuang/index.php/Admin/Design/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: list E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 48 行.
+NOTIC: [8] Undefined variable: page_show E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:28:13+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `design_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:28:19+08:00 ] ::1 /fuzhuang/index.php/Admin/NewsCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `news_category` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `news_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0020s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:28:53+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0190s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `design_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:28:56+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/edit?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `design_category` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`c_title` FROM `design_category` WHERE ( status=1 AND pid=0 ) ORDER BY myorder  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: editor E:\www\fuzhuang\Application\Runtime\Cache\Admin\b483363fc389c1e155bf5dbc1bfebafa.php 第 121 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:28:59+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `design_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-01-22T23:29:04+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/edit?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `design_category` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`c_title` FROM `design_category` WHERE ( status=1 AND pid=0 ) ORDER BY myorder  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: editor E:\www\fuzhuang\Application\Runtime\Cache\Admin\b483363fc389c1e155bf5dbc1bfebafa.php 第 121 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:29:20+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0150s ]
+SQL: UPDATE `design_category` SET `pid`='0',`c_title`='设计类资讯',`c_desc`='设计类资讯',`myorder`='1',`status`='1',`add_time`='1421940559',`meta_title`='设计类资讯',`meta_keywords`='设计类资讯',`meta_description`='设计类资讯' WHERE ( id=1 ) [ RunTime:0.1200s ]
+
+[ 2015-01-22T23:29:22+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `design_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:29:53+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/edit?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `design_category` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`c_title` FROM `design_category` WHERE ( status=1 AND pid=0 ) ORDER BY myorder  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: editor E:\www\fuzhuang\Application\Runtime\Cache\Admin\b483363fc389c1e155bf5dbc1bfebafa.php 第 121 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:30:20+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0150s ]
+SQL: UPDATE `design_category` SET `pid`='1',`c_title`='设计室',`c_desc`='设计室',`myorder`='1',`status`='1',`add_time`='1421940620',`meta_title`='设计室',`meta_keywords`='设计室',`meta_description`='设计室' WHERE ( id=2 ) [ RunTime:0.0010s ]
+
+[ 2015-01-22T23:30:22+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `design_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0020s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-01-22T23:30:30+08:00 ] ::1 /fuzhuang/index.php/Admin/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_admin` [ RunTime:0.0110s ]
+SQL: SELECT `password` FROM `user_admin` WHERE ( username='admin' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant logout - assumed 'logout' E:\www\fuzhuang\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 16 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-01-22T23:30:30+08:00 ] ::1 /fuzhuang/index.php/Admin/Design/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 48 行.
+NOTIC: [8] Undefined variable: page_show E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:30:32+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `design_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0156s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-01-22T23:30:46+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/edit?id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `design_category` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`c_title` FROM `design_category` WHERE ( status=1 AND pid=0 ) ORDER BY myorder  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: editor E:\www\fuzhuang\Application\Runtime\Cache\Admin\b483363fc389c1e155bf5dbc1bfebafa.php 第 121 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:30:57+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0170s ]
+SQL: UPDATE `design_category` SET `pid`='1',`c_title`='版房资讯',`c_desc`='版房资讯',`myorder`='2',`status`='1',`add_time`='1421940657',`meta_title`='版房资讯',`meta_keywords`='版房资讯',`meta_description`='版房资讯' WHERE ( id=4 ) [ RunTime:0.0010s ]
+
+[ 2015-01-22T23:31:00+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `design_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:31:01+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0170s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `design_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0020s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0020s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:31:19+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/edit?id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `design_category` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`c_title` FROM `design_category` WHERE ( status=1 AND pid=0 ) ORDER BY myorder  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: editor E:\www\fuzhuang\Application\Runtime\Cache\Admin\b483363fc389c1e155bf5dbc1bfebafa.php 第 121 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:31:28+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0070s ]
+SQL: UPDATE `design_category` SET `pid`='1',`c_title`='拍摄花絮',`c_desc`='拍摄花絮',`myorder`='3',`status`='1',`add_time`='1421940688',`meta_title`='拍摄花絮',`meta_keywords`='拍摄花絮',`meta_description`='拍摄花絮' WHERE ( id=5 ) [ RunTime:0.0010s ]
+
+[ 2015-01-22T23:31:36+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `design_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:31:40+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/edit?id=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `design_category` WHERE ( id=6 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`c_title` FROM `design_category` WHERE ( status=1 AND pid=0 ) ORDER BY myorder  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: editor E:\www\fuzhuang\Application\Runtime\Cache\Admin\b483363fc389c1e155bf5dbc1bfebafa.php 第 121 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:31:51+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0190s ]
+SQL: UPDATE `design_category` SET `pid`='1',`c_title`='设计美文',`c_desc`='设计美文',`myorder`='3',`status`='1',`add_time`='1421940711',`meta_title`='设计美文',`meta_keywords`='设计美文',`meta_description`='设计美文' WHERE ( id=6 ) [ RunTime:0.0010s ]
+
+[ 2015-01-22T23:31:53+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `design_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:31:58+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/edit?id=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `design_category` WHERE ( id=6 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`c_title` FROM `design_category` WHERE ( status=1 AND pid=0 ) ORDER BY myorder  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: editor E:\www\fuzhuang\Application\Runtime\Cache\Admin\b483363fc389c1e155bf5dbc1bfebafa.php 第 121 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:32:02+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0170s ]
+SQL: UPDATE `design_category` SET `pid`='1',`c_title`='设计美文',`c_desc`='设计美文',`myorder`='4',`status`='1',`add_time`='1421940722',`meta_title`='设计美文',`meta_keywords`='设计美文',`meta_description`='设计美文' WHERE ( id=6 ) [ RunTime:0.0010s ]
+
+[ 2015-01-22T23:32:05+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `design_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:32:08+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/delete?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `design` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `design_category` WHERE ( pid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `design` WHERE ( cid=3 or cpid=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: DELETE FROM `design_category` WHERE ( id=3 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:32:10+08:00 ] ::1 /fuzhuang/index.php/Admin/DesignCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `design_category` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `design_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `design_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:32:16+08:00 ] ::1 /fuzhuang/index.php/Admin/News/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list E:\www\fuzhuang\Application\Runtime\Cache\Admin\36087655c6ab8580337cdc45b35a926d.php 第 48 行.
+NOTIC: [8] Undefined variable: page_show E:\www\fuzhuang\Application\Runtime\Cache\Admin\36087655c6ab8580337cdc45b35a926d.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-01-22T23:32:19+08:00 ] ::1 /fuzhuang/index.php/Admin/NewsCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `news_category` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `news_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:32:23+08:00 ] ::1 /fuzhuang/index.php/Admin/NewsCategory/edit?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `news_category` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `news_category` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `id`,`c_title` FROM `news_category` WHERE ( status=1 AND pid=0 ) ORDER BY myorder  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: editor E:\www\fuzhuang\Application\Runtime\Cache\Admin\c0ee2bcf456ccd042392e5070b1d09b4.php 第 121 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:32:56+08:00 ] ::1 /fuzhuang/index.php/Admin/NewsCategory/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `news_category` [ RunTime:0.0080s ]
+SQL: UPDATE `news_category` SET `pid`='0',`c_title`='公司新闻',`c_desc`='公司新闻',`myorder`='1',`status`='1',`add_time`='1421940776',`meta_title`='公司新闻',`meta_keywords`='公司新闻',`meta_description`='公司新闻' WHERE ( id=1 ) [ RunTime:0.0000s ]
+
+[ 2015-01-22T23:32:58+08:00 ] ::1 /fuzhuang/index.php/Admin/NewsCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `news_category` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `news_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:33:27+08:00 ] ::1 /fuzhuang/index.php/Admin/NewsCategory/delete?id=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `news_category` [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `news_category` WHERE ( pid=6 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `news` WHERE ( cid=6 or cpid=6 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: DELETE FROM `news_category` WHERE ( id=6 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:33:30+08:00 ] ::1 /fuzhuang/index.php/Admin/NewsCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `news_category` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `news_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-01-22T23:33:32+08:00 ] ::1 /fuzhuang/index.php/Admin/NewsCategory/delete?id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `news_category` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `news_category` WHERE ( pid=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `news` WHERE ( cid=5 or cpid=5 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: DELETE FROM `news_category` WHERE ( id=5 ) [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:33:35+08:00 ] ::1 /fuzhuang/index.php/Admin/NewsCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `news_category` [ RunTime:0.0160s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `news_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-01-22T23:33:37+08:00 ] ::1 /fuzhuang/index.php/Admin/NewsCategory/delete?id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `news_category` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `news_category` WHERE ( pid=4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `news` WHERE ( cid=4 or cpid=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: DELETE FROM `news_category` WHERE ( id=4 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:33:39+08:00 ] ::1 /fuzhuang/index.php/Admin/NewsCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `news_category` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `news_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:33:41+08:00 ] ::1 /fuzhuang/index.php/Admin/NewsCategory/delete?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `news_category` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `news_category` WHERE ( pid=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `news` WHERE ( cid=2 or cpid=2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: DELETE FROM `news_category` WHERE ( id=2 ) [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:33:44+08:00 ] ::1 /fuzhuang/index.php/Admin/NewsCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `news_category` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `news_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-01-22T23:33:50+08:00 ] ::1 /fuzhuang/index.php/Admin/NewsCategory/edit?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `news_category` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `news_category` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`c_title` FROM `news_category` WHERE ( status=1 AND pid=0 ) ORDER BY myorder  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: editor E:\www\fuzhuang\Application\Runtime\Cache\Admin\c0ee2bcf456ccd042392e5070b1d09b4.php 第 121 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:34:00+08:00 ] ::1 /fuzhuang/index.php/Admin/NewsCategory/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `news_category` [ RunTime:0.0130s ]
+SQL: UPDATE `news_category` SET `pid`='0',`c_title`='知识分享',`c_desc`='知识分享',`myorder`='2',`status`='1',`add_time`='1421940840',`meta_title`='知识分享',`meta_keywords`='知识分享',`meta_description`='知识分享' WHERE ( id=3 ) [ RunTime:0.0010s ]
+
+[ 2015-01-22T23:34:02+08:00 ] ::1 /fuzhuang/index.php/Admin/NewsCategory/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `news_category` [ RunTime:0.0160s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `news_category` WHERE ( pid=0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=0 ) ORDER BY myorder LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=1 ) ORDER BY myorder  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`c_title`,`small_img`,`myorder`,`status` FROM `news_category` WHERE ( pid=3 ) ORDER BY myorder  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:34:07+08:00 ] ::1 /fuzhuang/index.php/Admin/Design/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: list E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 48 行.
+NOTIC: [8] Undefined variable: page_show E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:49:27+08:00 ] ::1 /fuzhuang/index.php/Admin/Design/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 48 行.
+NOTIC: [8] Undefined variable: page_show E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-01-22T23:49:28+08:00 ] ::1 /fuzhuang/index.php/Admin/Design/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 48 行.
+NOTIC: [8] Undefined variable: page_show E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:49:29+08:00 ] ::1 /fuzhuang/index.php/Admin/Design/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: list E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 48 行.
+NOTIC: [8] Undefined variable: page_show E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-01-22T23:49:29+08:00 ] ::1 /fuzhuang/index.php/Admin/Design/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 48 行.
+NOTIC: [8] Undefined variable: page_show E:\www\fuzhuang\Application\Runtime\Cache\Admin\1c958b9cd4672e2198b4f3555c4e51d7.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

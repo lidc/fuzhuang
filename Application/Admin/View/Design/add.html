@@ -31,59 +31,58 @@
     </style>
     <script type="text/javascript">
     function check(){
-     var nav_photo=document.form1.nav_photo.value;
-     if(nav_photo==''){
-       $("#nav_photo").attr("name","");
-       // return false;
+     var big_img=document.form1.big_img.value;
+     if(big_img==''){
+       $("#big_img").attr("name","");
       }
     }
 </script>
 </head>
 <body>
-<form action="add" method="post" class="definewidth m20" enctype="multipart/form-data">
+<form action="add" method="post" class="definewidth m20" name="form1" id="form1" enctype="multipart/form-data">
 <table class="table table-bordered table-hover m10">
     <tr>
-        <td width="10%" class="tableleft">上级</td>
+        <td width="10%" class="tableleft">类别</td>
         <td>
             <select name="parentid">
-            	<option value="0">&nbsp;一级菜单</option>
-            	<volist name="list" id="v">
-            	<option value='{{$v['id']}}'/>&nbsp;{{$v['nav_title']}}</option>
-                </volist>            	            
+            	<option value="0">&nbsp;--请选择--</option>
+            <volist name="cl" id="v">
+	    		<option value='{{$v['id']}}' <if condition="$parentid eq $v['id']"> selected </if> />&nbsp; <if condition="($v['childY'] eq $v['pid']) and ($v['pid'] neq 0) "> &nbsp;&nbsp;&nbsp;&lfloor;&nbsp;</if> {{$v['c_title']}}</option>
+	        </volist>            	            
             </select>
         </td>
     </tr>
     <tr>
-        <td class="tableleft">菜单名称</td>
-        <td><input type="text" name="nav_title" /></td>
+        <td class="tableleft">标题</td>
+        <td><input type="text" name="design_title" /></td>
     </tr>
     <tr>
-        <td class="tableleft">菜单简介</td>
-        <td><textarea cols="40" rows="5" name="nav_desc" id="nav_desc" style="width:380px;"></textarea></td>
+        <td class="tableleft">描述</td>
+        <td><textarea cols="40" rows="5" name="design_desc" id="design_desc" style="width:380px;"></textarea></td>
     </tr>
     <tr>
         <td class="tableleft">图片</td>
         <td>
-            <input type="file" name="nav_photo" id="nav_photo"/>
+            <input type="file" name="big_img" id="big_img"/>
         </td>
     </tr>
-    <tr>
+    <!-- <tr>
         <td class="tableleft">排序</td>
         <td>
             <input class="text" type="text" name="nav_order" value="0" style="width:90px;" onblur="if(/[^0123456789]/g.test(value))value=value.replace(/[^0123456789]/g,'');" onkeyup="if(/[^0123456789]/g.test(value))value=value.replace(/[^0123456789]/g,'');"/>
         </td>
-    </tr>   
+    </tr>   --> 
     <tr>
         <td class="tableleft">状态</td>
         <td>
-            <input type="radio" name="nav_status" value="1" checked/> 启用
-            <input type="radio" name="nav_status" value="0"/> 禁用
+            <input type="radio" name="status" value="1" checked/> 启用
+            <input type="radio" name="status" value="0"/> 禁用
         </td>
     </tr>
     <tr>
         <td class="tableleft">页面内容</td>
         <td>
-        	<textarea cols="40" rows="5" name="page_content" id="page_content"></textarea>
+        	<textarea cols="40" rows="5" name="design_content" id="design_content"></textarea>
         </td>
     </tr>
     <tr>
@@ -120,9 +119,8 @@
 <script>
     $(function () {       
 		$('#backid').click(function(){
-				window.location.href="index.html";
+				window.location.href="index";
 		 });
-
     });
 </script>
 {{$editor}}

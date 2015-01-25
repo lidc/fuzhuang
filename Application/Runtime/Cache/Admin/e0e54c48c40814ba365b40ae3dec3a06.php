@@ -45,7 +45,7 @@
     <tr>
         <td width="10%" class="tableleft">上级</td>
         <td>
-            <select name="parentid"><?php echo ($nl['pid']); ?>
+            <select name="parentid">
                 <option value="0">&nbsp;一级菜单</option>
                 <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><option value='<?php echo ($v['id']); ?>' <?php if($v['id'] == $nl['pid']): ?>selected<?php endif; ?> />&nbsp;<?php echo ($v['nav_title']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>                           
             </select>

@@ -12,6 +12,12 @@
 		$('#slider').nivoSlider();
 	});
 </script>
+<!--[if lt IE 7]>
+<script type="text/javascript" src="/fuzhuang/Public/js/jquery.js"></script>
+<script type="text/javascript" src="/fuzhuang/Public/js/jquery.dropdown.js"></script>
+<![endif]-->
+<link href="/fuzhuang/Public/css/dropdown.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/fuzhuang/Public/css/default.ultimate.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -19,7 +25,7 @@
 	<div class="header">
     	<div class="logo"><a href=""><img src="/fuzhuang/Public/images/logo.png" /></a></div>
         <div class="nav">
-        	<ul>
+        	<!--<ul>
             	<li><a href="">首页</a></li>
                	<li><a href="">关于简朵</a></li>
                 <li><a href="">品牌成员</a></li>
@@ -29,7 +35,95 @@
                 <li><a href="">网点分支</a></li>
                 <li><a href="">人才中心</a></li>
                 <li><a href="">联系我们</a></li>
-            </ul>
+            </ul>-->
+            
+           <ul id="nav" class="dropdown dropdown-horizontal">
+           	<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if($v["parent1"] != ''): ?><li id="n-music"><a href="./" class="dir"><?php echo ($v["nav_title"]); ?></a>
+                <ul>
+                	<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v2): $mod = ($i % 2 );++$i; if($v["parent1"] == $v2["parent2"] ): ?><li class="first"><a href="./" class="dir"><?php echo ($v2["nav_title"]); echo ($v2["c_title"]); ?></a>
+                        <ul>
+                        	<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v3): $mod = ($i % 2 );++$i; if($v2["child"] == $v3["child"] && $v3["parent3"] != '' ): ?><li class="first"><a href="./"><?php echo ($v3["c_title"]); ?></a></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>                       
+                        </ul>
+                    </li><?php endif; endforeach; endif; else: echo "" ;endif; ?>          
+                                    
+                </ul>
+            </li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+           
+           <!-- <li id="n-home"><a href="./">首页</a></li>
+            <li id="n-music"><a href="./" class="dir">商品展示</a>
+                <ul>
+                    <li class="first"><a href="./" class="dir">一级商品</a>
+                        <ul>
+                            <li class="first"><a href="./">零度对策</a></li>
+                            <li><a href="./">零度对策</a></li>
+                            <li><a href="./">零度对策</a></li>                            
+                        </ul>
+                    </li>                    
+                    <li><span class="dir">二级商品</span>
+                        <ul>
+                            <li class="first"><a href="./">网络营销技巧</a></li>
+                            <li><a href="./">网络营销技巧</a></li>
+                        </ul>
+                    </li>                   
+                </ul>
+            </li>
+            <li id="n-shows"><a href="./" class="dir">行业资讯</a>
+                <ul>
+                    <li class="first"><a href="./"><strong>行业资讯</strong></a></li>
+                    <li><a href="./">行业资讯</a></li>
+                    <li><a href="./"target="_blank">行业资讯</a></li>
+                </ul>
+            </li>
+            <li id="n-news"><a href="./" class="dir">工程案例</a>
+                <ul>
+                    <li class="first"><a href="./">工程案例</a></li>
+                    <li><span class="dir">工程案例</span>
+                        <ul>
+                            <li class="first"><a href="./">零度对策</a></li>
+                            <li><a href="./">零度对策</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="dir">工程案例</span>
+                        <ul>
+                            <li class="first"><a href="./">零度对策</a></li>
+                            <li><a href="./">零度对策</a></li>
+                        </ul>
+                    </li>                    
+                </ul>
+            </li>
+            <li><span class="dir">关于我们</span>
+                <ul>
+                    <li class="first"><a href="./" class="dir">关于我们</a>
+                        <ul>
+                            <li class="first"><a href="./">零度对策</a></li>
+                            <li><a href="./">零度对策</a></li>
+                            <li><a href="./">零度对策</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./" class="dir">关于我们</a>
+                        <ul>
+                            <li class="first"><span class="dir">零度对策</span>
+                                <ul>
+                                    <li class="first"><a href="./">电子商务</a></li>
+                                    <li><a href="./">电子商务</a></li>
+                                    <li><a href="./">电子商务</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./" class="dir">关于我们</a>
+                                <ul>
+                                    <li class="first"><a href="./">零度对策</a></li>
+                                    <li><a href="./">零度对策</a></li>
+                                    <li><a href="./">零度对策</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./">关于我们</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="n-home"><a href="./">零度对策</a></li>
+            <li id="n-home"><a href="./">联系我们</a></li> -->
+        </ul>
         </div>
         <div class="banner">
         	<div id="wrapper">

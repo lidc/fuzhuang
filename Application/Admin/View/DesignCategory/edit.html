@@ -30,64 +30,57 @@
     </style>
     <script type="text/javascript">
         function check(){
-         var nav_photo=$("#nav_photo").val();
-         if(nav_photo==''){
-           $("#nav_photo").attr("name","");
-           // return false;
+         var big_img=$("#big_img").val();
+         if(big_img==''){
+           $("#big_img").attr("name","");
           }
         }
     </script>
 </head>
 <body>
 <form action="edit" method="post" class="definewidth m20" id="form1" name="form1" enctype="multipart/form-data">
-<input type="hidden" name="id" value="{{$nl.id}}" />
+<input type="hidden" name="id" value="{{$cl.id}}" />
 <table class="table table-bordered table-hover m10">
     <tr>
         <td width="10%" class="tableleft">上级</td>
         <td>
-            <select name="parentid">{{$nl['pid']}}
+            <select name="parentid">
                 <option value="0">&nbsp;一级菜单</option>
                 <volist name="list" id="v">
-                <option value='{{$v['id']}}' <if condition="$v['id'] eq $nl['pid']" > selected </if> />&nbsp;{{$v['nav_title']}}</option>
+                <option value='{{$v['id']}}' <if condition="$v['id'] eq $cl['pid']" > selected </if> />&nbsp;{{$v['c_title']}}</option>
                 </volist>                           
             </select>
         </td>
     </tr>
     <tr>
-        <td class="tableleft">菜单名称</td>
-        <td><input type="text" name="nav_title" value="{{$nl['nav_title']}}" /></td>
+        <td class="tableleft">名称</td>
+        <td><input type="text" name="c_title" value="{{$cl['c_title']}}"/></td>
     </tr>
     <tr>
-        <td class="tableleft">菜单简介</td>
-        <td><textarea cols="40" rows="5" name="nav_desc" id="nav_desc" style="width:380px;">{{$nl['nav_desc']}}</textarea></td>
+        <td class="tableleft">描述</td>
+        <td><textarea cols="40" rows="5" name="c_desc" id="c_desc" style="width:380px;" >{{$cl['c_desc']}}</textarea></td>
     </tr>
     <tr>
         <td class="tableleft">图片</td>
         <td>
-            <input type="file" name="nav_photo" id="nav_photo"/>
+            <input type="file" name="big_img" id="big_img"/>
             <br/>
-            <if condition="$nl['nav_photo'] neq ''">
-            	<img src="{{$nl['nav_photo']}}" style="height:80px;"/>
+            <if condition="$cl['small_img'] neq ''">
+            	<img src="{{$cl['small_img']}}" style="height:80px;"/>
             </if>
         </td>
     </tr>
     <tr>
         <td class="tableleft">排序</td>
         <td>
-            <input class="text" type="text" name="nav_order" value="{{$nl['nav_order']}}" style="width:90px;" onblur="if(/[^0123456789]/g.test(value))value=value.replace(/[^0123456789]/g,'');" onkeyup="if(/[^0123456789]/g.test(value))value=value.replace(/[^0123456789]/g,'');"/>
+            <input class="text" type="text" name="myorder" value="{{$cl['myorder']}}" style="width:90px;" onblur="if(/[^0123456789]/g.test(value))value=value.replace(/[^0123456789]/g,'');" onkeyup="if(/[^0123456789]/g.test(value))value=value.replace(/[^0123456789]/g,'');"/>
         </td>
     </tr>   
     <tr>
         <td class="tableleft">状态</td>
         <td>
-            <input type="radio" name="nav_status" value="1" <if condition="$nl['nav_status'] eq 1"> checked </if> /> 启用
-            <input type="radio" name="nav_status" value="0" <if condition="$nl['nav_status'] eq 0"> checked </if> /> 禁用
-        </td>
-    </tr>
-    <tr>
-        <td class="tableleft">页面内容</td>
-        <td>
-            <textarea cols="40" rows="5" name="page_content" id="page_content">{{$ncl['content']}}</textarea>
+            <input type="radio" name="status" value="1" <if condition="$cl['status'] eq 1"> checked </if> /> 启用
+            <input type="radio" name="status" value="0" <if condition="$cl['status'] eq 0"> checked </if> /> 禁用
         </td>
     </tr>
     <tr>
@@ -96,19 +89,19 @@
     <tr>
         <td class="tableleft">Meta 标题</td>
         <td>
-            <input type="text" name="meta_title" style="width:380px;" value="{{$nl['meta_title']}}" />
+            <input type="text" name="meta_title" style="width:380px;" value="{{$cl['meta_keywords']}}"/>
         </td>
     </tr>
     <tr>
         <td class="tableleft">Meta 关键字</td>
         <td>
-            <input type="text" name="meta_keywords" style="width:380px;" value="{{$nl['meta_keywords']}}" />
+            <input type="text" name="meta_keywords" style="width:380px;" value="{{$cl['meta_keywords']}}"/>
         </td>
     </tr>
     <tr>
         <td class="tableleft">Meta 描述</td>
         <td>
-            <input type="text" name="meta_description" style="width:380px;" value="{{$nl['meta_description']}}" />
+            <input type="text" name="meta_description" style="width:380px;" value="{{$cl['meta_description']}}"/>
         </td>
     </tr>    
     <tr>
@@ -124,7 +117,7 @@
 <script>
     $(function () {       
 		$('#backid').click(function(){
-				window.location.href="index.html";
+				window.location.href="index";
 		 });
 
     });

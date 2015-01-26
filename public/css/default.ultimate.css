@@ -1,12 +1,12 @@
-@import "default.css";
+/** @import "default.css"; */
 
 ul.dropdown a,ul.dropdown span { display: block; padding: 5px 30px;}
 ul.dropdown li { padding: 0;}
 ul.dropdown ul a,ul.dropdown ul span { /* POI, proposal: override abstract a, span */ padding: 8px;}
-ul.dropdown *.dir { /* POI */ padding: 5px 30px;}
-ul.dropdown ul *.dir { padding: 8px 30px 8px 8px;}
-ul.dropdown ul a { width: 133px;}
-ul.dropdown ul a.dir { width: 111px;}
+ul.dropdown *.dir { /* POI */ padding: 5px 24px;}
+ul.dropdown ul *.dir { padding: 8px 10px 8px 8px;}
+ul.dropdown ul a { width: 106px;}
+ul.dropdown ul a.dir { width: 100px;}
 
 ul.dropdown *.open { background-color: #3d3d3d;}
 ul.dropdown ul *.open { background-color: #4c4c4c;color: #fff;}

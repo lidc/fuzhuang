@@ -40,14 +40,14 @@
            <ul id="nav" class="dropdown dropdown-horizontal">
            	<volist name="list" id="v">
            		<if condition="$v.parent1 neq ''">
-           		<li id="n-music"><a href="./" class="dir">{{$v.nav_title}}</a>
+           		<li id="n-home"><a href="./" class="dir">{{$v.nav_title}}</a>
                 <ul>
                 	<volist name="list" id="v2">
                 	<if condition="$v.parent1 eq $v2.parent2 "> 
                     <li class="first"><a href="./" class="dir">{{$v2.nav_title}}{{$v2.c_title}}</a>
-                        <ul>
+                        <ul style=" width:160px;">
                         	<volist name="list" id="v3">
-                        	<if condition="$v2.child eq $v3.child && $v3.parent3 neq '' "> 
+                        	<if condition="$v3.child eq $v2.child && $v3.childY eq 'y' "> 
                             <li class="first"><a href="./">{{$v3.c_title}}</a></li>
                             </if>
                             </volist>                       

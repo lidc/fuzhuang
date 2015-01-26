@@ -9,7 +9,7 @@ define('APP_DEBUG',True);
 
 //获取应用目录
 define('ROOT_PATH',str_replace('\\','/',dirname(__FILE__)) . '/');
-
+define('HTTPHOST', $_SERVER['HTTP_HOST']);
 //绑定Admin模块到当前入口文件
 // define('BIND_MODULE', 'Home');
 

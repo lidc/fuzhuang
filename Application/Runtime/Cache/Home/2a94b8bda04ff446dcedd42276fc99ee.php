@@ -25,6 +25,18 @@
 	<div class="header">
     	<div class="logo"><a href=""><img src="/fuzhuang/Public/images/logo.png" /></a></div>
         <div class="nav">
+        	<ul id="nav" class="dropdown dropdown-horizontal">
+           	<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if($v["parent1"] != ''): ?><li id="n-home"><a href="./" class="dir"><?php echo ($v["nav_title"]); ?></a>
+                <ul>
+                	<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v2): $mod = ($i % 2 );++$i; if($v["parent1"] == $v2["parent2"] ): ?><li class="first"><a href="./" class="dir"><?php echo ($v2["nav_title"]); echo ($v2["c_title"]); ?></a>
+                        <ul style=" width:160px;">
+                        	<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v3): $mod = ($i % 2 );++$i; if($v3["child"] == $v2["child"] && $v3["childY"] == 'y' ): ?><li class="first"><a href="./"><?php echo ($v3["c_title"]); ?></a></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>                       
+                        </ul>
+                    </li><?php endif; endforeach; endif; else: echo "" ;endif; ?>          
+                                    
+                </ul>
+            </li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+        </ul>
         	<!--<ul>
             	<li><a href="">首页</a></li>
                	<li><a href="">关于简朵</a></li>
@@ -37,8 +49,8 @@
                 <li><a href="">联系我们</a></li>
             </ul>-->
             
-           <ul id="nav" class="dropdown dropdown-horizontal">
-           	<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if($v["parent1"] != ''): ?><li id="n-home"><a href="./" class="dir"><?php echo ($v["nav_title"]); ?></a>
+         <!--  <ul id="nav" class="dropdown dropdown-horizontal">
+           	 <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if($v["parent1"] != ''): ?><li id="n-home"><a href="./" class="dir"><?php echo ($v["nav_title"]); ?></a>
                 <ul>
                 	<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v2): $mod = ($i % 2 );++$i; if($v["parent1"] == $v2["parent2"] ): ?><li class="first"><a href="./" class="dir"><?php echo ($v2["nav_title"]); echo ($v2["c_title"]); ?></a>
                         <ul style=" width:160px;">
@@ -122,8 +134,8 @@
                 </ul>
             </li>
             <li id="n-home"><a href="./">零度对策</a></li>
-            <li id="n-home"><a href="./">联系我们</a></li> -->
-        </ul>
+            <li id="n-home"><a href="./">联系我们</a></li> 
+        </ul>-->
         </div>
         <div class="banner">
         	<div id="wrapper">

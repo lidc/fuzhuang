@@ -4,9 +4,9 @@ use Think\Controller;
 
 class IndexController extends Controller {
     public function index(){
-    	$public = new PublicController();
-    	$public->nav();
-    	$public->bottom();
+        
+    	$this->assign("menu",menu());
+    	$this->assign('banner',banner());
         $this->display();
         
     }

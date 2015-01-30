@@ -23,7 +23,7 @@ class DesignController extends Controller {
         $numPerPage = 10;
         $count = $design->where($where)->count();
         $Page = new Page($count,$numPerPage);
-        $list = $design->field('id,cpid,cid,design_title,big_img,small_img,release_time')->where($where)->order('release_time desc')->page($nowPage.','.$Page->listRows)->select();
+        $list = $design->field('id,cpid,cid,design_title,big_img,small_img,release_time')->where($where)->order('add_time desc')->page($nowPage.','.$Page->listRows)->select();
         $cArr = array();
         foreach ($list as $key=>$value){
         	$cl = $design_category->field('id,pid,c_title')->where("id=".$value['cid'])->find();
@@ -35,6 +35,13 @@ class DesignController extends Controller {
         			$cls = $design_category->field('id,pid,c_title')->where("id=".$cl['pid'])->find();
         			$list[$key]['b_title'] = $cls['c_title'];
         			$list[$key]['c_title'] = $cl['c_title'];
+        		}
+        		if($value['hotOffers']==0){
+        		    $list[$key]['hotOffers'] = '不推荐';
+        		}elseif ($value['hotOffers']==1){
+        		     $list[$key]['hotOffers'] = '首页图片推荐';
+        		}else{
+        		    $list[$key]['hotOffers'] = '首页推荐';
         		}
         		//                 $list[$key]['c_title'] = $cl['c_title'];
         		$cArr[] = $list[$key];
@@ -80,6 +87,7 @@ class DesignController extends Controller {
             $design_title = isset($_POST['design_title']) ? in($_POST['design_title']) : ""; 
             $design_desc = isset($_POST['design_desc']) ? in($_POST['design_desc']) : "";
             $status = isset($_POST['status']) ? intval($_POST['status']) : 1;
+            $hotOffers = isset($_POST['hotOffers']) ? intval($_POST['hotOffers']) : 0;
             $add_time = time();
             $release_time = time();
             $design_content = isset($_POST['design_content']) ? in($_POST['design_content']) : "";
@@ -135,6 +143,7 @@ class DesignController extends Controller {
                 'small_img'   	=>  $small_photo_url,
                 'design_content'=>  $design_content,
                 'status'   		=>  $status,
+                'hotOffers'     =>  $hotOffers,
                 'add_time'      =>  $add_time,
             	'release_time'  =>  $release_time,
                 'meta_title'    =>  $meta_title,
@@ -187,6 +196,7 @@ class DesignController extends Controller {
             $design_title = isset($_POST['design_title']) ? in($_POST['design_title']) : ""; 
             $design_desc = isset($_POST['design_desc']) ? in($_POST['design_desc']) : "";
             $status = isset($_POST['status']) ? intval($_POST['status']) : 1;
+            $hotOffers = isset($_POST['hotOffers']) ? intval($_POST['hotOffers']) : 0;
             $release_time = time();
             $design_content = isset($_POST['design_content']) ? in($_POST['design_content']) : "";
             $meta_title = isset($_POST['meta_title']) ? in($_POST['meta_title']) : "";
@@ -200,6 +210,7 @@ class DesignController extends Controller {
             		'design_desc'   =>  $design_desc,
             		'design_content'=>  $design_content,
             		'status'   		=>  $status,
+                    'hotOffers'     =>  $hotOffers,
             		'release_time'  =>  $release_time,
             		'meta_title'    =>  $meta_title,
             		'meta_keywords' =>  $meta_keywords,
@@ -263,6 +274,7 @@ class DesignController extends Controller {
         }
         $dList = $design->where('id='.$id)->find();
         $this->assign("dl",$dList);        
+        echo $dList['hotOffers'];
         
         $where = 'status=1 and pid=0';
         $list = $design_category->field('id,pid,c_title')->where($where)->order('myorder')->select();
@@ -284,8 +296,7 @@ class DesignController extends Controller {
         $this->assign("cl",$cArray);   
         $KindEditor_obj = new KindEditor();
         $editor_code = $KindEditor_obj->create_editor('design_content',1000,380);
-        $this->assign("editor",$editor_code);
-        
+        $this->assign("editor",$editor_code);        
         $this->display();
     }
     

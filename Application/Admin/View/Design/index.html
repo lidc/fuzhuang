@@ -49,7 +49,8 @@
         <th>设计标题</th>
         <th>所在分类</th>
         <th>设计图标</th>
-        <th>发布时间</th>        
+        <th>首页推荐</th>
+        <th>发布时间</th>                 
         <th>管理操作</th>
     </tr>
     </thead>	 
@@ -59,6 +60,7 @@
 	           <td>{{$v.design_title}}</td>
 	           <td>{{$v.b_title}} <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$v.c_title}}</p></td>
 	           <td><img src="{{$v.small_img}}" style="height:42px;" /></td>
+	           <td>{{$v.hotOffers}}</td>
 	           <td>{{$v.release_time|date='Y-m-d H:i:s',###}}</td>
 	           <td>
 	                 <a href="edit?id={{$v.id}}">编辑</a>    

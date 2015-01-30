@@ -47,7 +47,8 @@
         <th>设计标题</th>
         <th>所在分类</th>
         <th>设计图标</th>
-        <th>发布时间</th>        
+        <th>首页推荐</th>
+        <th>发布时间</th>                 
         <th>管理操作</th>
     </tr>
     </thead>	 
@@ -56,10 +57,11 @@
 	           <td><?php echo ($v["design_title"]); ?></td>
 	           <td><?php echo ($v["b_title"]); ?> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ($v["c_title"]); ?></p></td>
 	           <td><img src="<?php echo ($v["small_img"]); ?>" style="height:42px;" /></td>
+	           <td><?php echo ($v["hotOffers"]); ?></td>
 	           <td><?php echo (date('Y-m-d H:i:s',$v["release_time"])); ?></td>
 	           <td>
 	                 <a href="edit?id=<?php echo ($v["id"]); ?>">编辑</a>    
-	                 <a href="delete?id=<?php echo ($v["id"]); ?>&cid=<?php echo ($v["cid"]); ?>&cpid=<?php echo ($v["cpid"]); ?>">删除</a>              
+	                 <a href="delete?id=<?php echo ($v["id"]); ?>">删除</a>              
 	           </td>
 	       </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 </table>
@@ -71,7 +73,7 @@
 <script>
     $(function () {        
 		$('#addnew').click(function(){
-				window.location.href="add.html";
+				window.location.href="add";
 		 });
     });
 
@@ -79,7 +81,7 @@
 	{		
 		if(confirm("确定要删除吗？"))
 		{		
-			var url = "index.html";			
+			var url = "index";			
 			window.location.href=url;		
 		}	
 	}

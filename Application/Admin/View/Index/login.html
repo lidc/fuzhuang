@@ -12,7 +12,7 @@
 <form name="userLoginActionForm" id="userLoginActionForm" method="POST" action="__URL__/login" target="_parent" >
 	<input type="text" id="username" name="username" value="" maxlength="20" placeholder="请输入用户名……" />
     <input type="password" id="userpwd" name="userpwd" maxlength="20" placeholder="请输入用户密码……"/>
-    <input type="text" id="validatecode" name="validatecode" value="" placeholder="验证码" onkeypress="co_click(this.form);" style="border:1px #CCCCCC solid"maxlength="20" />    
+    <input type="text" id="validatecode" name="validatecode" value="" placeholder="验证码" onkeydown="co_click(this.form);" style="border:1px #CCCCCC solid"maxlength="20" />    
     <a href="javaScript:getVcode2()" title="点击，换一张！">
         <img src='__APP__/Admin/Public/verify' onclick='this.src=this.src+"?"+Math.random()' id="vcodesrc" name="vcodesrc"/>    	
     </a>

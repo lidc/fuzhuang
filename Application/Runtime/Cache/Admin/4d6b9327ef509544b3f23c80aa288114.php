@@ -76,14 +76,22 @@
     <tr>
         <td class="tableleft">状态</td>
         <td>
-            <input type="radio" name="status" value="1" <?php if($pl['status'] == 1): ?>checked<?php endif; ?> /> 启用
-            <input type="radio" name="status" value="0" <?php if($pl['status'] == 0): ?>checked<?php endif; ?> /> 禁用
+            <input type="radio" name="status" value="1" <?php if($dl['status'] == 1): ?>checked<?php endif; ?> /> 启用
+            <input type="radio" name="status" value="0" <?php if($dl['status'] == 0): ?>checked<?php endif; ?> /> 禁用
+        </td>
+    </tr>
+    <tr>
+        <td class="tableleft">首页推荐</td>
+        <td>
+            <input type="radio" name="hotOffers" value="1" <?php if($dl['hotOffers'] == 1): ?>checked<?php endif; ?> /> 首页图片推荐
+            <input type="radio" name="hotOffers" value="2" <?php if($dl['hotOffers'] == 2): ?>checked<?php endif; ?> /> 首页推荐
+            <input type="radio" name="hotOffers" value="0" <?php if($dl['hotOffers'] == 0): ?>checked<?php endif; ?> /> 不推荐
         </td>
     </tr>
     <tr>
         <td class="tableleft">页面内容</td>
         <td>
-        	<textarea cols="40" rows="5" name="design_content" id="design_content"> <?php echo ($dl["design_title"]); ?> </textarea>
+        	<textarea cols="40" rows="5" name="design_content" id="design_content"> <?php echo ($dl["design_content"]); ?> </textarea>
         </td>
     </tr>
     <tr>
@@ -92,19 +100,19 @@
     <tr>
         <td class="tableleft">Meta 标题</td>
         <td>
-            <input type="text" name="meta_title" style="width:380px;" value="<?php echo ($dl["design_title"]); ?>"/>
+            <input type="text" name="meta_title" style="width:380px;" value="<?php echo ($dl["meta_title"]); ?>"/>
         </td>
     </tr>
     <tr>
         <td class="tableleft">Meta 关键字</td>
         <td>
-            <input type="text" name="meta_keywords" style="width:380px;" value="<?php echo ($dl["design_title"]); ?>"/>
+            <input type="text" name="meta_keywords" style="width:380px;" value="<?php echo ($dl["meta_keywords"]); ?>"/>
         </td>
     </tr>
     <tr>
         <td class="tableleft">Meta 描述</td>
         <td>
-            <input type="text" name="meta_description" style="width:380px;" value="<?php echo ($dl["design_title"]); ?>" />
+            <input type="text" name="meta_description" style="width:380px;" value="<?php echo ($dl["meta_keywords"]); ?>" />
         </td>
     </tr>    
     <tr>

@@ -30,7 +30,7 @@
     </style>
 </head>
 <body>
-<form class="form-inline definewidth m20" action="index" method="get">  
+<form class="form-inline definewidth m20" action="__ROOT__/index.php/Admin/Product/index" method="get">  
     产品名称：
     <input type="text" name="product_title" id="product_title"class="abc input-default" placeholder="{{$product_title}}" value="">&nbsp;&nbsp; 
     产品类型：
@@ -39,6 +39,14 @@
     	<volist name="cl" id="v">
     		<option value='{{$v['id']}}' <if condition="$parentid eq $v['id']"> selected </if> />&nbsp; <if condition="($v['childY'] eq $v['pid']) and ($v['pid'] neq 0) "> &nbsp;&nbsp;&nbsp; &lfloor; &nbsp; </if> {{$v['c_title']}}</option>
         </volist>            	            
+    </select>&nbsp;&nbsp;  
+    首页推荐：
+     <select name="select_hotoffers">
+            <option value="none"  >--请选择--</option>
+            <option value="0" <if  condition="($hotoffers eq '0')"> selected </if> >不推荐</option>
+            <!-- <option value="2" <if  condition="($hotoffers eq 2)"> selected </if> >推荐</option> -->
+            <option value="1" <if  condition="($hotoffers eq 1)"> selected </if> >图片推荐</option>
+                                        
     </select>
     &nbsp;&nbsp; 
     <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增产品</button>
@@ -51,7 +59,8 @@
         <th>所在分类</th>
         <th>状态</th>
         <th>产品图片</th>
-        <th>更多图片</th>                
+        <th>更多图片</th>   
+        <th>首页推荐</th>             
         <th>管理操作</th>
     </tr>
     </thead>
@@ -62,10 +71,16 @@
 	           <td>{{$v['b_title']}} <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$v['c_title']}}</p></td>
 	           <td>{{$v['status']}}</td>
 	           <td><img src="{{$v['small_img']}}" style="height:52px;" /></td>
-	           <td><a href="imgList?id={{$v['id']}}&title={{$v['product_title']}}">查看</a></td>	           
+	           <td><a href="imgList?id={{$v['id']}}&title={{$v['product_title']}}">查看</a></td>
+               <td>
+                <if condition="($v.hotoffers eq 1)"> 图片推荐 
+                 <elseif condition="$v.hotoffers eq 2"/>推荐
+                 <else /> 不推荐
+                 </if>
+                </td>	           
 	           <td>
-                 <a href="edit?id={{$v['id']}}">编辑</a>    
-                 <a href="delete?id={{$v['id']}}">删除</a>              
+                 <a href="__ROOT__/index.php/Admin/Product/edit?id={{$v['id']}}">编辑</a>    
+                 <a href="__ROOT__/index.php/Admin/Product/delete?id={{$v['id']}}">删除</a>              
 	           </td>
 	       </tr>
      </volist>
@@ -78,7 +93,7 @@
 <script>
     $(function () {        
 		$('#addnew').click(function(){
-				window.location.href="add";
+				window.location.href="__ROOT__/index.php/Admin/Product/add";
 		 });
     });
 

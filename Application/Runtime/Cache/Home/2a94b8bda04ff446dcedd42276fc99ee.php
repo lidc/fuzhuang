@@ -26,11 +26,11 @@
     	<div class="logo"><a href=""><img src="/fuzhuang/Public/images/logo.png" /></a></div>
         <div class="nav">
         	<ul id="nav" class="dropdown dropdown-horizontal">
-	<?php if(is_array($menu)): $i = 0; $__LIST__ = $menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if($v["parent1"] != ''): ?><li id="n-home"><a href="./" class="dir"><?php echo ($v["nav_title"]); ?></a>
+	<?php if(is_array($menu)): $i = 0; $__LIST__ = $menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if($v["parent1"] != ''): ?><li id="n-home"><a href="/fuzhuang/index.php/Home/<?php echo ($v["page_url"]); ?>?id=<?php echo ($v["id"]); ?>" class="dir"><?php echo ($v["nav_title"]); ?></a>
 		        <ul>
-			    	<?php if(is_array($menu)): $i = 0; $__LIST__ = $menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v2): $mod = ($i % 2 );++$i; if($v["parent1"] == $v2["parent2"] ): ?><li class="first"><a href="./" class="dir"><?php echo ($v2["nav_title"]); echo ($v2["c_title"]); ?></a>
+			    	<?php if(is_array($menu)): $i = 0; $__LIST__ = $menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v2): $mod = ($i % 2 );++$i; if($v["parent1"] == $v2["parent2"] ): ?><li class="first"><a href="/fuzhuang/index.php/Home/<?php echo ($v["page_url"]); ?>?id=<?php echo ($v2["id"]); ?>" class="dir"><?php echo ($v2["nav_title"]); echo ($v2["c_title"]); ?></a>
 						        <ul style=" width:160px;">
-							      <?php if(is_array($menu)): $i = 0; $__LIST__ = $menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v3): $mod = ($i % 2 );++$i; if($v3["child"] == $v2["child"] && $v3["childY"] == 'y' ): ?><li class="first"><a href="./"><?php echo ($v3["c_title"]); ?></a></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>                       
+							      <?php if(is_array($menu)): $i = 0; $__LIST__ = $menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v3): $mod = ($i % 2 );++$i; if($v3["child"] == $v2["child"] && $v3["childY"] == 'y' ): ?><li class="first"><a href="/fuzhuang/index.php/Home/<?php echo ($v["page_url"]); ?>?id=<?php echo ($v3["id"]); ?>"><?php echo ($v3["c_title"]); ?></a></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>                       
 						      </ul>
 						  </li><?php endif; endforeach; endif; else: echo "" ;endif; ?>	                            
 		        </ul>
@@ -53,62 +53,44 @@
         	<div class="con1-mod">
             	<div class="mod-title"><a href=""><img src="/fuzhuang/Public/images/chuangyisheji.png"/></a></div>
                 <div class="mod-hot">
-                	<a href=""><img src="/fuzhuang/Public/images/01.jpg"/></a>
-                    <p><a href="">2015春夏灵动系列首推</a></p>
+                	<?php if(is_array($dlist)): $i = 0; $__LIST__ = $dlist;if( count($__LIST__)==0 ) : echo "暂时没有数据" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if(($v["hotoffers"] == 1)): ?><a href="design?id=<?php echo ($v["id"]); ?>"><img src="<?php echo ($v["big_img"]); ?>"/></a>
+                    <p><a href="design?id=<?php echo ($v["id"]); ?>"><?php echo ($v["design_title"]); ?></a></p><?php endif; endforeach; endif; else: echo "暂时没有数据" ;endif; ?>
                 </div>
                 <div class="mod-list">
                 	<hr/>
                     <ul>
-                    	<li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
+                    	<?php if(is_array($dlist)): $i = 0; $__LIST__ = $dlist;if( count($__LIST__)==0 ) : echo "暂时没有数据" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if(($v["hotoffers"] == 2 and $i <= 8)): ?><li><a href="design?id=<?php echo ($v["id"]); ?>"><?php echo ($v["design_title"]); ?></a></li><?php endif; endforeach; endif; else: echo "暂时没有数据" ;endif; ?>
+                       
                     </ul>
-                    <p><a href=""><img src="/fuzhuang/Public/images/more.png" /></a></p>
+                    <p><a href="design"><img src="/fuzhuang/Public/images/more.png" /></a></p>
                 </div>
             </div>
             <div class="con1-mod">
             	<div class="mod-title"><a href=""><img src="/fuzhuang/Public/images/pinpaizixun.png"/></a></div>
                 <div class="mod-hot">
-                	<a href=""><img src="/fuzhuang/Public/images/02.jpg"/></a>
-                    <p><a href="">J.D.Chaude创业天虹推广活动启动</a></p>
+                	<?php if(is_array($blist)): $i = 0; $__LIST__ = $blist;if( count($__LIST__)==0 ) : echo "暂时没有数据" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if(($v["hotoffers"] == 1 )): ?><a href="brand?id=<?php echo ($v["id"]); ?>"><img src="<?php echo ($v["big_img"]); ?>"/></a>
+                    <p><a href="brand?id=<?php echo ($v["id"]); ?>"><?php echo ($v["brand_name"]); ?></a></p><?php endif; endforeach; endif; else: echo "暂时没有数据" ;endif; ?>
                 </div>
                 <div class="mod-list">
                 	<hr/>
                     <ul>
-                    	<li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
+                    	<?php if(is_array($blist)): $i = 0; $__LIST__ = $blist;if( count($__LIST__)==0 ) : echo "暂时没有数据" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if(($v["hotoffers"] == 2 and $i <= 8)): ?><li><a href="brand?id=<?php echo ($v["id"]); ?>"><?php echo ($v["brand_name"]); ?></a></li><?php endif; endforeach; endif; else: echo "暂时没有数据" ;endif; ?>
                     </ul>
-                    <p><a href=""><img src="/fuzhuang/Public/images/more.png" /></a></p>
+                    <p><a href="brand"><img src="/fuzhuang/Public/images/more.png" /></a></p>
                 </div>
             </div>
             <div class="con1-mod">
             	<div class="mod-title"><a href=""><img src="/fuzhuang/Public/images/jiaoyufenxiang.png"/></a></div>
                 <div class="mod-hot">
-                	<a href=""><img src="/fuzhuang/Public/images/03.jpg"/></a>
-                    <p><a href="">少女如何穿文胸</a></p>
+
+                	<?php if(is_array($nlist)): $i = 0; $__LIST__ = $nlist;if( count($__LIST__)==0 ) : echo "暂时没有数据" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if(($v["hotoffers"] == 1 )): ?><a href="news?id=<?php echo ($v["id"]); ?>"><img src="<?php echo ($v["big_img"]); ?>"/></a>
+                    <p><a href="news?id=<?php echo ($v["id"]); ?>"><?php echo ($v["news_title"]); ?></a></p><?php endif; endforeach; endif; else: echo "暂时没有数据" ;endif; ?>
+
                 </div>
                 <div class="mod-list">
                 	<hr/>
                     <ul>
-                    	<li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
+                    	<?php if(is_array($nlist)): $i = 0; $__LIST__ = $nlist;if( count($__LIST__)==0 ) : echo "暂时没有数据" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if(($v["hotoffers"] == 2 and $i <= 8)): ?><li><a href="news?id=<?php echo ($v["id"]); ?>"><?php echo ($v["news_title"]); ?></a></li><?php endif; endforeach; endif; else: echo "暂时没有数据" ;endif; ?>
                     </ul>
                     <p><a href=""><img src="/fuzhuang/Public/images/more.png" /></a></p>
                 </div>
@@ -122,11 +104,7 @@
             </div>
             <div class="con2-product-list">
             	<ul>
-                	<li><a href=""><img src="/fuzhuang/Public/images/06.jpg" /></a></li>
-                    <li><a href=""><img src="/fuzhuang/Public/images/07.jpg" /></a></li>
-                    <li><a href=""><img src="/fuzhuang/Public/images/08.jpg" /></a></li>
-                    <li><a href=""><img src="/fuzhuang/Public/images/09.jpg" /></a></li>
-                    <li><a href=""><img src="/fuzhuang/Public/images/10.jpg" /></a></li>
+                        <?php if(is_array($plist)): $i = 0; $__LIST__ = array_slice($plist,0,5,true);if( count($__LIST__)==0 ) : echo "暂时没有数据" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if(($v["hotoffers"] == 1 and $i <= 5)): ?><li><a href=""><img src="<?php echo ($v["big_img"]); ?>" /></a></li><?php endif; endforeach; endif; else: echo "暂时没有数据" ;endif; ?>
                 </ul>
             </div>
         </div>

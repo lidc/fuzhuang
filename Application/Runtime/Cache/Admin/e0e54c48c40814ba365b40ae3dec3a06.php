@@ -55,6 +55,10 @@
         <td class="tableleft">菜单名称</td>
         <td><input type="text" name="nav_title" value="<?php echo ($nl['nav_title']); ?>" /></td>
     </tr>
+     <tr>
+        <td class="tableleft">页面路径</td>
+        <td><input type="text" name="page_url" value="<?php echo ($nl['page_url']); ?>"/></td>
+    </tr>
     <tr>
         <td class="tableleft">菜单简介</td>
         <td><textarea cols="40" rows="5" name="nav_desc" id="nav_desc" style="width:380px;"><?php echo ($nl['nav_desc']); ?></textarea></td>

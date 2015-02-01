@@ -30,15 +30,23 @@
     </style>
 </head>
 <body>
-<form class="form-inline definewidth m20" action="index" method="get">  
+<form class="form-inline definewidth m20" action="__ROOT__/index.php/Admin/News/index" method="get">  
     新闻标题：
-    <input type="text" name="news_title" id="news_title"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
+    <input type="text" name="news_title" id="news_title"class="abc input-default" placeholder="" value="{{$news_title}}">&nbsp;&nbsp;  
    类型：
     <select name="parentid">
     		<option value="0">--请选择--</option>
     	<volist name="cl" id="v">
-    		<option value='{{$v['id']}}' <if condition="$parentid eq $v['id']"> selected </if> />&nbsp; <if condition="($v['childY'] eq $v['pid']) and ($v['pid'] neq 0) "> &nbsp;&nbsp;&nbsp;&lfloor;&nbsp;</if> {{$v['c_title']}}</option>
+    		<option value='{{$v['id']}}' <if condition="$parentid eq $v['id']"> selected </if>  />&nbsp; <if condition="($v['childY'] eq $v['pid']) and ($v['pid'] neq 0) "> &nbsp;&nbsp;&nbsp;&lfloor;&nbsp;</if> {{$v['c_title']}}</option>
         </volist>            	            
+    </select>&nbsp;&nbsp;  
+    首页推荐：
+     <select name="select_hotoffers">
+            <option value="none"  >--请选择--</option>
+            <option value="0" <if  condition="($hotoffers eq '0')"> selected </if> >不推荐</option>
+            <option value="2" <if  condition="($hotoffers eq 2)"> selected </if> >推荐</option>
+            <option value="1" <if  condition="($hotoffers eq 1)"> selected </if> >图片推荐</option>
+                                        
     </select>
     <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增设计</button>
 </form>
@@ -49,20 +57,27 @@
         <th>设计标题</th>
         <th>所在分类</th>
         <th>设计图标</th>
+        <th>首页推荐</th>
         <th>发布时间</th>        
         <th>管理操作</th>
     </tr>
     </thead>	 
     <volist name="list" id="v">    
 	       <tr>
-	           <td>{{$v.id}}</td>
+	           <td>{{$i}}</td>
 	           <td>{{$v.news_title}}</td>
 	           <td>{{$v.b_title}} <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$v.c_title}}</p></td>
 	           <td><img src="{{$v.small_img}}" style="height:42px;" /></td>
+               <td>
+                <if condition="($v.hotoffers eq 1)"> 图片推荐 
+                 <elseif condition="$v.hotoffers eq 2"/>推荐
+                 <else /> 不推荐
+                 </if>
+                </td>
 	           <td>{{$v.release_time|date='Y-m-d H:i:s',###}}</td>
 	           <td>
-	                 <a href="edit?id={{$v.id}}">编辑</a>    
-	                 <a href="delete?id={{$v.id}}">删除</a>              
+	                 <a href="__ROOT__/index.php/Admin/News/edit?id={{$v.id}}">编辑</a>    
+	                 <a href="__ROOT__/index.php/Admin/News/delete?id={{$v.id}}">删除</a>              
 	           </td>
 	       </tr>
      </volist>
@@ -75,7 +90,7 @@
 <script>
     $(function () {        
 		$('#addnew').click(function(){
-				window.location.href="add";
+				window.location.href="__ROOT__/index.php/Admin/News/add";
 		 });
     });
 
@@ -83,7 +98,7 @@
 	{		
 		if(confirm("确定要删除吗？"))
 		{		
-			var url = "index";			
+			var url = "__ROOT__/index.php/Admin/News/index";			
 			window.location.href=url;		
 		}	
 	}

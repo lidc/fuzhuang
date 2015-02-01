@@ -18,11 +18,15 @@ public function index(){
         if($parentid){
         	$where .=" AND (cid=".$parentid." or cpid=".$parentid.")";
         }
+         $select_hotoffers = isset($_GET['select_hotoffers']) ? $_GET['select_hotoffers'] : 'none'; 
+        if($select_hotoffers!='none'){
+            $where .= " AND hotoffers=".$select_hotoffers." ";
+        }
         $nowPage = isset($_GET['p']) ? intval($_GET['p']) : 1;
         $numPerPage = 10;
         $count = $news->where($where)->count();
         $Page = new Page($count,$numPerPage);
-        $list = $news->field('id,cpid,cid,news_title,big_img,small_img,release_time')->where($where)->order('release_time desc')->page($nowPage.','.$Page->listRows)->select();
+        $list = $news->field('id,cpid,cid,news_title,big_img,small_img,release_time,hotoffers')->where($where)->order('release_time desc')->page($nowPage.','.$Page->listRows)->select();
         $cArr = array();
         foreach ($list as $key=>$value){
         	$cl = $news_category->field('id,pid,c_title')->where("id=".$value['cid'])->find();
@@ -47,6 +51,9 @@ public function index(){
         $this->assign("page_show",$page_show);
         $this->assign("list",$cArr);
         $this->assign("news_title",$news_title);
+        $this->assign('parentid',$parentid);
+        $this->assign("hotoffers",$select_hotoffers);
+
         
         $where = 'status=1 and pid=0';
         $list = $news_category->field('id,pid,c_title')->where($where)->order('myorder')->select();
@@ -79,6 +86,7 @@ public function index(){
             $news_title = isset($_POST['news_title']) ? in($_POST['news_title']) : ""; 
             $news_desc = isset($_POST['news_desc']) ? in($_POST['news_desc']) : "";
             $status = isset($_POST['status']) ? intval($_POST['status']) : 1;
+            $hotOffers = isset($_POST['hotOffers']) ? intval($_POST['hotOffers']) : 0;
             $add_time = time();
             $release_time = time();
             $news_content = isset($_POST['news_content']) ? in($_POST['news_content']) : "";
@@ -134,6 +142,7 @@ public function index(){
                 'big_img'     	=>  $big_img_url ,
                 'small_img'   	=>  $small_photo_url,                
                 'status'   		=>  $status,
+                'hotOffers'     =>  $hotOffers,
                 'add_time'      =>  $add_time,
             	'release_time'  =>  $release_time,
                 'meta_title'    =>  $meta_title,
@@ -186,6 +195,7 @@ public function index(){
             $news_title = isset($_POST['news_title']) ? in($_POST['news_title']) : ""; 
             $news_desc = isset($_POST['news_desc']) ? in($_POST['news_desc']) : "";
             $status = isset($_POST['status']) ? intval($_POST['status']) : 1;
+            $hotOffers = isset($_POST['hotOffers']) ? intval($_POST['hotOffers']) : 0;
             $release_time = time();
             $news_content = isset($_POST['news_content']) ? in($_POST['news_content']) : "";
             $meta_title = isset($_POST['meta_title']) ? in($_POST['meta_title']) : "";
@@ -199,6 +209,7 @@ public function index(){
 	                'news_desc'   	=>  $news_desc,
 	            	'news_content'	=>  $news_content,
             		'status'   		=>  $status,
+                    'hotOffers'     =>  $hotOffers,
             		'release_time'  =>  $release_time,
             		'meta_title'    =>  $meta_title,
             		'meta_keywords' =>  $meta_keywords,
@@ -250,7 +261,7 @@ public function index(){
             if($result){
                 echo "<script>alert('修改成功！');location.href='index';</script>";              
             }else{
-                echo "<script>alert('修改失败！');location.href='add';</script>";
+                echo "<script>alert('修改失败！');location.href='edit';</script>";
             }
         }
         

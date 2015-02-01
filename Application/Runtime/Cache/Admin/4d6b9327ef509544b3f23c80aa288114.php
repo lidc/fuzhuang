@@ -83,9 +83,9 @@
     <tr>
         <td class="tableleft">首页推荐</td>
         <td>
-            <input type="radio" name="hotOffers" value="1" <?php if($dl['hotOffers'] == 1): ?>checked<?php endif; ?> /> 首页图片推荐
-            <input type="radio" name="hotOffers" value="2" <?php if($dl['hotOffers'] == 2): ?>checked<?php endif; ?> /> 首页推荐
-            <input type="radio" name="hotOffers" value="0" <?php if($dl['hotOffers'] == 0): ?>checked<?php endif; ?> /> 不推荐
+            <input type="radio" name="hotOffers" value="1" <?php if(($dl["hotoffers"] == 1)): ?>checked<?php endif; ?> /> 首页图片推荐
+            <input type="radio" name="hotOffers" value="2" <?php if($dl["hotoffers"] == 2): ?>checked<?php endif; ?> /> 首页推荐
+            <input type="radio" name="hotOffers" value="0" <?php if($dl["hotoffers"] == 0): ?>checked<?php endif; ?> /> 不推荐
         </td>
     </tr>
     <tr>

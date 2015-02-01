@@ -19,7 +19,6 @@
         .sidebar-nav {
             padding: 9px 0;
         }
-
         @media (max-width: 980px) {
             /* Enable use of floated navbar text */
             .navbar-text.pull-right {
@@ -28,68 +27,70 @@
                 padding-right: 5px;
             }
         }
-
-
     </style>
 </head>
 <body>
 <form class="form-inline definewidth m20" action="index" method="get">  
-    品牌名称：
-    <input type="text" name="banner_title" id="banner_title"class="abc input-default" placeholder="" value="{{$banner_title}}">&nbsp;&nbsp;  
-    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增品牌</button>
+    品牌咨询标题：
+    <input type="text" name="brand_name" id="brand_name"class="abc input-default" placeholder="" value="{{$brand_name}}">&nbsp;&nbsp;  
+    首页推荐：
+     <select name="select_hotoffers">
+    		<option value="none"  >--请选择--</option>
+    		<option value="0" <if  condition="($hotoffers eq '0')"> selected </if> >不推荐</option>
+    		<option value="2" <if  condition="($hotoffers eq 2)"> selected </if> >推荐</option>
+    		<option value="1" <if  condition="($hotoffers eq 1)"> selected </if> >图片推荐</option>
+    		            	            
+    </select>
+    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增设计</button>
 </form>
 <table class="table table-bordered table-hover definewidth m10" >
     <thead>
     <tr>
-        <th>Banner 标题</th>
-        <th>Banner 图片</th>
-        <th>链接地址</th>
+    	<th>序号</th>
+        <th>产品咨询标题</th>
+        <th>图标</th>
+        <th>首页推荐</th>
+        <th>时间</th>                 
         <th>管理操作</th>
     </tr>
-    </thead>
-    	<volist name="list" id="v">
-	     <tr>
-            <td>{{$v['banner_title']}}</td>
-            <td><img src="{{$v['small_photo']}}" style="width:126px"/></td>
-            <td>{{$v['website']}}</td>
-            <td>
-                  <a href="edit?bid={{$v['id']}}">编辑</a>
-                  
-            </td>
-        </tr>
-    	</volist>
-    </table>
+    </thead>	 
+    <volist name="list" id="v">    
+	       <tr>
+	           <td>{{$i}}</td>
+	           <td>{{$v.brand_name}}</td>
+	           <td><img src="{{$v.small_img}}" style="height:42px;" /></td>
+	           <td>
+	           	<if condition="($v.hotoffers eq 1)"> 图片推荐 
+				 <elseif condition="$v.hotoffers eq 2"/>推荐
+				 <else /> 不推荐
+				 </if>
+	           	</td>
+	           <td>{{$v.add_time|date='Y-m-d H:i:s',###}}</td>
+	           <td>
+	                 <a href="__ROOT__/index.php/Admin/Brand/edit?id={{$v.id}}">编辑</a>    
+	                 <a href="__ROOT__/index.php/Admin/Brand/delete?id={{$v.id}}">删除</a>              
+	           </td>
+	       </tr>
+     </volist>
+</table>
 <div class="inline pull-right page">
-	{{$page_show}}         
+	{{$page_show}}        
 </div>
 </body>
 </html>
 <script>
-    $(function () {
-        
+    $(function () {        
 		$('#addnew').click(function(){
-
-				window.location.href="add.html";
+				window.location.href="__ROOT__/index.php/Admin/Brand/add";
 		 });
-
-
     });
 
 	function del(id)
-	{
-		
-		
+	{		
 		if(confirm("确定要删除吗？"))
-		{
-		
-			var url = "index.html";
-			
+		{		
+			var url = "index";			
 			window.location.href=url;		
-		
-		}
-	
-	
-	
-	
+		}	
 	}
 </script>

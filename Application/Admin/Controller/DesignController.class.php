@@ -19,13 +19,21 @@ class DesignController extends Controller {
         if($parentid){
         	$where .=" AND (cid=".$parentid." or cpid=".$parentid.")";
         }
+        $select_hotoffers = isset($_GET['select_hotoffers']) ? $_GET['select_hotoffers'] : 'none'; 
+        if($select_hotoffers!='none'){
+        	$where .= " AND hotoffers=".$select_hotoffers." ";
+        }
+        
         $nowPage = isset($_GET['p']) ? intval($_GET['p']) : 1;
         $numPerPage = 10;
         $count = $design->where($where)->count();
         $Page = new Page($count,$numPerPage);
-        $list = $design->field('id,cpid,cid,design_title,big_img,small_img,release_time')->where($where)->order('add_time desc')->page($nowPage.','.$Page->listRows)->select();
+        $list = $design->field('id,cpid,cid,design_title,big_img,small_img,release_time,hotOffers')->where($where)->order('add_time desc')->page($nowPage.','.$Page->listRows)->select();
         $cArr = array();
-        foreach ($list as $key=>$value){
+        $i=0;
+        foreach ($list as $key=>$value){   
+        	$i++;
+        	$list[$key]['code'] = $i;     	
         	$cl = $design_category->field('id,pid,c_title')->where("id=".$value['cid'])->find();
         	if($cl){
         		if($cl['pid']==0){
@@ -35,14 +43,7 @@ class DesignController extends Controller {
         			$cls = $design_category->field('id,pid,c_title')->where("id=".$cl['pid'])->find();
         			$list[$key]['b_title'] = $cls['c_title'];
         			$list[$key]['c_title'] = $cl['c_title'];
-        		}
-        		if($value['hotOffers']==0){
-        		    $list[$key]['hotOffers'] = '不推荐';
-        		}elseif ($value['hotOffers']==1){
-        		     $list[$key]['hotOffers'] = '首页图片推荐';
-        		}else{
-        		    $list[$key]['hotOffers'] = '首页推荐';
-        		}
+        		}        		
         		//                 $list[$key]['c_title'] = $cl['c_title'];
         		$cArr[] = $list[$key];
         	}else{
@@ -55,7 +56,8 @@ class DesignController extends Controller {
         $this->assign("page_show",$page_show);
         $this->assign("list",$cArr);
         $this->assign("design_title",$design_title);
-        
+        $this->assign('parentid',$parentid);
+        $this->assign("hotoffers",$select_hotoffers);
         $where = 'status=1 and pid=0';
         $list = $design_category->field('id,pid,c_title')->where($where)->order('myorder')->select();
         $cArray = array();
@@ -263,7 +265,7 @@ class DesignController extends Controller {
             if($result){
                 echo "<script>alert('修改成功！');location.href='index';</script>";              
             }else{
-                echo "<script>alert('修改失败！');location.href='add';</script>";
+                echo "<script>alert('修改失败！');location.href='edit';</script>";
             }
         }
         
@@ -273,8 +275,7 @@ class DesignController extends Controller {
         	exit;
         }
         $dList = $design->where('id='.$id)->find();
-        $this->assign("dl",$dList);        
-        echo $dList['hotOffers'];
+        $this->assign("dl",$dList);
         
         $where = 'status=1 and pid=0';
         $list = $design_category->field('id,pid,c_title')->where($where)->order('myorder')->select();
@@ -302,7 +303,6 @@ class DesignController extends Controller {
     
     public function delete(){
     	$design = M('design');
-        $design_category = M('design_category');
     	$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
     	if(!$id){
     		echo "无参数！";

@@ -10,7 +10,7 @@ function menu(){
     $product_category = M('product_category');
     $design_category = M('design_category');
     $news_category = M('news_category');
-    $list = $nav_page->field('id,pid,nav_title')->where('pid=0')->select();
+    $list = $nav_page->field('id,pid,nav_title,page_url')->where('pid=0')->select();
     $pArray = array();    
     foreach ($list as $key=>$value){
         if($value['nav_title']=='产品展示'){
@@ -77,7 +77,7 @@ function menu(){
                 }
             }
         }else {
-            $ncl = $nav_page->field('id,pid,nav_title')->where('pid='.$value['id'])->select();
+            $ncl = $nav_page->field('id,pid,nav_title,page_url')->where('pid='.$value['id'])->select();
             if($ncl){
                 $list[$key]['parent1'] = $value['id'];
                 $list[$key]['child'] = '';

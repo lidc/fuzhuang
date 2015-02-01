@@ -70,7 +70,7 @@
 							</a>
 							<a href="deleteImg?id=<?php echo ($v['id']); ?>&productId=<?php echo ($v['product_id']); ?>" class="imgdel">删除</a>
 						</li><?php endforeach; endif; else: echo "" ;endif; ?>
-						<li>
+						<!-- <li>
 							<a class="example-image-link" href="/fuzhuang/plug-in/lightbox/img/demopage/image-3.jpg" data-lightbox="example-set" data-title="">
 								<img class="example-image" src="/fuzhuang/plug-in/lightbox/img/demopage/thumb-3.jpg" alt=""/>
 							</a>
@@ -93,7 +93,7 @@
 								<img class="example-image" src="/fuzhuang/plug-in/lightbox/img/demopage/thumb-6.jpg" alt="" />
 							</a>
 							<a href="" class="imgdel">删除</a>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 			</div>

@@ -60,6 +60,7 @@ class NodeController extends Controller {
         if($_POST){            
             $parentid = isset($_POST['parentid']) ? intval($_POST['parentid']) : 0;
             $nav_title = isset($_POST['nav_title']) ? in($_POST['nav_title']) : ""; 
+            $page_url = isset($_POST['page_url']) ? in($_POST['page_url']) : "";
             $nav_desc = isset($_POST['nav_desc']) ? in($_POST['nav_desc']) : "";
             $urlArr = C('TMPL_PARSE_STRING');            
             $img_url = $urlArr['__UPLOAD_PATH__'];                      //图片保存路径
@@ -110,6 +111,7 @@ class NodeController extends Controller {
             $data = array(
                 'pid'           =>  $parentid,
                 'nav_title'     =>  $nav_title,
+            	'page_url'		=>	$page_url,
                 'nav_desc'      =>  $nav_desc,
                 'nav_photo'     =>  $nav_photo_url,
                 'thumb_photo'   =>  $thumb_photo_url,
@@ -158,6 +160,7 @@ class NodeController extends Controller {
             }
             $parentid = isset($_POST['parentid']) ? intval($_POST['parentid']) : 0;
             $nav_title = isset($_POST['nav_title']) ? in($_POST['nav_title']) : ""; 
+            $page_url = isset($_POST['page_url']) ? in($_POST['page_url']) : "";
             $nav_desc = isset($_POST['nav_desc']) ? in($_POST['nav_desc']) : "";            
             $nav_order = isset($_POST['nav_order']) ? intval($_POST['nav_order']) : 0;
             $nav_status = isset($_POST['nav_status']) ? intval($_POST['nav_status']) : 1;
@@ -170,6 +173,7 @@ class NodeController extends Controller {
             $data = array(
                 'pid'           =>  $parentid,
                 'nav_title'     =>  $nav_title,
+            	'page_url'		=>	$page_url,
                 'nav_desc'      =>  $nav_desc,
                 'nav_order'     =>  $nav_order,
                 'nav_status'    =>  $nav_status,

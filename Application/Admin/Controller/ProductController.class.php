@@ -17,12 +17,16 @@ public function index(){
         $parentid = isset($_GET['parentid']) ? intval($_GET['parentid']) : 0;
         if($parentid){
             $where .=" AND (cid=".$parentid." or cpid=".$parentid.")";
-        }       
+        } 
+        $select_hotoffers = isset($_GET['select_hotoffers']) ? $_GET['select_hotoffers'] : 'none'; 
+        if($select_hotoffers!='none'){
+            $where .= " AND hotoffers=".$select_hotoffers." ";
+        }    
         $nowPage = isset($_GET['p']) ? intval($_GET['p']) : 1;
         $numPerPage = 10;
         $count = $product->where($where)->count();
         $Page = new Page($count,$numPerPage);
-        $list = $product->field('id,cid,cpid,product_title,status,small_img')->where($where)->order('add_time')->page($nowPage.','.$Page->listRows)->select();
+        $list = $product->field('id,cid,cpid,product_title,status,small_img,hotoffers')->where($where)->order('add_time')->page($nowPage.','.$Page->listRows)->select();
         
         $cArr = array();
         foreach ($list as $key=>$value){
@@ -49,7 +53,7 @@ public function index(){
                 $list[$key]['c_title'] = "";                
                 $cArr[]=$list[$key];
             }
-        }
+        }        
         $where = 'status=1 and pid=0';
         $list = $product_category->field('id,pid,c_title')->where($where)->order('myorder')->select();
         $cArray = array();
@@ -74,6 +78,7 @@ public function index(){
         $this->assign("list",$cArr);
         $this->assign("product_title",$product_title);
         $this->assign("parentid",$parentid);
+        $this->assign("hotoffers",$select_hotoffers);
         $this->display();
     }
     
@@ -88,6 +93,7 @@ public function index(){
             $product_title = isset($_POST['product_title']) ? in($_POST['product_title']) : "";
             $product_desc = isset($_POST['product_desc']) ? in($_POST['product_desc']) : "";
             $status = isset($_POST['status']) ? intval($_POST['status']) : 1;
+            $hotOffers = isset($_POST['hotOffers']) ? intval($_POST['hotOffers']) : 0;
             $add_time = time();
             $meta_title = isset($_POST['meta_title']) ? in($_POST['meta_title']) : "";
             $meta_keywords = isset($_POST['meta_keywords']) ? in($_POST['meta_keywords']) : "";
@@ -141,6 +147,7 @@ public function index(){
                 'big_img'       =>  $big_img_url,
                 'small_img'     =>  $small_photo_url,
                 'status'        =>  $status,
+                'hotOffers'     =>  $hotOffers,
                 'add_time'      =>  $add_time,
                 'meta_title'    =>  $meta_title,
                 'meta_keywords' =>  $meta_keywords,
@@ -205,6 +212,7 @@ public function index(){
             $product_title = isset($_POST['product_title']) ? in($_POST['product_title']) : "";
             $product_desc = isset($_POST['product_desc']) ? in($_POST['product_desc']) : "";
             $status = isset($_POST['status']) ? intval($_POST['status']) : 1;
+            $hotOffers = isset($_POST['hotOffers']) ? intval($_POST['hotOffers']) : 0;
             $add_time = time();
             $meta_title = isset($_POST['meta_title']) ? in($_POST['meta_title']) : "";
             $meta_keywords = isset($_POST['meta_keywords']) ? in($_POST['meta_keywords']) : "";
@@ -217,6 +225,7 @@ public function index(){
                 'product_title' =>  $product_title,
                 'product_desc'  =>  $product_desc,                
                 'status'        =>  $status,
+                'hotOffers'     =>  $hotOffers,
                 'meta_title'    =>  $meta_title,
                 'meta_keywords' =>  $meta_keywords,
                 'meta_description'  =>  $meta_description

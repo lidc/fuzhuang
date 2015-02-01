@@ -78,6 +78,14 @@
         </td>
     </tr>
     <tr>
+        <td class="tableleft">首页推荐</td>
+        <td>
+            <input type="radio" name="hotOffers" value="1" checked/> 首页图片推荐
+            <input type="radio" name="hotOffers" value="2"/> 首页推荐
+            <input type="radio" name="hotOffers" value="0" checked/> 不推荐
+        </td>
+    </tr>
+    <tr>
         <td class="tableleft">页面内容</td>
         <td>
         	<textarea cols="40" rows="5" name="design_content" id="design_content"></textarea>

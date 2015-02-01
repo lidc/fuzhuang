@@ -37,62 +37,68 @@
         	<div class="con1-mod">
             	<div class="mod-title"><a href=""><img src="__PUBLIC__/images/chuangyisheji.png"/></a></div>
                 <div class="mod-hot">
-                	<a href=""><img src="__PUBLIC__/images/01.jpg"/></a>
-                    <p><a href="">2015春夏灵动系列首推</a></p>
+                	<volist name="dlist" id="v" empty="暂时没有数据" >
+                	<if condition="($v.hotoffers eq 1)">
+                	<a href="design?id={{$v.id}}"><img src="{{$v.big_img}}"/></a>
+                    <p><a href="design?id={{$v.id}}">{{$v.design_title}}</a></p>
+                    </if>
+                    </volist>
                 </div>
                 <div class="mod-list">
                 	<hr/>
                     <ul>
-                    	<li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
+                    	<volist name="dlist" id="v" empty="暂时没有数据" >
+                    	<if condition="($v.hotoffers eq 2 and $i elt 8)">
+                    	<li><a href="design?id={{$v.id}}">{{$v.design_title}}</a></li>
+                    	</if>
+                    	</volist>
+                       
                     </ul>
-                    <p><a href=""><img src="__PUBLIC__/images/more.png" /></a></p>
+                    <p><a href="design"><img src="__PUBLIC__/images/more.png" /></a></p>
                 </div>
             </div>
             <div class="con1-mod">
             	<div class="mod-title"><a href=""><img src="__PUBLIC__/images/pinpaizixun.png"/></a></div>
                 <div class="mod-hot">
-                	<a href=""><img src="__PUBLIC__/images/02.jpg"/></a>
-                    <p><a href="">J.D.Chaude创业天虹推广活动启动</a></p>
+                	<volist name="blist" id="v" empty="暂时没有数据" >
+                	<if condition="($v.hotoffers eq 1 )">
+                	<a href="brand?id={{$v.id}}"><img src="{{$v.big_img}}"/></a>
+                    <p><a href="brand?id={{$v.id}}">{{$v.brand_name}}</a></p>
+                    </if>
+                    </volist>
                 </div>
                 <div class="mod-list">
                 	<hr/>
                     <ul>
-                    	<li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
+                    	<volist name="blist" id="v" empty="暂时没有数据" >
+                    	<if condition="($v.hotoffers eq 2 and $i elt 8)">
+                    	<li><a href="brand?id={{$v.id}}">{{$v.brand_name}}</a></li>
+                    	</if>
+                    	</volist>
                     </ul>
-                    <p><a href=""><img src="__PUBLIC__/images/more.png" /></a></p>
+                    <p><a href="brand"><img src="__PUBLIC__/images/more.png" /></a></p>
                 </div>
             </div>
             <div class="con1-mod">
             	<div class="mod-title"><a href=""><img src="__PUBLIC__/images/jiaoyufenxiang.png"/></a></div>
                 <div class="mod-hot">
-                	<a href=""><img src="__PUBLIC__/images/03.jpg"/></a>
-                    <p><a href="">少女如何穿文胸</a></p>
+
+                	<volist name="nlist" id="v" empty="暂时没有数据" >
+                    <if condition="($v.hotoffers eq 1 )">
+                    <a href="news?id={{$v.id}}"><img src="{{$v.big_img}}"/></a>
+                    <p><a href="news?id={{$v.id}}">{{$v.news_title}}</a></p>
+                    </if>
+                    </volist>
+
                 </div>
                 <div class="mod-list">
                 	<hr/>
                     <ul>
-                    	<li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
-                        <li><a href="">资讯链接资讯链接</a></li>
+                    	<volist name="nlist" id="v" empty="暂时没有数据" >
+                        <if condition="($v.hotoffers eq 2 and $i elt 8)">
+                        <li><a href="news?id={{$v.id}}">{{$v.news_title}}</a></li>
+                        </if>
+                        </volist>
                     </ul>
                     <p><a href=""><img src="__PUBLIC__/images/more.png" /></a></p>
                 </div>
@@ -106,11 +112,11 @@
             </div>
             <div class="con2-product-list">
             	<ul>
-                	<li><a href=""><img src="__PUBLIC__/images/06.jpg" /></a></li>
-                    <li><a href=""><img src="__PUBLIC__/images/07.jpg" /></a></li>
-                    <li><a href=""><img src="__PUBLIC__/images/08.jpg" /></a></li>
-                    <li><a href=""><img src="__PUBLIC__/images/09.jpg" /></a></li>
-                    <li><a href=""><img src="__PUBLIC__/images/10.jpg" /></a></li>
+                        <volist name="plist" id="v" empty="暂时没有数据"  offset="0" length="5"  >
+                        <if condition="($v.hotoffers eq 1 and $i elt 5)">
+                        <li><a href=""><img src="{{$v.big_img}}" /></a></li>
+                        </if>
+                        </volist>
                 </ul>
             </div>
         </div>

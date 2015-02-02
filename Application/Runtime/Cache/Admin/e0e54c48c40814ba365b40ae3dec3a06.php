@@ -57,7 +57,7 @@
     </tr>
      <tr>
         <td class="tableleft">页面路径</td>
-        <td><input type="text" name="page_url" value="<?php echo ($nl['page_url']); ?>"/></td>
+        <td><input type="text" name="page_url" value="<?php echo ($nl['page_url']); ?>" readonly /></td>
     </tr>
     <tr>
         <td class="tableleft">菜单简介</td>

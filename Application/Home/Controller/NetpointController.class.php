@@ -2,7 +2,7 @@
 namespace Home\Controller;
 use Think\Controller;
 
-class ContactController extends Controller {
+class NetPointController extends Controller {
 
 	public function index(){
 		$page = M('nav_page');
@@ -11,7 +11,7 @@ class ContactController extends Controller {
 		if(!$id){
 			echo  "无参数！";
 			exit;
-		}		
+		}
 		$ls = $page->field('nav_title,page_url,meta_title,meta_keywords,meta_description')->where('id='.$id)->find();
 		$lc = $page_content->field('content')->where('nav_id='.$id)->find();
 		$content = html_out($lc['content']);

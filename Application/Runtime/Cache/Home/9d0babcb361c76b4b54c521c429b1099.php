@@ -2,7 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>简朵服饰</title>
+<title><?php echo ($ls["meta_title"]); ?></title>
+<meta name="description" content="<?php echo ($ls["meta_description"]); ?>" />
+<meta name="keywords" content="<?php echo ($ls["meta_keywords"]); ?>" />
 <link rel="stylesheet" type="text/css" href="/fuzhuang/Public/css/style.css"/>
 <link rel="stylesheet" type="text/css" href="/fuzhuang/Public/css/nivo-slider.css">
 <script type="text/javascript" src="/fuzhuang/Public/js/jquery-1.4.3.min.js"></script>
@@ -49,8 +51,8 @@
     </div>
     
     <div class="content">
-    	<div class="con1">
-        	<h1>联系我们</h1>
+    	<div class="con2">
+        	<h1><?php echo ($ls["nav_title"]); ?></h1>
             <div>
             	<?php echo ($content); ?>
             </div>

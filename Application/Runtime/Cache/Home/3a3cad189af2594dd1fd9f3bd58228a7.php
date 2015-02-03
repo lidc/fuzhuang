@@ -30,9 +30,9 @@
         	<ul id="nav" class="dropdown dropdown-horizontal">
 	<?php if(is_array($menu)): $i = 0; $__LIST__ = $menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if($v["parent1"] != ''): ?><li id="n-home"><a href="/fuzhuang/index.php/Home/<?php echo ($v["page_url"]); ?>?id=<?php echo ($v["id"]); ?>" class="dir"><?php echo ($v["nav_title"]); ?></a>
 		        <ul>
-			    	<?php if(is_array($menu)): $i = 0; $__LIST__ = $menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v2): $mod = ($i % 2 );++$i; if($v["parent1"] == $v2["parent2"] ): ?><li class="first"><a href="/fuzhuang/index.php/Home/<?php echo ($v["page_url"]); ?>?id=<?php echo ($v2["id"]); ?>" class="dir"><?php echo ($v2["nav_title"]); echo ($v2["c_title"]); ?></a>
+			    	<?php if(is_array($menu)): $i = 0; $__LIST__ = $menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v2): $mod = ($i % 2 );++$i; if($v["parent1"] == $v2["parent2"] ): ?><li class="first"><a href="/fuzhuang/index.php/Home/<?php echo ($v["page_url"]); ?>?id=<?php echo ($v["id"]); ?>&cpid=<?php echo ($v2["id"]); ?>" class="dir"><?php echo ($v2["nav_title"]); echo ($v2["c_title"]); ?></a>
 						        <ul style=" width:160px;">
-							      <?php if(is_array($menu)): $i = 0; $__LIST__ = $menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v3): $mod = ($i % 2 );++$i; if($v3["child"] == $v2["child"] && $v3["childY"] == 'y' ): ?><li class="first"><a href="/fuzhuang/index.php/Home/<?php echo ($v["page_url"]); ?>?id=<?php echo ($v3["id"]); ?>"><?php echo ($v3["c_title"]); ?></a></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>                       
+							      <?php if(is_array($menu)): $i = 0; $__LIST__ = $menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v3): $mod = ($i % 2 );++$i; if($v3["child"] == $v2["child"] && $v3["childY"] == 'y' ): ?><li class="first"><a href="/fuzhuang/index.php/Home/<?php echo ($v["page_url"]); ?>?id=<?php echo ($v["id"]); ?>&cpid=<?php echo ($v2["id"]); ?>&cid=<?php echo ($v3["id"]); ?>"><?php echo ($v3["c_title"]); ?></a></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>                       
 						      </ul>
 						  </li><?php endif; endforeach; endif; else: echo "" ;endif; ?>	                            
 		        </ul>
@@ -51,10 +51,15 @@
     </div>
     
     <div class="content">
-    	<div class="con2">
-        	<h1><?php echo ($ls["nav_title"]); ?></h1>
-            <div>
-            	<?php echo ($content); ?>
+    	<div class="con3">
+        	<h1>▶创意设计<?php if($cp_title != ''): ?>｜<?php echo ($cp_title); endif; if($c_title != ''): ?>｜<?php echo ($c_title); endif; ?></h1>
+            <div class="conRow">
+            	<ul>
+            		<?php if(is_array($ls)): $i = 0; $__LIST__ = $ls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><li><a href="detailed?id=<?php echo ($v["id"]); ?>&cpid=<?php echo ($v["cpid"]); ?>&cid=<?php echo ($v["cid"]); ?>"><?php echo ($v["design_title"]); ?></a></li>
+            		<li><a href="detailed?id=<?php echo ($v["id"]); ?>&cpid=<?php echo ($v["cpid"]); ?>&cid=<?php echo ($v["cid"]); ?>"><?php echo ($v["design_title"]); ?></a></li>
+            		<li><a href="detailed?id=<?php echo ($v["id"]); ?>&cpid=<?php echo ($v["cpid"]); ?>&cid=<?php echo ($v["cid"]); ?>"><?php echo ($v["design_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+            	</ul>
+            	<div class="clear"></div>
             </div>
             	
         </div>

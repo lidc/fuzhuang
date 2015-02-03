@@ -35,10 +35,17 @@
     </div>
     
     <div class="content">
-    	<div class="con2">
-        	<h1>{{$ls.nav_title}}</h1>
-            <div>
-            	{{$content}}
+    	<div class="con3">
+        	<h1>▶创意设计<if condition="$cp_title neq ''">｜{{$cp_title}}</if><if condition="$c_title neq ''">｜{{$c_title}}</if></h1>
+            <div class="conRow">
+            	<ul>
+            		<volist name="ls" id="v">
+            		<li><a href="detailed?id={{$v.id}}&cpid={{$v.cpid}}&cid={{$v.cid}}">{{$v.design_title}}</a></li>
+            		<li><a href="detailed?id={{$v.id}}&cpid={{$v.cpid}}&cid={{$v.cid}}">{{$v.design_title}}</a></li>
+            		<li><a href="detailed?id={{$v.id}}&cpid={{$v.cpid}}&cid={{$v.cid}}">{{$v.design_title}}</a></li>
+            		</volist>
+            	</ul>
+            	<div class="clear"></div>
             </div>
             	
         </div>

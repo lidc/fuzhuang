@@ -90,6 +90,16 @@ img{ border:0;}
 .con2-product-list ul{ padding:0 16px;}
 .con2-product-list ul li{ float:left; width:186px; height:186px; margin:12px 6px;}
 
+.con3{ width:100%; height:auto; clear:both;  padding:16px; background:#FFF;}
+.con3 h1{line-height: 1em;font-size: 18px;padding-bottom: 8px;font-weight: normal;border-bottom: #f5f5f5 solid 1px;}
+.conRow{ padding:10px 0; clear:both;}
+.conRow ul{ margin:0; padding-bottom:26px;}
+.conRow ul li{ float:left; line-height:26px; clear:both;}
+.conRow ul li a{ color:#000;}
+.conRow ul li a:hover{ color:#999}
+
+.clear{ width:100%; height:16px; clear:both;}
+
 .bottom{ clear:both; background:#d3d3d3; width:100%; height:145px; text-align:center; font-family:"微软雅黑"; line-height:25px;}
 .bottom span{ font-size:22px;}
 

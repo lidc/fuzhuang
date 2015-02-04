@@ -38,15 +38,16 @@
     </div>
     
     <div class="content">
-    	<div class="con2">
+    	<div class="con3">
         	<h1>▶产品展示<if condition="$cp_title neq ''">｜{{$cp_title}}</if><if condition="$c_title neq ''">｜{{$c_title}}</if></h1>
-            <div>
-            	<ul id="mappic">
+            <div class="product_row">
+            	<ul>
 					<volist name="ls" id="v"> 
 					<li>
-						<a class="example-image-link" href="http://localhost/fuzhuang/public/images/recsp1_bg.jpg" data-lightbox="example-set" data-title="">
-							<img class="example-image" src="http://localhost/fuzhuang/public/images/2014-10-07CR-2yc1qwscfe.jpg" alt=""/>
+						<a class="example-image-link" href="{{$v.big_img}}" data-lightbox="example-set" data-title="">
+							<img class="example-image" src="{{$v.small_img}}" alt=""/>
 						</a>
+						<p><a href="Product/detailed?id={{$v.id}}&cid={{$v.cid}}&cpid={{$v.cpid}}">{{$v.product_title}}</a></p>
 					</li>
 					</volist>
 				</ul>

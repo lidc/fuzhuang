@@ -3,7 +3,7 @@ namespace Home\Controller;
 use Think\Controller;
 
 class ProductController extends Controller {
-
+	
     public function index(){
 		$product = M('product');
 		$product_category = M('product_category');
@@ -18,7 +18,7 @@ class ProductController extends Controller {
 		if($id){
 		    $where .= " AND status=1 ";
 		    if($cpid){
-		        $where .= " AND cpid=".$cpid." ";
+		        $where .= " AND (cpid=".$cpid." or cid=".$cpid.") ";
 		        $cpls = $product_category->field('id,c_title,meta_title,meta_keywords,meta_description')->where("id=".$cpid."")->find();
 		        $this->assign('cp_title',$cpls['c_title']);
 		    }
@@ -28,8 +28,8 @@ class ProductController extends Controller {
 		        $this->assign('c_title',$cpls['c_title']);
 		    }
 		}
-			
-		$ls = $product->field('id,cpid,cid,product_title,add_time')->where($where)->select();
+
+		$ls = $product->field('id,cpid,cid,product_title,small_img,big_img,add_time')->where($where)->select();
 		$this->assign('ls',$ls);
 		$this->assign("menu",menu());
 		$this->assign('banner',banner());
@@ -49,7 +49,7 @@ class ProductController extends Controller {
 		}
 		$ls = $product->field('id,cid,cpid,product_title,big_img,add_time,meta_title,meta_keywords,meta_description')->where('id='.$id)->find();
 		$lsc = $product_content->field('id,content1')->where('product_id='.$id)->find();
-		$lsc['content1'] = html_out($ls['content1']);
+		$lsc['content1'] = html_out($lsc['content1']);
 		$this->assign('ls',$ls);
 		$this->assign('lsc',$lsc);
 		$this->assign("menu",menu());

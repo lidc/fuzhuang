@@ -38,7 +38,7 @@ class DesignController extends Controller {
 	
 	public function detailed(){
 		$design = M('design');
-		$id = isset($_GET['id']) ? intval($_GET['']) : 0;
+		$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 		$cpid = isset($_GET['cpid']) ? intval($_GET['cpid']) : 0;
 		$cid = isset($_GET['cid']) ? intval($_GET['cid']) : 0;
 		if(!$id){

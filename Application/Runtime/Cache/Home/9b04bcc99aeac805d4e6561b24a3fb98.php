@@ -23,6 +23,7 @@
 	    $('#slider').nivoSlider();
 	});
 </script>
+<link href="/fuzhuang/Public/css/default.ultimate.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -30,7 +31,7 @@
 	<div class="header">
     	<div class="logo"><a href=""><img src="/fuzhuang/Public/images/logo.png" /></a></div>
         <div class="nav">
-        	 <ul id="nav" class="dropdown dropdown-horizontal">
+        	<ul id="nav" class="dropdown dropdown-horizontal">
 	<?php if(is_array($menu)): $i = 0; $__LIST__ = $menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if($v["parent1"] != ''): ?><li id="n-home"><a href="/fuzhuang/index.php/Home/<?php echo ($v["page_url"]); ?>?id=<?php echo ($v["id"]); ?>" class="dir"><?php echo ($v["nav_title"]); ?></a>
 		        <ul>
 			    	<?php if(is_array($menu)): $i = 0; $__LIST__ = $menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v2): $mod = ($i % 2 );++$i; if($v["parent1"] == $v2["parent2"] ): ?><li class="first"><a href="/fuzhuang/index.php/Home/<?php echo ($v["page_url"]); ?>?id=<?php echo ($v["id"]); ?>&cpid=<?php echo ($v2["id"]); ?>" class="dir"><?php echo ($v2["nav_title"]); echo ($v2["c_title"]); ?></a>
@@ -40,7 +41,7 @@
 						  </li><?php endif; endforeach; endif; else: echo "" ;endif; ?>	                            
 		        </ul>
 	    	</li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
-</ul>         	
+</ul>        	
         </div>
         <div class="banner">
         	<div class="slider-wrapper theme-default">
@@ -53,16 +54,10 @@
     
     <div class="content">
     	<div class="con3">
-        	<h1>▶产品展示<?php if($cp_title != ''): ?>｜<?php echo ($cp_title); endif; if($c_title != ''): ?>｜<?php echo ($c_title); endif; ?></h1>
-            <div class="product_row">
-            	<ul>
-					<?php if(is_array($ls)): $i = 0; $__LIST__ = $ls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><li>
-						<a class="example-image-link" href="<?php echo ($v["big_img"]); ?>" data-lightbox="example-set" data-title="">
-							<img class="example-image" src="<?php echo ($v["small_img"]); ?>" alt=""/>
-						</a>
-						<p><a href="Product/detailed?id=<?php echo ($v["id"]); ?>&cid=<?php echo ($v["cid"]); ?>&cpid=<?php echo ($v["cpid"]); ?>"><?php echo ($v["product_title"]); ?></a></p>
-					</li><?php endforeach; endif; else: echo "" ;endif; ?>
-				</ul>
+        	<h1>▶ <?php echo ($ls["product_title"]); ?></h1>
+            <div class="conRow">
+            	<?php echo ($lsc["content1"]); ?>
+            	<div class="clear"></div>
             </div>
             	
         </div>

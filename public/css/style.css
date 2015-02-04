@@ -97,6 +97,11 @@ img{ border:0;}
 .conRow ul li a{ color:#000;}
 .conRow ul li a:hover{ color:#999}
 
+.product_row{padding:10px 0; clear:both;}
+.product_row ul{marign:0; padding-bottom:16px;}
+.product_row ul li{ width:186px; height:156px; float:left; margin:6px;}
+.product_row ul li img{ widht:186px; height:136px;}
+
 .clear{ width:100%; height:16px; clear:both;}
 
 .bottom{ clear:both; background:#d3d3d3; width:100%; height:145px; text-align:center; font-family:"微软雅黑"; line-height:25px;}

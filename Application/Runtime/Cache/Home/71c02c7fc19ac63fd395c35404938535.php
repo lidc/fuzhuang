@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="/fuzhuang/plug-in/themes/default/default.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="/fuzhuang/plug-in/nivo_slider/nivo-slider.css" type="text/css" media="screen" />
 <script type="text/javascript" src="/fuzhuang/plug-in/nivo_slider/jquery.nivo.slider.js"></script>
-
 <link href="/fuzhuang/Public/css/dropdown.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/fuzhuang/Public/css/default.ultimate.css" media="screen" rel="stylesheet" type="text/css" />
 <!--[if lt IE 7]>

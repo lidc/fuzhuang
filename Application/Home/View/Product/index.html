@@ -5,26 +5,25 @@
 <title>{{$ls.meta_title}}</title>
 <meta name="description" content="{{$ls.meta_description}}" />
 <meta name="keywords" content="{{$ls.meta_keywords}}" />
+<script src="__PUBLIC__/js/jquery-1.9.0.min.js"></script>
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style.css"/>
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/nivo-slider.css">
-<script type="text/javascript" src="__PUBLIC__/js/jquery-1.4.3.min.js"></script>
-<script type="text/javascript" src="__PUBLIC__/js/jquery.nivo.slider.pack.js"></script>
+<link rel="stylesheet" href="__PLUG-IN__/themes/default/default.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="__PLUG-IN__/nivo_slider/nivo-slider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="__PLUG-IN__/nivo_slider/jquery.nivo.slider.js"></script>
 
-<script src="__PLUG-IN__/lightbox/js/jquery-1.11.0.min.js"></script>
-<script src="__PLUG-IN__/lightbox/js/lightbox.min.js"></script>
-<link href="__PLUG-IN__/lightbox/css/lightbox.css" rel="stylesheet" />
-
-<script type="text/javascript">
-	$(window).load(function() {
-		$('#slider').nivoSlider();
-	});
-</script>
+<link href="__PUBLIC__/css/dropdown.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/css/default.ultimate.css" media="screen" rel="stylesheet" type="text/css" />
 <!--[if lt IE 7]>
 <script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
 <script type="text/javascript" src="__PUBLIC__/js/jquery.dropdown.js"></script>
 <![endif]-->
-<link href="__PUBLIC__/css/dropdown.css" media="screen" rel="stylesheet" type="text/css" />
-<link href="__PUBLIC__/css/default.ultimate.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="__PLUG-IN__/lightbox/js/lightbox.js"></script>
+<link href="__PLUG-IN__/lightbox/css/lightbox.css" rel="stylesheet" />
+<script type="text/javascript">
+	$(window).load(function() {
+	    $('#slider').nivoSlider();
+	});
+</script>
 </head>
 
 <body>
@@ -32,7 +31,7 @@
 	<div class="header">
     	<div class="logo"><a href=""><img src="__PUBLIC__/images/logo.png" /></a></div>
         <div class="nav">
-        	<include file="Public:menu" />        	
+        	 <include file="Public:menu" />         	
         </div>
         <div class="banner">
         	<include file="Public:banner" />
@@ -41,15 +40,14 @@
     
     <div class="content">
     	<div class="con2">
-        	<h1>{{$ls.nav_title}}</h1>
+        	<h1>▶产品展示<if condition="$cp_title neq ''">｜{{$cp_title}}</if><if condition="$c_title neq ''">｜{{$c_title}}</if></h1>
             <div>
-            	<ul>
-					<volist name="list" id="v"> 
+            	<ul id="mappic">
+					<volist name="ls" id="v"> 
 					<li>
-						<a class="example-image-link" href="{{$v['big_img']}}" data-lightbox="example-set" data-title="">
-							<img class="example-image" src="{{$v['small_img']}}" alt=""/>
+						<a class="example-image-link" href="http://localhost/fuzhuang/public/images/recsp1_bg.jpg" data-lightbox="example-set" data-title="">
+							<img class="example-image" src="http://localhost/fuzhuang/public/images/2014-10-07CR-2yc1qwscfe.jpg" alt=""/>
 						</a>
-						<a href="deleteImg?id={{$v['id']}}&productId={{$v['product_id']}}" class="imgdel">删除</a>
 					</li>
 					</volist>
 				</ul>

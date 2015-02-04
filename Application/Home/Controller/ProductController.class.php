@@ -5,8 +5,8 @@ use Think\Controller;
 class ProductController extends Controller {
 
     public function index(){
-		$design = M('design');
-		$design_category = M('design_category');
+		$product = M('product');
+		$product_category = M('product_category');
 		$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 		$cpid = isset($_GET['cpid']) ? intval($_GET['cpid']) : 0;
 		$cid = isset($_GET['cid']) ? intval($_GET['cid']) : 0;		
@@ -19,17 +19,17 @@ class ProductController extends Controller {
 		    $where .= " AND status=1 ";
 		    if($cpid){
 		        $where .= " AND cpid=".$cpid." ";
-		        $cpls = $design_category->field('id,c_title')->where("id=".$cpid."")->find();
+		        $cpls = $product_category->field('id,c_title,meta_title,meta_keywords,meta_description')->where("id=".$cpid."")->find();
 		        $this->assign('cp_title',$cpls['c_title']);
 		    }
 		    if($cid){
 		        $where .= " AND cid=".$cid." ";
-		        $cpls = $design_category->field('id,c_title')->where("id=".$cid."")->find();
+		        $cpls = $product_category->field('id,c_title,meta_title,meta_keywords,meta_description')->where("id=".$cid."")->find();
 		        $this->assign('c_title',$cpls['c_title']);
 		    }
 		}
 			
-		$ls = $design->field('id,cpid,cid,design_title,add_time')->where($where)->select();
+		$ls = $product->field('id,cpid,cid,product_title,add_time')->where($where)->select();
 		$this->assign('ls',$ls);
 		$this->assign("menu",menu());
 		$this->assign('banner',banner());
@@ -37,7 +37,9 @@ class ProductController extends Controller {
 	}
 	
 	public function detailed(){
-		$design = M('design');
+		$product = M('product');
+		$product_category = M('product_category');
+		$product_content = M('product_content');
 		$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 		$cpid = isset($_GET['cpid']) ? intval($_GET['cpid']) : 0;
 		$cid = isset($_GET['cid']) ? intval($_GET['cid']) : 0;
@@ -45,9 +47,11 @@ class ProductController extends Controller {
 			echo  "无参数！";
 			exit;
 		}
-		$ls = $design->field('id,design_title,design_content,add_time,meta_title,meta_keywords,meta_description')->where('id='.$id)->find();
-		$ls['design_content'] = html_out($ls['design_content']);
+		$ls = $product->field('id,cid,cpid,product_title,big_img,add_time,meta_title,meta_keywords,meta_description')->where('id='.$id)->find();
+		$lsc = $product_content->field('id,content1')->where('product_id='.$id)->find();
+		$lsc['content1'] = html_out($ls['content1']);
 		$this->assign('ls',$ls);
+		$this->assign('lsc',$lsc);
 		$this->assign("menu",menu());
 		$this->assign('banner',banner());
 		$this->display();	    

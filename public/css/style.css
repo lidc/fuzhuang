@@ -33,7 +33,7 @@ img{ border:0;}
 
 #slider {
 	position:relative;
-    width:965px;
+    width:1024px;
     height:303px;
 	background:url(../images/loading.gif) no-repeat 50% 50%;
 }

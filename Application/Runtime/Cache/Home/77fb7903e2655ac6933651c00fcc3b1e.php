@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><?php echo ($cpls["meta_title"]); ?></title>
-<meta name="description" content="<?php echo ($cpls["meta_description"]); ?>" />
-<meta name="keywords" content="<?php echo ($cpls["meta_keywords"]); ?>" />
+<title><?php echo ($ls["meta_title"]); ?></title>
+<meta name="description" content="<?php echo ($ls["meta_description"]); ?>" />
+<meta name="keywords" content="<?php echo ($ls["meta_keywords"]); ?>" />
 <link rel="stylesheet" type="text/css" href="/fuzhuang/Public/css/style.css"/>
 <link rel="stylesheet" type="text/css" href="/fuzhuang/Public/css/nivo-slider.css">
 <script type="text/javascript" src="/fuzhuang/Public/js/jquery-1.4.3.min.js"></script>
@@ -52,11 +52,9 @@
     
     <div class="content">
     	<div class="con3">
-        	<h1>▶新闻资讯<?php if($cpls["c_title"] != ''): ?>｜<?php echo ($cpls["c_title"]); endif; ?></h1>
+        	<h1>▶ <?php echo ($ls["news_title"]); ?></h1>
             <div class="conRow">
-            	<ul>
-            		<?php if(is_array($ls)): $i = 0; $__LIST__ = $ls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><li><a href="News/detailed?id=<?php echo ($v["id"]); ?>&cid=<?php echo ($v["cid"]); ?>"><?php echo ($v["news_title"]); ?> </a></li><?php endforeach; endif; else: echo "" ;endif; ?>
-            	</ul>
+            	<?php echo ($ls["news_content"]); ?>
             	<div class="clear"></div>
             </div>
             	

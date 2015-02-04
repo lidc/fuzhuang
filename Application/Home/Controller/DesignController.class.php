@@ -38,7 +38,7 @@ class DesignController extends Controller {
 	
 	public function detailed(){
 		$design = M('design');
-		$id = isset($_GET['id']) ? intval($_GET['']) : 0;
+		$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 		$cpid = isset($_GET['cpid']) ? intval($_GET['cpid']) : 0;
 		$cid = isset($_GET['cid']) ? intval($_GET['cid']) : 0;
 		if(!$id){
@@ -46,8 +46,10 @@ class DesignController extends Controller {
 			exit;
 		}
 		$ls = $design->field('id,design_title,design_content,add_time,meta_title,meta_keywords,meta_description')->where('id='.$id)->find();
+		$ls['design_content'] = html_out($ls['design_content']);
 		$this->assign('ls',$ls);
-		print_r($ls);
+		$this->assign("menu",menu());
+		$this->assign('banner',banner());
 		$this->display();	    
 	}
 }

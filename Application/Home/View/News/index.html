@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>{{$ls.meta_title}}</title>
-<meta name="description" content="{{$ls.meta_description}}" />
-<meta name="keywords" content="{{$ls.meta_keywords}}" />
+<title>{{$cpls.meta_title}}</title>
+<meta name="description" content="{{$cpls.meta_description}}" />
+<meta name="keywords" content="{{$cpls.meta_keywords}}" />
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style.css"/>
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/nivo-slider.css">
 <script type="text/javascript" src="__PUBLIC__/js/jquery-1.4.3.min.js"></script>
@@ -35,10 +35,15 @@
     </div>
     
     <div class="content">
-    	<div class="con2">
-        	<h1>{{$ls.nav_title}}</h1>
-            <div>
-            	{{$content}}
+    	<div class="con3">
+        	<h1>▶新闻资讯<if condition="$cpls.c_title neq ''">｜{{$cpls.c_title}}</if></h1>
+            <div class="conRow">
+            	<ul>
+            		<volist name="ls" id="v">
+            		<li><a href="News/detailed?id={{$v.id}}&cid={{$v.cid}}">{{$v.news_title}} </a></li>            		
+            		</volist>
+            	</ul>
+            	<div class="clear"></div>
             </div>
             	
         </div>

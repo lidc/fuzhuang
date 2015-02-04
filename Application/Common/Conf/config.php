@@ -6,8 +6,8 @@ return array(
 	    '__PUBLIC_FONT__'       => ROOT_PATH.'Application/Admin/Public/font/',              //字体根目录
 	    '__UPLOAD_URL__'        => __ROOT__.'/Application/Admin/Public/Uploads/',           //后台图片访问路径   $_SERVER['HTTP_HOST'].
         '__UPLOAD_PATH__'       => ROOT_PATH.'Application/Admin/Public/Uploads/',           //后台图片保存路径
-        '__FILE__UPLOADS__'     => ROOT_PATH.'public/uploads/',                             //文件上传目录                        
-	    '__FILE_UPLOADS_URL__'  => __ROOT__.'/public/uploads/',                             //文件上传访问路径
+        '__FILE__UPLOADS__'     => ROOT_PATH.'Public/uploads/',                             //文件上传目录                        
+	    '__FILE_UPLOADS_URL__'  => __ROOT__.'/Public/uploads/',                             //文件上传访问路径
 	    '__PLUG-IN__'           => __ROOT__.'/plug-in',
     ),
     

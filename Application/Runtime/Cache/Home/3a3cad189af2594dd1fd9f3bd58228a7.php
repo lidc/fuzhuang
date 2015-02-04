@@ -55,9 +55,7 @@
         	<h1>▶创意设计<?php if($cp_title != ''): ?>｜<?php echo ($cp_title); endif; if($c_title != ''): ?>｜<?php echo ($c_title); endif; ?></h1>
             <div class="conRow">
             	<ul>
-            		<?php if(is_array($ls)): $i = 0; $__LIST__ = $ls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><li><a href="detailed?id=<?php echo ($v["id"]); ?>&cpid=<?php echo ($v["cpid"]); ?>&cid=<?php echo ($v["cid"]); ?>"><?php echo ($v["design_title"]); ?></a></li>
-            		<li><a href="detailed?id=<?php echo ($v["id"]); ?>&cpid=<?php echo ($v["cpid"]); ?>&cid=<?php echo ($v["cid"]); ?>"><?php echo ($v["design_title"]); ?></a></li>
-            		<li><a href="detailed?id=<?php echo ($v["id"]); ?>&cpid=<?php echo ($v["cpid"]); ?>&cid=<?php echo ($v["cid"]); ?>"><?php echo ($v["design_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+            		<?php if(is_array($ls)): $i = 0; $__LIST__ = $ls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><li><a href="Design/detailed?id=<?php echo ($v["id"]); ?>&cpid=<?php echo ($v["cpid"]); ?>&cid=<?php echo ($v["cid"]); ?>"><?php echo ($v["design_title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
             	</ul>
             	<div class="clear"></div>
             </div>

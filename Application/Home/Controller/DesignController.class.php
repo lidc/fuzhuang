@@ -9,8 +9,7 @@ class DesignController extends Controller {
 		$design_category = M('design_category');
 		$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 		$cpid = isset($_GET['cpid']) ? intval($_GET['cpid']) : 0;
-		$cid = isset($_GET['cid']) ? intval($_GET['cid']) : 0;
-		
+		$cid = isset($_GET['cid']) ? intval($_GET['cid']) : 0;		
 		if(!$id){
 			echo  "无参数！";
 			exit;
@@ -38,6 +37,17 @@ class DesignController extends Controller {
 	}
 	
 	public function detailed(){
-	    $this->display();	    
+		$design = M('design');
+		$id = isset($_GET['id']) ? intval($_GET['']) : 0;
+		$cpid = isset($_GET['cpid']) ? intval($_GET['cpid']) : 0;
+		$cid = isset($_GET['cid']) ? intval($_GET['cid']) : 0;
+		if(!$id){
+			echo  "无参数！";
+			exit;
+		}
+		$ls = $design->field('id,design_title,design_content,add_time,meta_title,meta_keywords,meta_description')->where('id='.$id)->find();
+		$this->assign('ls',$ls);
+		print_r($ls);
+		$this->display();	    
 	}
 }

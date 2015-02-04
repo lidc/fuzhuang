@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="__PLUG-IN__/themes/default/default.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="__PLUG-IN__/nivo_slider/nivo-slider.css" type="text/css" media="screen" />
 <script type="text/javascript" src="__PLUG-IN__/nivo_slider/jquery.nivo.slider.js"></script>
-
 <link href="__PUBLIC__/css/dropdown.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="__PUBLIC__/css/default.ultimate.css" media="screen" rel="stylesheet" type="text/css" />
 <!--[if lt IE 7]>
@@ -23,7 +22,8 @@
 	$(window).load(function() {
 	    $('#slider').nivoSlider();
 	});
-</script>
+</script>>
+<link href="__PUBLIC__/css/default.ultimate.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -40,13 +40,9 @@
     
     <div class="content">
     	<div class="con3">
-        	<h1>▶创意设计<if condition="$cp_title neq ''">｜{{$cp_title}}</if><if condition="$c_title neq ''">｜{{$c_title}}</if></h1>
+        	<h1>▶ {{$ls.design_title}}</h1>
             <div class="conRow">
-            	<ul>
-            		<volist name="ls" id="v">
-            		<li><a href="Design/detailed?id={{$v.id}}&cpid={{$v.cpid}}&cid={{$v.cid}}">{{$v.design_title}}</a></li>            		
-            		</volist>
-            	</ul>
+            	{{$ls.design_content}}
             	<div class="clear"></div>
             </div>
             	

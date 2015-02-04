@@ -2,24 +2,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><?php echo ($cpls["meta_title"]); ?></title>
-<meta name="description" content="<?php echo ($cpls["meta_description"]); ?>" />
-<meta name="keywords" content="<?php echo ($cpls["meta_keywords"]); ?>" />
+<title><?php echo ($ls["meta_title"]); ?></title>
+<meta name="description" content="<?php echo ($ls["meta_description"]); ?>" />
+<meta name="keywords" content="<?php echo ($ls["meta_keywords"]); ?>" />
+<script src="/fuzhuang/Public/js/jquery-1.9.0.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/fuzhuang/Public/css/style.css"/>
-<link rel="stylesheet" type="text/css" href="/fuzhuang/Public/css/nivo-slider.css">
-<script type="text/javascript" src="/fuzhuang/Public/js/jquery-1.4.3.min.js"></script>
-<script type="text/javascript" src="/fuzhuang/Public/js/jquery.nivo.slider.pack.js"></script>
-<script type="text/javascript">
-	$(window).load(function() {
-		$('#slider').nivoSlider();
-	});
-</script>
+<link rel="stylesheet" href="/fuzhuang/plug-in/themes/default/default.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/fuzhuang/plug-in/nivo_slider/nivo-slider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/fuzhuang/plug-in/nivo_slider/jquery.nivo.slider.js"></script>
+
+<link href="/fuzhuang/Public/css/dropdown.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/fuzhuang/Public/css/default.ultimate.css" media="screen" rel="stylesheet" type="text/css" />
 <!--[if lt IE 7]>
 <script type="text/javascript" src="/fuzhuang/Public/js/jquery.js"></script>
 <script type="text/javascript" src="/fuzhuang/Public/js/jquery.dropdown.js"></script>
 <![endif]-->
-<link href="/fuzhuang/Public/css/dropdown.css" media="screen" rel="stylesheet" type="text/css" />
-<link href="/fuzhuang/Public/css/default.ultimate.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="/fuzhuang/plug-in/lightbox/js/lightbox.js"></script>
+<link href="/fuzhuang/plug-in/lightbox/css/lightbox.css" rel="stylesheet" />
+<script type="text/javascript">
+	$(window).load(function() {
+	    $('#slider').nivoSlider();
+	});
+</script>
 </head>
 
 <body>
@@ -27,7 +31,7 @@
 	<div class="header">
     	<div class="logo"><a href=""><img src="/fuzhuang/Public/images/logo.png" /></a></div>
         <div class="nav">
-        	<ul id="nav" class="dropdown dropdown-horizontal">
+        	 <ul id="nav" class="dropdown dropdown-horizontal">
 	<?php if(is_array($menu)): $i = 0; $__LIST__ = $menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i; if($v["parent1"] != ''): ?><li id="n-home"><a href="/fuzhuang/index.php/Home/<?php echo ($v["page_url"]); ?>?id=<?php echo ($v["id"]); ?>" class="dir"><?php echo ($v["nav_title"]); ?></a>
 		        <ul>
 			    	<?php if(is_array($menu)): $i = 0; $__LIST__ = $menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v2): $mod = ($i % 2 );++$i; if($v["parent1"] == $v2["parent2"] ): ?><li class="first"><a href="/fuzhuang/index.php/Home/<?php echo ($v["page_url"]); ?>?id=<?php echo ($v["id"]); ?>&cpid=<?php echo ($v2["id"]); ?>" class="dir"><?php echo ($v2["nav_title"]); echo ($v2["c_title"]); ?></a>
@@ -37,27 +41,28 @@
 						  </li><?php endif; endforeach; endif; else: echo "" ;endif; ?>	                            
 		        </ul>
 	    	</li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
-</ul>        	
+</ul>         	
         </div>
         <div class="banner">
-        	<div id="wrapper">
-    <div id="slider-wrapper">
-        <div id="slider" class="nivoSlider">
-            <?php if(is_array($banner)): $i = 0; $__LIST__ = $banner;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><a href="<?php echo ($v["website"]); ?>" target="_blank"><img src="<?php echo ($v["big_photo"]); ?>" alt="" width="1024" height="303"/></a><?php endforeach; endif; else: echo "" ;endif; ?>
-        </div>                
-    </div>
+        	<div class="slider-wrapper theme-default">
+    <div id="slider" class="nivoSlider">
+         <?php if(is_array($banner)): $i = 0; $__LIST__ = $banner;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><a href="<?php echo ($v["website"]); ?>" target="_blank"><img src="<?php echo ($v["big_photo"]); ?>" alt="" width="1024" height="303"/></a><?php endforeach; endif; else: echo "" ;endif; ?>
+    </div>   
 </div>
         </div>
     </div>
     
     <div class="content">
-    	<div class="con3">
-        	<h1>▶新闻资讯<?php if($cpls["c_title"] != ''): ?>｜<?php echo ($cpls["c_title"]); endif; ?></h1>
-            <div class="conRow">
-            	<ul>
-            		<?php if(is_array($ls)): $i = 0; $__LIST__ = $ls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><li><a href="News/detailed?id=<?php echo ($v["id"]); ?>&cid=<?php echo ($v["cid"]); ?>"><?php echo ($v["news_title"]); ?> </a></li><?php endforeach; endif; else: echo "" ;endif; ?>
-            	</ul>
-            	<div class="clear"></div>
+    	<div class="con2">
+        	<h1>▶产品展示<?php if($cp_title != ''): ?>｜<?php echo ($cp_title); endif; if($c_title != ''): ?>｜<?php echo ($c_title); endif; ?></h1>
+            <div>
+            	<ul id="mappic">
+					<?php if(is_array($ls)): $i = 0; $__LIST__ = $ls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><li>
+						<a class="example-image-link" href="http://localhost/fuzhuang/public/images/recsp1_bg.jpg" data-lightbox="example-set" data-title="">
+							<img class="example-image" src="http://localhost/fuzhuang/public/images/2014-10-07CR-2yc1qwscfe.jpg" alt=""/>
+						</a>
+					</li><?php endforeach; endif; else: echo "" ;endif; ?>
+				</ul>
             </div>
             	
         </div>

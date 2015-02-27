@@ -1,5 +1,16 @@
 <?php
 // 应用入口文件
+// phpinfo();
+
+// define('CLIENT_MULTI_RESULTS', 131072);
+// $link= mysql_connect('localhost', 'root', 'root', 1, CLIENT_MULTI_RESULTS) or die("Could not connect: ".mysql_error());
+// mysql_select_db('fuzhuang');
+// mysql_query('set names utf8');
+// $resule = mysql_query('call test1("admin2")');
+// while ($rows=mysql_fetch_array($resule)){
+//     echo $rows['password']."<br>";
+// }
+// exit;
 
 // 检测PHP环境
 if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');

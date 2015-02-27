@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>简朵服饰</title>
+
 <script src="/fuzhuang/Public/js/jquery-1.9.0.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/fuzhuang/Public/css/style.css"/>
 <link rel="stylesheet" href="/fuzhuang/plug-in/themes/default/default.css" type="text/css" media="screen" />
@@ -98,7 +99,7 @@
             </div>
         </div>
         
-        <div class="con2">
+        <div class="con2" style="width:100%; padding-left:0px;">
         	<div class="con2-head">
             	<div class="con2-title">J.D.Chaude 暖暖热卖单品 Sells a single product</div>
                 <div class="con2-img"><img src="/fuzhuang/Public/images/05.jpg" /></div>
